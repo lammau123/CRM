@@ -53,4 +53,4 @@ Open browser with url http://localhost:8000/
 
 python manage.py startapp webapp
 
-![Project structure](/assets/images/crm.png)
+![Project structure](/assets/images/project_structure.png)
