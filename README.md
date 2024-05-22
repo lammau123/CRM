@@ -17,33 +17,47 @@ Version: 3.12.3
 From commandline 
 #### 1. Create a development folder
 
+```cmd
 mkdir develop
 cd develop
+```
 
 #### 2. Create virtual environment
 
+```cmd
 python -m venv venv
+```
 
 #### 3. Activate virtual environment
 
+```cmd
 venv\Scripts\activate
+```
 
 #### 4. Create text file requirement.txt and add the below required package
 
+```cmd
 django=5.0.6
+```
 
 #### 5. Intall required packages
 
+```cmd
 pip install -r requirment
+```
 
 #### 6. Create django project
 
+```cmd
 django-admin startproject crm
+```
 
 #### 7. Run the server
 
+```cmd
 cd crm
 python manage.py runserver
+```
 
 #### 8. Check the application
 
@@ -51,15 +65,19 @@ Open browser with url http://localhost:8000/
 
 #### 9. Create an app in django project
 
+```cmd
 python manage.py startapp webapp
+```
 
 ![Project structure](/assets/images/project_structure.png)
 
 The entry point of django project is configured in the urls.py file at the project level as the code below:
 
+```python
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+```
 
 Open the settings.py under crm folder and register the webapp in the INSTALLED_APPS array
 
@@ -80,15 +98,17 @@ INSTALLED_APPS = [
 
 Create new urls.py under the webapp folder and add the below code into it.
 
+```python
 urlpatterns = [
     # entry point for webapp will be inserted here later
 ]
+```
 
 Add this entry point into the urls.py under crm folder as the code below:
 
+```python
 from django.urls import include
 
-```python
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('webapp.urls'))
