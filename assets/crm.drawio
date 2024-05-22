@@ -1,0 +1,39 @@
+<mxfile host="app.diagrams.net" modified="2024-05-22T01:03:42.262Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0" etag="4hWECuJZLiAxskcG9vpK" version="24.2.0" type="device">
+  <diagram name="Page-1" id="wTUeLgo0ohAoyHbHCDhX">
+    <mxGraphModel dx="1230" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cDbSeV_pIObZ3GQgrRIo-14" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry width="850" height="850" as="geometry" />
+        </mxCell>
+        <mxCell id="cDbSeV_pIObZ3GQgrRIo-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cDbSeV_pIObZ3GQgrRIo-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cDbSeV_pIObZ3GQgrRIo-1" value="Users" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="133" y="230" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cDbSeV_pIObZ3GQgrRIo-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cDbSeV_pIObZ3GQgrRIo-3" target="cDbSeV_pIObZ3GQgrRIo-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cDbSeV_pIObZ3GQgrRIo-3" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Browser.svg;" vertex="1" parent="1">
+          <mxGeometry x="230" y="234" width="65" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="cDbSeV_pIObZ3GQgrRIo-6" value="DJango" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17A2FF;" vertex="1" parent="1">
+          <mxGeometry x="365" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cDbSeV_pIObZ3GQgrRIo-10" value="&lt;b&gt;PostgresSQL&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="554" y="220" width="86" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cDbSeV_pIObZ3GQgrRIo-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="cDbSeV_pIObZ3GQgrRIo-6" target="cDbSeV_pIObZ3GQgrRIo-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cDbSeV_pIObZ3GQgrRIo-13" value="&lt;b&gt;CRM Web Application Diagram&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="320" width="350" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
