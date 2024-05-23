@@ -115,7 +115,7 @@ urlpatterns = [
 ]
 ```
 
-#### 11. Create home page for webapp application
+#### 11. Create a request handler for home page
 
 The webapp application recieves requests from users via web browser and django webapp handles it and returns a html page back to web brower. the returned html pages are configured as html template under webapp folder of the webapp application.
 
@@ -143,3 +143,59 @@ urlpatterns = [
 ```
 
 Open browser with url: http://localhost:8000, the home page show up the in the browser.
+
+#### 12. Define template page structure
+
+base.html template page defines the crm page structure. this page is extended from specific pages which are created later.
+```html
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CRM Project</title>
+  </head>
+  <body>
+    <!-- Create NAV bar here -->
+    {% include "webapp/navbar.html" %}
+    <div class="container">
+        <br />
+        <h3>Notification message shows here</h3>
+
+        {% block content %}
+            <!-- Content of the page-->
+        {% endblock %}
+    </div>
+  </body>
+</html>
+```
+
+navbar.html template page
+```html
+<nav>
+    <h2>Navigation menu shows here</h2>  
+</nav>
+```
+
+index.html template page
+```html
+{% extends "webapp/base.html" %} 
+
+{% block content %}
+    <body>
+        <div><h3>Content shows here</h3></div>
+    </body>
+{% endblock %}
+
+```
+Run and test to see the result
+
+#### 13. Adding style sheet and jquery to the template
+
+#### 14. Create layout for the navbar.html template
+
+#### 15. Create layout for the Notification message
+
+#### 16. Create layout for the index.html template
