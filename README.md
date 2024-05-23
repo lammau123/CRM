@@ -192,10 +192,82 @@ index.html template page
 ```
 Run and test to see the result
 
-#### 13. Adding style sheet and jquery to the template
+#### 13. Adding style sheet and javascript to the base.html template file
+
+```html
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>CRM Project</title>
+        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/flatly/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        .....
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    </body>
+```
 
 #### 14. Create layout for the navbar.html template
+Replace the content of of navbar.html with the below code
 
+```html
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center">
+    <a class="navbar-brand main-heading" href="{% url 'home' %}">CRM Project</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+          {% if user.is_authenticated %}
+              <li class="nav-item">          
+                  <a class="nav-link" href="{% url '' %}">Dashboard &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
+              </li>
+              &nbsp;     &nbsp;     &nbsp; 
+              <li class="nav-item">      
+                  <a class="nav-link" href="{% url '' %}">Sign out &nbsp; <i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+              </li>
+          {% else %}
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url '' %}">Register</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url '' %}">Login</a>
+              </li>
+          {% endif %}
+      </ul>
+    </div>
+</nav>
+```
 #### 15. Create layout for the Notification message
-
+In the base.html template file replace the code 
+```html
+<h3>Notification message shows here</h3>
+```
+by
+```html
+<p id="message-timer" class="alert alert-success float-center text-center message-text"> 
+    <i class="fa fa-check" aria-hidden="true"> &nbsp; This is notification message </i>
+</p>
+```
 #### 16. Create layout for the index.html template
+Replace the content in the index.html template with the below code
+
+```html
+{% block content %}
+    <body>
+        <br>
+        <br>
+
+        <div class="text-center">
+            <h3>Simple CRM project demontration</h3>
+            <br>
+            <h5> Keep track of your records effectively!!</h5>
+            <hr>
+            <br>
+            <a class="btn btn-primary" href="{% url 'register' %}">Create Your Account </a>
+        </div>
+    </body>
+{% endblock %}
+```
