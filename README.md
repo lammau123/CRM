@@ -7,13 +7,13 @@ The above diagram depicts the CRM web application that is going to be built.
 Here are the technology stack used in the project:
 
 ## 2. Main features are supported in this web application
-- customer management
-- sales tracking
-- task management
-- reporting
+- Customer management
+- Sales tracking
+- Task management
+- Reporting
 
 ## 3. Technology stack in the application
-- DJango framework version 5.0.6
+- dJango framework version 5.0.6
 - django-bootstrap5
 - django-crispy-forms
 - azure ad authentication and authorization
@@ -28,11 +28,11 @@ Version: 3.12.3
 #### Setup project
 
 From commandline 
-#### 1. Create a development folder
+#### 1. Create a CRM folder
 
 ```cmd
-mkdir develop
-cd develop
+mkdir CRM
+cd CRM
 ```
 
 #### 2. Create virtual environment
@@ -50,13 +50,15 @@ venv\Scripts\activate
 #### 4. Create text file requirement.txt and add the below required package
 
 ```cmd
-django=5.0.6
+django==5.0.6
+django-bootstrap5
+django-crispy-forms
 ```
 
 #### 5. Intall required packages
 
 ```cmd
-pip install -r requirment
+pip install -r requirment.txt
 ```
 
 #### 6. Create django project
@@ -69,6 +71,7 @@ django-admin startproject crm
 
 ```cmd
 cd crm
+python manage.py migrate
 python manage.py runserver
 ```
 
