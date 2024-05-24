@@ -6,6 +6,7 @@ Here are the technology stack used in the project:
 
 1. DJango framework version 5.0.6
 2. PostgresSQL database
+3. django-bootstrap5
 
 #### Install python
 
@@ -210,6 +211,16 @@ Run and test to see the result
 ```
 
 #### 14. Create layout for the navbar.html template
+
+Update the settings.py at 
+
+```python
+INSTALLED_APPS = [
+    ...
+    'crispy_bootstrap5',
+]
+```
+
 Replace the content of of navbar.html with the below code
 
 ```html
@@ -266,8 +277,120 @@ Replace the content in the index.html template with the below code
             <h5> Keep track of your records effectively!!</h5>
             <hr>
             <br>
-            <a class="btn btn-primary" href="{% url 'register' %}">Create Your Account </a>
+            <a class="btn btn-primary" href="">Create Your Account &nbsp; <i class="fa fa-check" aria-hidden="true"></i> </a>
         </div>
     </body>
 {% endblock %}
 ```
+
+#### 17. Create new customer template page
+Below list outlines all things that are going to be done for the new customer creation process of the crm
+###### 1. Update the settings.py at INSTALLED_APPS and add 'INSTALLED_APPS'
+###### 2. update the models.py and new CustomerRecord class, The class is also a record persisted in crm database
+###### 3. Add new customer-list.html template under the templates folder to show all customers records
+###### 4. Update the views.py and add a new request handler for the list customer
+###### 5. Update the urls.py under the webapp folder to add an entry for the list customer request
+###### 6. Create forms.py file under webapp folder and create a CreateCustomerForm class and this class is used in the create-customer.html template
+###### 7. Add new create-customer.html template under the templates folder
+###### 8. Update the views.py and add a new request handler for the create new customer
+###### 9. Update the urls.py under the webapp folder to add an entry for the new customer request
+
+Open the settings.py and add the below code
+
+```python
+INSTALLED_APPS = [
+    ...
+    'crispy_forms',
+]
+```
+
+Update the models.py and new CustomerRecord class
+
+```python
+class CustomerRecord(models.Model):
+    creation_date = models.DateTimeField(auto_now_add=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.CharField(max_length=255)
+    phone = models.CharField(max_length=20)
+    address = models.CharField(max_length=300)
+    city = models.CharField(max_length=255)
+    province = models.CharField(max_length=200)
+    country = models.CharField(max_length=125)
+    
+    def __str__(self):
+        return self.first_name + " " + self.last_name
+```
+
+Add new customer-list.html template under the templates folder to show all customers records
+
+
+Update the views.py and add a new request handler for the list customer
+
+Update the urls.py under the webapp folder to add an entry for the list customer request
+
+Create forms.py file under webapp folder and create a CreateCustomerForm class and this class is used in the create-customer.html template
+
+```python
+from django import forms
+from .models import CustomerRecord
+
+class CreateCustomerForm(forms.ModelForm):
+    class Meta:
+        model = CustomerRecord
+        fields = ['first_name', 'last_name', 'email', 'phone', 'address', 'city', 'province', 'country']
+```
+
+Add new create-customer.html template under the templates folder
+
+```python
+{% extends 'webapp/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <body>
+        <div class="container bg-light shadow-md p-5 form-layout">
+            <h3> Create record </h3>
+            <h6> Start adding in the required details for your record. </h6><hr>
+            <br>
+            <form method="POST" autocomplete="off">
+                {% csrf_token %}
+                {{form.first_name|as_crispy_field}}<br>
+                {{form.last_name|as_crispy_field}}<br>
+                {{form.email|as_crispy_field}}<br>
+                {{form.phone|as_crispy_field}}<br>
+                {{form.address|as_crispy_field}}<br>
+                {{form.city|as_crispy_field}}<br>
+                {{form.province|as_crispy_field}}<br>
+                {{form.country|as_crispy_field}}<br>
+                <button type="submit" class="btn btn-primary"> 
+                    Create record &nbsp; <i class="fa fa-check" aria-hidden="true"></i>
+                </button>
+                &nbsp;
+                <a href="{% url 'dashboard' %}" class="btn btn-secondary"> 
+                    Return &nbsp; <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </a>
+            </form>
+        </div>
+    </body>
+{% endblock %}
+```
+
+Update the views.py and add a new request handler for the create new customer
+
+```python
+from .form import CreateCustomerForm
+
+def create_customer(request):
+    record = CreateCustomerForm()
+    
+    if request.method == 'POST':
+        record = CreateCustomerForm(request.POST)    
+        if record.is_valid():
+            record.save()   
+            messages.success(request, "Your new Customer was created!")
+            return redirect('dashboard')
+    context = {'form': record}
+    return render(request, 'create-customer.html', context=context)
+```
+
+Update the urls.py under the webapp folder to add an entry for the new customer request

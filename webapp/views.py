@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import auth
 from django.contrib.auth.decorators import login_required
-from .form import CreateUserForm, LoginForn, CreateRecordForm, UpdateRecordForm
+from .form import CreateUserForm, LoginForn, CreateCustomerForm, UpdateRecordForm
 from .models import Record
 import logging
 
@@ -59,17 +59,17 @@ def user_logout(request):
     return redirect("user-login")
 
 @login_required(login_url='user-login')
-def create_record(request):
-    record = CreateRecordForm()
+def create_customer(request):
+    record = CreateCustomerForm()
     
     if request.method == 'POST':
-        record = CreateRecordForm(request.POST)    
+        record = CreateCustomerForm(request.POST)    
         if record.is_valid():
             record.save()   
-            messages.success(request, "Your record was created!")
+            messages.success(request, "Your new Customer was created!")
             return redirect('dashboard')
     context = {'form': record}
-    return render(request, 'webapp/create-record.html', context=context)
+    return render(request, 'webapp/create-customer.html', context=context)
 
 @login_required(login_url='user-login')
 def singular_record(request, pk):
