@@ -285,15 +285,16 @@ Replace the content in the index.html template with the below code
 
 #### 17. Create new customer template page
 Below list outlines all things that are going to be done for the new customer creation process of the crm
-###### 1. Update the settings.py at INSTALLED_APPS and add 'INSTALLED_APPS'
-###### 2. update the models.py and new CustomerRecord class, The class is also a record persisted in crm database
-###### 3. Add new customer-list.html template under the templates folder to show all customers records
-###### 4. Update the views.py and add a new request handler for the list customer
-###### 5. Update the urls.py under the webapp folder to add an entry for the list customer request
-###### 6. Create forms.py file under webapp folder and create a CreateCustomerForm class and this class is used in the create-customer.html template
-###### 7. Add new create-customer.html template under the templates folder
-###### 8. Update the views.py and add a new request handler for the create new customer
-###### 9. Update the urls.py under the webapp folder to add an entry for the new customer request
+
+1. Update the settings.py at INSTALLED_APPS and add 'INSTALLED_APPS'
+2. update the models.py and new CustomerRecord class, The class is also a record persisted in crm database
+3. Add new customer-list.html template under the templates folder to show all customers records
+4. Update the views.py and add a new request handler for the list customer
+5. Update the urls.py under the webapp folder to add an entry for the list customer request
+6. Create forms.py file under webapp folder and create a CreateCustomerForm class and this class is used in the create-customer.html template
+7. Add new create-customer.html template under the templates folder
+8. Update the views.py and add a new request handler for the create new customer
+9. Update the urls.py under the webapp folder to add an entry for the new customer request
 
 Open the settings.py and add the below code
 
