@@ -80,10 +80,60 @@ python manage.py runserver
 Open browser with url http://localhost:8000/
 
 ## 5. Set Up the Project
-Create a new Django project and configure the necessary settings.
+Create a new Django app and configure the necessary settings. Django project includes one or more sub applications under django project.
+- register webapp to django project
+- Register webapp to django project
+- Create entry point for the webapp
+- Register the entry of the webapp to the django project
 
+#### 5.1 Create webapp under django project
+From command line creates under django project folder, run the below command
+
+```cmd
+python manage.py startapp webapp
+```
+
+#### 5.2 Register webapp to django project
+Open the settings.py and update the below code
+
+```python
+INSTALLED_APPS = [
+    ...,
+    
+    'webapp',
+]
+```
+#### 5.3 Create entry point for the webapp
+Create new urls.py under the webapp folder and add the below code
+
+```python
+from django.urls import path
+
+urlpatterns = [
+]
+```
+
+#### 5.4 Register the entry of the webapp to the django project
+Open then file urls.py under the folder crm and add the below code
+
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('webapp.urls'))
+]
+```
 ## 6. Create Models
 Define the data models for your CRM, such as Customer, Contact, Task, Opportunity, etc.
+#### 6.1 Customer model
+
+#### 6.2 Contact model
+
+#### 6.3 Task model
+
+#### 6.4 Opportunity model
 
 ## 7. Create Views and Templates
 Implement views to handle HTTP requests and templates to render HTML pages.
