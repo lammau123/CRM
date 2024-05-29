@@ -374,6 +374,9 @@ Run the server and open url http://localhost:8000/admin
     Content Area1 ...
 {% endblock %}
 ```
+
+Result
+![CRM diagram](/assets/images/home.png)
 ## 12. Set Up URL Routing
 Define URL patterns to map URLs to views.
 
