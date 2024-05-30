@@ -162,7 +162,7 @@ from dataclasses import dataclass
 from datetime import datetime
 
 @dataclass(frozen=True)
-class Customer:
+class CustomerDto:
     name: str
     email: str
     phone: str
@@ -413,9 +413,11 @@ Under webapp folder add new list-customer.html template and add the below code
 Under webapp folder open the views.py and add the below code
 
 ```python
+from .models import CustomerDto
+
 def list_customer(request):
     context = {'customers': [
-        Customer(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0))
+        CustomerDto(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0))
     ]}
     return render(request, 'list-customer.html', context=context)
 ```

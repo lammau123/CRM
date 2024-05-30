@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from datetime import datetime
 
 @dataclass(frozen=True)
-class Customer:
+class CustomerDto:
     name: str
     email: str
     phone: str
