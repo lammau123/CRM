@@ -446,7 +446,7 @@ urlpatterns = [
 ]
 ```
 Result
-![CRM diagram](/assets/images/home.png)
+![CRM diagram](/assets/images/list-customer.png)
 
 #### 13.2 Add customer page
 
