@@ -305,30 +305,25 @@ Run the server and open url http://localhost:8000/admin
   <li class="nav-item">
     <a href="#" class="nav-link align-middle px-0">
       <i class="fs-4 bi-house"></i>
-      <span class="ms-1 d-none d-sm-inline">Home</span>
+      <span class="ms-1 d-none d-sm-inline"><i class="fa fa-home" aria-hidden="true"></i> &nbsp; Home</span>
     </a>
   </li>
   <li class="nav-item">
     <a href="/dashboard" class="nav-link align-middle px-0">
-      <i class="fs-4 bi-house"></i>
-      <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+      <span class="ms-1 d-none d-sm-inline"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp;
+        Dashboard</span>
     </a>
   </li>
   <li class="nav-item">
-    <a href="/customer" class="nav-link align-middle px-0">
-      <i class="fs-4 bi-house"></i>
-      <span class="ms-1 d-none d-sm-inline">Customer</span>
-    </a>
+    <a href="/customer" class="nav-link align-middle px-0">Customer</a>
   </li>
   <li class="nav-item">
     <a href="#" class="nav-link align-middle px-0">
-      <i class="fs-4 bi-house"></i>
       <span class="ms-1 d-none d-sm-inline">Task</span>
     </a>
   </li>
   <li class="nav-item">
     <a href="/opportunity" class="nav-link align-middle px-0">
-      <i class="fs-4 bi-house"></i>
       <span class="ms-1 d-none d-sm-inline">Opportunity</span>
     </a>
   </li>
@@ -465,6 +460,8 @@ def create_customer(request):
     context = {"form": CustomerForm()}
     return render(request, "create-customer.html", context=context)
 ```
+Result
+![CRM diagram](/assets/images/create-customer.png)
 
 #### 13.3 Update customer page
 
