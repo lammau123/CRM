@@ -17,6 +17,7 @@ Here are the technology stack used in the project:
 - django-bootstrap5
 - django-crispy-forms
 - azure ad authentication and authorization
+- fontawesome
 
 ## 4. Preparing Development Environment
 
