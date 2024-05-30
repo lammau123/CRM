@@ -445,6 +445,8 @@ urlpatterns = [
     path('customer', views.list_customer, name='list-customer'),
 ]
 ```
+Result
+![CRM diagram](/assets/images/home.png)
 
 #### 13.2 Add customer page
 
