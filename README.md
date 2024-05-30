@@ -158,19 +158,17 @@ Open the models.py under the webapp folder and add the models to it.
 
 #### 6.1 Customer model
 ```python
-from django.db import models
-from django.contrib.auth.models import User
+from dataclasses import dataclass
+from datetime import datetime
 
-class Customer(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
-    phone = models.CharField(max_length=15, blank=True, null=True)
-    address = models.TextField(blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.name
+@dataclass(frozen=True)
+class Customer:
+    name: str
+    email: str
+    phone: str
+    address: str
+    created_at: datetime
+    updated_at: datetime
 ```
 
 #### 6.2 Contact model
@@ -379,6 +377,63 @@ Result
 ![CRM diagram](/assets/images/home.png)
 ## 12. Set Up URL Routing
 Define URL patterns to map URLs to views.
+
+## 13. Create CRUD customer function
+#### 13.1 List customer page
+Under webapp folder add new list-customer.html template and add the below code
+```html
+{% extends "base.html" %}
+
+{% block content %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
+            <th scope="col">Created Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for customer in customers %}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{customer.name}}</td>
+            <td>{{customer.address}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.created_at}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+```
+
+Under webapp folder open the views.py and add the below code
+
+```python
+def list_customer(request):
+    context = {'customers': [
+        Customer(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0))
+    ]}
+    return render(request, 'list-customer.html', context=context)
+```
+
+Under the webapp folder open urls.py and add the below code
+
+```python
+urlpatterns = [
+    ...
+    path('customer', views.list_customer, name='list-customer'),
+]
+```
+
+#### 13.2 Add customer page
+
+#### 13.3 Update customer page
+
+#### 13.4 Delete customer page
 
 ## 13. Add Forms
 Create forms for adding and editing CRM data.
