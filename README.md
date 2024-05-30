@@ -298,7 +298,10 @@ Run the server and open url http://localhost:8000/admin
 
 #### 10.2 Create menu-items.html template for the left menu items
 ```html
-<ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+<ul
+  class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+  id="menu"
+>
   <li class="nav-item">
     <a href="#" class="nav-link align-middle px-0">
       <i class="fs-4 bi-house"></i>
@@ -306,59 +309,28 @@ Run the server and open url http://localhost:8000/admin
     </a>
   </li>
   <li class="nav-item">
-    <a href="#" class="nav-link align-middle px-0">
+    <a href="/dashboard" class="nav-link align-middle px-0">
       <i class="fs-4 bi-house"></i>
       <span class="ms-1 d-none d-sm-inline">Dashboard</span>
     </a>
   </li>
-  <li>
-    <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-      <i class="fs-4 bi-speedometer2"></i>
+  <li class="nav-item">
+    <a href="/customer" class="nav-link align-middle px-0">
+      <i class="fs-4 bi-house"></i>
       <span class="ms-1 d-none d-sm-inline">Customer</span>
     </a>
-    <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-      <li class="w-100">
-        <a href="#" class="nav-link px-0">
-          <span class="d-none d-sm-inline">Create</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link px-0">
-          <span class="d-none d-sm-inline">Edit</span>
-        </a>
-      </li>
-    </ul>
   </li>
-  <li>
-    <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-      <i class="fs-4 bi-bootstrap"></i>
-      <span class="ms-1 d-none d-sm-inline">Task</span></a>
-    <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-      <li class="w-100">
-        <a href="#" class="nav-link px-0">
-          <span class="d-none d-sm-inline">Create</span></a>
-      </li>
-      <li>
-        <a href="#" class="nav-link px-0">
-          <span class="d-none d-sm-inline">Edit</span></a>
-      </li>
-    </ul>
+  <li class="nav-item">
+    <a href="#" class="nav-link align-middle px-0">
+      <i class="fs-4 bi-house"></i>
+      <span class="ms-1 d-none d-sm-inline">Task</span>
+    </a>
   </li>
-  <li>
-    <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-      <i class="fs-4 bi-grid"></i>
+  <li class="nav-item">
+    <a href="/opportunity" class="nav-link align-middle px-0">
+      <i class="fs-4 bi-house"></i>
       <span class="ms-1 d-none d-sm-inline">Opportunity</span>
     </a>
-    <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-      <li class="w-100">
-        <a href="#" class="nav-link px-0">
-          <span class="d-none d-sm-inline">Create</span></a>
-      </li>
-      <li>
-        <a href="#" class="nav-link px-0">
-          <span class="d-none d-sm-inline">Edit</span></a>
-      </li>
-    </ul>
   </li>
 </ul>
 ```
@@ -449,6 +421,50 @@ Result
 ![CRM diagram](/assets/images/list-customer.png)
 
 #### 13.2 Add customer page
+- Install crispy-bootstrap5
+
+```txt
+```
+- Update settings.py
+
+```python
+```
+
+- Create CustomerForm class
+
+```python
+from django import forms
+
+class CustomerForm(forms.Form):
+    name = forms.CharField()
+    email = forms.EmailField()
+    phone = forms.CharField()
+    address = forms.CharField()
+    created_at = forms.DateField()
+    updated_at = forms.DateField()
+```
+
+- Add new create-customer.html page
+
+```html
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+{% endblock %}
+```
+
+- Add create customer request handler to views.py
+
+```python
+def create_customer(request):
+    context = {"form": CustomerForm()}
+    return render(request, "create-customer.html", context=context)
+```
 
 #### 13.3 Update customer page
 

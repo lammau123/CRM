@@ -20,4 +20,5 @@ from . import views
 urlpatterns = [
     path('', view=views.home, name='home'),
     path('customer', views.list_customer, name='list-customer'),
+    path('customer/add', views.create_customer, name='create-customer'),
 ]
