@@ -380,11 +380,23 @@ Define URL patterns to map URLs to views.
 
 ## 13. Create CRUD customer function
 #### 13.1 List customer page
+Under webapp folder add new font awesome css
+
+```html
+  <head>
+    ...
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    ...
+  </head>
+```
+
 Under webapp folder add new list-customer.html template and add the below code
+
 ```html
 {% extends "base.html" %}
 
 {% block content %}
+    <button type="button" class="btn btn-lg btn-primary" disabled><i class="fa fa-plus" aria-hidden="true"></i></button>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -417,7 +429,10 @@ from .models import CustomerDto
 
 def list_customer(request):
     context = {'customers': [
-        CustomerDto(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0))
+        CustomerDto(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
+        CustomerDto(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
+        CustomerDto(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
+        CustomerDto(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
     ]}
     return render(request, 'list-customer.html', context=context)
 ```
