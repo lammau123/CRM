@@ -1,32 +1,26 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="container">
+    <div class="container">
+    {% for message in messages %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+            <p id="message-timer" class="alert alert-success float-center text-center message-text"> 
+                <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
+            </p>
+        {% endif %}
+    {% endfor %}
     <form method="POST" autocomplete="off">
         {% csrf_token %}
+        {% for field in form %}
         <div class="row">
             <div class="col-xs-4">
-                {{form.name|as_crispy_field}}
+                {{field|as_crispy_field}}
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-2">
-                {{form.email|as_crispy_field}}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-4">
-                {{form.address|as_crispy_field}}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-4">
-                {{form.phone|as_crispy_field}}
-            </div>
-        </div>
+        {% endfor %}
         <div class="col-auto">
             <button type="submit" class="btn btn-primary mb-3">Create &nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>
-            <a href="customer/add" class="btn btn-primary mb-3" role="button" aria-disabled="true">
+            <a href="/customer" class="btn btn-primary mb-3" role="button" aria-disabled="true">
                 &nbsp;Cancel&nbsp;
             </a>
         </div>
