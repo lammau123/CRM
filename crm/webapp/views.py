@@ -2,7 +2,6 @@ from django.shortcuts import render
 from .models import CustomerDto
 from .forms import CustomerForm
 from datetime import datetime
-from .map import customer_form_to_dto
 from django.contrib import messages
 
 def home(request):
@@ -21,7 +20,7 @@ def create_customer(request):
     if request.method == 'POST':
         form = CustomerForm(request.POST)
         if form.is_valid():
-            dto = customer_form_to_dto(form)
+            dto = CustomerDto(**form.cleaned_data, created_at = datetime.now(), updated_at = datetime.now())
             # submit dto to the backend
             messages.success(request, "Customer added successfully.")
             form = CustomerForm()
