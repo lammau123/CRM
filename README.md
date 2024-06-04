@@ -18,6 +18,7 @@ Here are the technology stack used in the project:
 - django-crispy-forms
 - azure ad authentication and authorization
 - fontawesome
+- Azure authentication and Authorization
 
 ## 4. Preparing Development Environment
 
@@ -202,7 +203,38 @@ Update the menu-items.html
 </ul>
 ```
 
-## 6. Create list customer page
+## 6. Create Models
+Define the data models for your CRM, such as Customer, Contact, Task, Opportunity, etc.
+Open the models.py under the webapp folder and add the models to it.
+
+#### 6.1 Customer model
+```python
+from dataclasses import dataclass
+from datetime import datetime
+
+@dataclass(frozen=True)
+class CustomerDto:
+    name: str
+    email: str
+    phone: str
+    address: str
+    created_at: datetime
+    updated_at: datetime
+```
+
+#### 6.2 Contact model
+```python
+```
+
+#### 6.3 Task model
+```python
+```
+
+#### 6.4 Opportunity model
+```python
+```
+
+## 7. Create list customer page
 Under templates folder create new file list-customer.html template and add the below code:
 
 ```html
@@ -263,20 +295,7 @@ urlpatterns = [
 ]
 ```
 
-#### 5.4 Register the entry of the webapp to the django project
-Open then file urls.py under the folder crm and add the below code
-
-```python
-from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('webapp.urls'))
-]
-```
-
-#### 5.5 run and test the app
+#### 8 Run and test the app
 
 ```cmd
     python manage.py runserver
@@ -287,57 +306,7 @@ Open browser with url=http://localhost:8000/customer
 Result
 ![CRM diagram](/assets/images/list-customer.png)
 
-## 6. Create Models
-Define the data models for your CRM, such as Customer, Contact, Task, Opportunity, etc.
-Open the models.py under the webapp folder and add the models to it.
-
-#### 6.1 Customer model
-```python
-from dataclasses import dataclass
-from datetime import datetime
-
-@dataclass(frozen=True)
-class CustomerDto:
-    name: str
-    email: str
-    phone: str
-    address: str
-    created_at: datetime
-    updated_at: datetime
-```
-
-#### 6.2 Contact model
-```python
-```
-
-#### 6.3 Task model
-```python
-```
-
-#### 6.4 Opportunity model
-```python
-```
-
-## 8. Create admin user
-First create a user who can login to the admin site. Run the following command
-
-```cmd
-python manage.py createsuperuser
-```
-
-## 9. Explore the free admin functionality
-Run the server and open url http://localhost:8000/admin
-
-#### 13.2 Add customer page
-- Install crispy-bootstrap5
-
-```txt
-```
-- Update settings.py
-
-```python
-```
-
+#### 13.2 Create create customer pageS
 - Create CustomerForm class
 
 ```python
@@ -348,21 +317,40 @@ class CustomerForm(forms.Form):
     email = forms.EmailField()
     phone = forms.CharField()
     address = forms.CharField()
-    created_at = forms.DateField()
-    updated_at = forms.DateField()
 ```
 
 - Add new create-customer.html page
 
 ```html
 {% extends "base.html" %}
-
+{% load crispy_forms_tags %}
 {% block content %}
-    <form method="post">
+    <div class="container">
+    {% for message in messages %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+            <p id="message-timer" class="alert alert-success float-center text-center message-text"> 
+                <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
+            </p>
+        {% endif %}
+    {% endfor %}
+    <form method="POST" autocomplete="off">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Save">
+        {% for field in form %}
+        <div class="row">
+            <div class="col-xs-4">
+                {{field|as_crispy_field}}
+            </div>
+        </div>
+        {% endfor %}
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Create &nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>
+            <a href="/customer" class="btn btn-primary mb-3" role="button" aria-disabled="true">
+                &nbsp;Cancel&nbsp;
+            </a>
+        </div>
+        
     </form>
+</div>
 {% endblock %}
 ```
 
@@ -370,23 +358,26 @@ class CustomerForm(forms.Form):
 
 ```python
 def create_customer(request):
-    context = {"form": CustomerForm()}
-    return render(request, "create-customer.html", context=context)
+    if request.method == 'POST':
+        form = CustomerForm(request.POST)
+        if form.is_valid():
+            dto = CustomerDto(**form.cleaned_data, created_at = datetime.now(), updated_at = datetime.now())
+            # submit dto to the backend
+            messages.success(request, "Customer added successfully.")
+            form = CustomerForm()
+    else:
+        form = CustomerForm()
+        
+    return render(request, "create-customer.html", context={'form': form})
 ```
+
 Result
 ![CRM diagram](/assets/images/create-customer.png)
 
-#### 13.3 Update customer page
-
-#### 13.4 Delete customer page
-
-## 13. Add Forms
-Create forms for adding and editing CRM data.
-
-## 14. Implement Authentication and Authorization
+## 8. Implement Authentication and Authorization
 : Use Django's built-in authentication system to manage user accounts and permissions.
-## 15. Add Additional Features
+## 9. Add Additional Features
 Implement additional features like reporting, dashboards, and integrations with other services.
 
-## 16. Test and Deploy
+## 10. Test and Deploy
 Thoroughly test the application and deploy it to a production server.
