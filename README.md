@@ -371,6 +371,16 @@ def create_customer(request):
     return render(request, "create-customer.html", context={'form': form})
 ```
 
+- When Customer is added successfully, then a message "Customer added successfully." shows up at the top of created customer form. To hide this message after showing for some seconds. Open app.js page and add the below code:
+
+```javascript
+function hideMessage(){
+    document.getElementById("message-timer").style.display = 'none';
+}
+
+setTimeout(hideMessage, 5000);
+```
+
 Result
 ![CRM diagram](/assets/images/create-customer.png)
 
