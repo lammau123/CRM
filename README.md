@@ -207,41 +207,62 @@ Update the menu-items.html
 Define the data models for your CRM, such as Customer, Contact, Task, Opportunity, etc.
 Open the models.py under the webapp folder and add the models to it.
 
-#### 6.1 Customer model
+#### 6.1 Contact model
 ```python
 from dataclasses import dataclass
 from datetime import datetime
 
 @dataclass(frozen=True)
-class CustomerDto:
-    name: str
+class ContactDto:
+    id: int
+    last_name: str
+    first_name: str
     email: str
     phone: str
-    address: str
+    company: str
     created_at: datetime
     updated_at: datetime
+
+    def __str__(self):
+        return '{} {}'.format(self.first_name, self.last_name)
+    
+    def toDict(self):
+        return {"last_name": self.last_name, "first_name": self.first_name, "email": self.email, "phone": self.phone, "company": self.company}
 ```
 
-#### 6.2 Contact model
+#### 6.2 Task model
 ```python
 ```
 
-#### 6.3 Task model
+#### 6.3 Opportunity model
 ```python
 ```
 
-#### 6.4 Opportunity model
+## 7. Create entry point
+
+Create new urls.py under the webapp folder and add the below code
+
 ```python
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', view=views.home, name='home'),
+    path('contact', views.list_contact, name='list-contact'),
+    path('contact/<int:id>/edit', views.edit_contact, name='edit-contact'),
+    path('contact/add', views.add_contact, name='add-contact'),
+]
+
 ```
 
-## 7. Create list customer page
-Under templates folder create new file list-customer.html template and add the below code:
+## 8. Create list Contact page
+Under templates folder create new file list-contact.html template and add the below code:
 
 ```html
 {% extends "base.html" %}
 
 {% block content %}  
-    <a href="customer/add" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">
+    <a href="{% url 'add-contact' %}" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">
         <i class="fa fa-plus" aria-hidden="true"></i>
     </a>
     <table class="table table-striped">
@@ -249,21 +270,23 @@ Under templates folder create new file list-customer.html template and add the b
         <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
-            <th scope="col">Address</th>
+            <th scope="col">Company</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
             <th scope="col">Created Date</th>
+            <th scope="col">&nbsp;</th>
         </tr>
         </thead>
         <tbody>
-        {% for customer in customers %}
+        {% for contact in contacts %}
         <tr>
             <th scope="row">{{forloop.counter}}</th>
-            <td>{{customer.name}}</td>
-            <td>{{customer.address}}</td>
-            <td>{{customer.email}}</td>
-            <td>{{customer.phone}}</td>
-            <td>{{customer.created_at}}</td>
+            <td>{{contact.first_name}} {{contact.last_name}}</td>
+            <td>{{contact.company}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.phone}}</td>
+            <td>{{contact.created_at}}</td>
+            <td><a href="{% url 'edit-contact' contact.id %}"><i class="fa fa-edit"></i></a></td>
         </tr>
         {% endfor %}
         </tbody>
@@ -274,28 +297,22 @@ Under templates folder create new file list-customer.html template and add the b
 Open views.py and add the below code
 
 ```python
-def list_customer(request):
-    context = {'customers': [
-        CustomerDto(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
-        CustomerDto(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
-        CustomerDto(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
-        CustomerDto(name='test1', phone='123-123-123', address='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
-    ]}
-    return render(request, 'list-customer.html', context=context)
+list_of_contacts = [
+        ContactDto(id=1, first_name='first', last_name='last', phone='123-123-123', company='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
+        ContactDto(id=1, first_name='first', last_name='last', phone='123-123-123', company='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
+        ContactDto(id=1, first_name='first', last_name='last', phone='123-123-123', company='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
+        ContactDto(id=1, first_name='first', last_name='last', phone='123-123-123', company='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
+        ContactDto(id=1, first_name='first', last_name='last', phone='123-123-123', company='123 ooo st', email="asd@gmail.com", created_at=datetime(2024, 5, 21, 9, 0, 0), updated_at=datetime(2024, 5, 21, 9, 0, 0)),
+    ]
+
+contacts = {contact.id: contact for contact in list_of_contacts}
+
+def list_contact(request):
+    context = {'contacts': list_of_contacts}
+    return render(request, 'list-contact.html', context=context)
 ```
 
-Create new urls.py under the webapp folder and add the below code
-
-```python
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path('customer', views.list_customer, name='list-customer'),
-]
-```
-
-#### 8 Run and test the app
+#### 9 Run and test the app
 
 ```cmd
     python manage.py runserver
