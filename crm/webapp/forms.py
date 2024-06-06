@@ -1,7 +1,9 @@
 from django import forms
+from .models import ContactDto
 
-class CustomerForm(forms.Form):
-    name = forms.CharField(min_length=2)
+class ContactForm(forms.Form):
+    first_name = forms.CharField(label='Fist Name', min_length=2)
+    last_name = forms.CharField(label='Last Name', min_length=2)
     email = forms.EmailField()
     phone = forms.CharField()
-    address = forms.CharField()
+    company = forms.CharField()
