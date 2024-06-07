@@ -22,34 +22,34 @@ Here are the technology stack used in the project:
 
 ## 4. Preparing Development Environment
 
-#### 4.1 Install python
+#### 4.1. Install python
 
 Download link: https://www.python.org/downloads/
 Version: 3.12.3
 
-#### Setup project
+#### 4.2. Setup project
 
 From commandline 
-#### 1. Create a CRM folder
+#### 4.2.1. Create a CRM folder
 
 ```cmd
 mkdir CRM
 cd CRM
 ```
 
-#### 2. Create virtual environment
+#### 4.2.2. Create virtual environment
 
 ```cmd
 python -m venv venv
 ```
 
-#### 3. Activate virtual environment
+#### 4.2.3. Activate virtual environment
 
 ```cmd
 venv\Scripts\activate
 ```
 
-#### 4. Create text file requirement.txt and add the below required package
+#### 4.2.4. Create text file requirement.txt and add the below required package
 
 ```cmd
 django==5.0.6
@@ -58,19 +58,19 @@ django-crispy-forms
 crispy-bootstrap5
 ```
 
-#### 5. Intall required packages
+#### 4.2.5. Intall required packages
 
 ```cmd
 pip install -r requirment.txt
 ```
 
-#### 6. Create django project
+#### 4.2.6. Create django project
 
 ```cmd
 django-admin startproject crm
 ```
 
-#### 7. Run the server
+#### 4.2.7. Run the server
 
 ```cmd
 cd crm
@@ -78,14 +78,14 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-#### 8. Check the application
+#### 4.2.9. Check the application
 
 Open browser with url http://localhost:8000/
 
 ## 5. Set Up the Project
 Create a new Django app and configure the necessary settings. Django project includes one or more sub applications under django project.
 
-#### 5.1 Create webapp under django project
+#### 5.1. Create webapp under django project
 From command line creates under django project folder, run the below command
 
 ```cmd
@@ -94,7 +94,7 @@ python manage.py startapp webapp
 
 The command above will create a sub webapp under the crm project.
 
-#### 5.2 Register sub applications to django project
+#### 5.2. Register sub applications to django project
 Wired sub applications which are included in the django project in settings.py under crm folder:
 - webapp
 - crispy_forms
@@ -110,19 +110,19 @@ INSTALLED_APPS = [
 ]
 ```
 
-#### 5.3 Create basic template files for the webapp
+#### 5.3. Create basic template files for the webapp
 The web application includes base.html file, menu-items.html, and specific templates. 
 - base.html is the basic template of the project, all specific template would extends from this template and creates its main content in the content area. 
 - menu-items.html is included in the base.html and contains the menu function of the project.
 
 ![CRM diagram](/assets/images/base.png)
 
-#### 5.4 Add javascript and css 
+#### 5.4. Add javascript and css 
 Under the webapp folder create the below files structure. app.js contains customered javascript function and styles.css contains customize css style, but they are empty now.
 
 ![CRM diagram](/assets/images/static.png)
 
-#### 5.5 Add template files  
+#### 5.5. Add template files  
 Under the webapp folder create the below files structure.
 
 ![CRM diagram](/assets/images/templates.png)
