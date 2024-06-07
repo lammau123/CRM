@@ -10,21 +10,23 @@
         {% endif %}
     {% endfor %}
     <form method="POST" autocomplete="off">
-        {% csrf_token %}
-        {% for field in form %}
-        <div class="row">
-            <div class="col-xs-4">
-                {{field|as_crispy_field}}
+        <fieldset>
+            <legend>Edit Contact</legend>
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="row">
+                <div class="col-xs-4">
+                    {{field|as_crispy_field}}
+                </div>
             </div>
-        </div>
-        {% endfor %}
-        <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Update &nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>
-            <a href="{% url 'list-contact' %}" class="btn btn-primary mb-3" role="button" aria-disabled="true">
-                &nbsp;Cancel&nbsp;
-            </a>
-        </div>
-        
+            {% endfor %}
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Update &nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>
+                <a href="{% url 'list-contact' %}" class="btn btn-primary mb-3" role="button" aria-disabled="true">
+                    &nbsp;Cancel&nbsp;
+                </a>
+            </div>
+        </fieldset>
     </form>
 </div>
 {% endblock %}
