@@ -604,7 +604,7 @@ function hideMessage(){
 setTimeout(hideMessage, 5000);
 ```
 
-![CRM diagram](/assets/images/create-customer.png)
+![CRM diagram](/assets/images/edit-contact.png)
 
 ## 11. Implement Authentication and Authorization
 
