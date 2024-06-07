@@ -30,26 +30,26 @@ Version: 3.12.3
 #### 4.2. Setup project
 
 From commandline 
-#### 4.2.1. Create a CRM folder
+- Create a CRM folder
 
 ```cmd
 mkdir CRM
 cd CRM
 ```
 
-#### 4.2.2. Create virtual environment
+- Create virtual environment
 
 ```cmd
 python -m venv venv
 ```
 
-#### 4.2.3. Activate virtual environment
+- Activate virtual environment
 
 ```cmd
 venv\Scripts\activate
 ```
 
-#### 4.2.4. Create text file requirement.txt and add the below required package
+- Create text file requirement.txt and add the below required package
 
 ```cmd
 django==5.0.6
@@ -58,19 +58,19 @@ django-crispy-forms
 crispy-bootstrap5
 ```
 
-#### 4.2.5. Intall required packages
+- Intall required packages
 
 ```cmd
 pip install -r requirment.txt
 ```
 
-#### 4.2.6. Create django project
+- Create django project
 
 ```cmd
 django-admin startproject crm
 ```
 
-#### 4.2.7. Run the server
+- Run the server
 
 ```cmd
 cd crm
@@ -78,7 +78,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-#### 4.2.9. Check the application
+- Check the application
 
 Open browser with url http://localhost:8000/
 
@@ -127,7 +127,7 @@ Under the webapp folder create the below files structure.
 
 ![CRM diagram](/assets/images/templates.png)
 
-#### 5.6 Update templates content
+#### 5.6. Update templates content
 Update the base.html template files to include:
 - menu-items.html
 - styles.css
@@ -207,7 +207,7 @@ Update the menu-items.html
 Define the data models for your CRM, such as Customer, Contact, Task, Opportunity, etc.
 Open the models.py under the webapp folder and add the models to it.
 
-#### 6.1 Contact model
+#### 6.1. ContactDto model
 ```python
 from dataclasses import dataclass
 from datetime import datetime
@@ -227,20 +227,112 @@ class ContactDto:
         return '{} {}'.format(self.first_name, self.last_name)
     
     def toDict(self):
-        return {"last_name": self.last_name, "first_name": self.first_name, "email": self.email, "phone": self.phone, "company": self.company}
+        return {
+            "last_name": self.last_name, 
+            "first_name": self.first_name, 
+            "email": self.email, 
+            "phone": self.phone, 
+            "company": self.company
+        }
 ```
 
-#### 6.2 Task model
+#### 6.2. TaskTypeDto model
+
 ```python
+@dataclass(frozen=True)
+class TaskTypeDto:
+    name: str
+    
+    def __str__(self):
+        return self.name
+
+    def toDict(self):
+        return { "name": self.name }
 ```
 
-#### 6.3 Opportunity model
+#### 6.3. TaskStatusDto model
+
 ```python
+@dataclass(frozen=True)
+class TaskStatusDto:
+    name: str
+    
+    def __str__(self):
+        return self.name
+
+    def toDict(self):
+        return { "name": self.name }
 ```
 
-## 7. Create entry point
+#### 6.4. TaskDto model
 
-Create new urls.py under the webapp folder and add the below code
+```python
+@dataclass(frozen=True)
+class TaskDto:
+    title: str
+    opportunity_id: int
+    due_date: datetime
+    type_id: int
+    status_id: int
+
+    def __str__(self):
+        return self.title
+
+    def toDict(self):
+        return {
+            "title": self.title, 
+            "opportunity": self.opportunity_id, 
+            "due_date": self.due_date, 
+            "type_id": self.type_id, 
+            "status_id": self.status_id 
+        }
+```
+
+#### 6.5. OpportunityStatusDto model
+
+```python
+@dataclass(frozen=True)
+class OpportunityStatusDto:
+    name: str
+    
+    def __str__(self):
+        return self.name
+    
+    def toDict(self):
+        return { "name": self.name }
+```
+
+#### 6.6. OpportunityDto model
+
+```python
+@dataclass(frozen=True)
+class OpportunityDto:
+    name: str
+    amount: int
+    user_id: int
+    contact_id: int
+    status_id: int
+    open_date: datetime
+    close_date: datetime
+    
+    def __str__(self):
+        return self.name
+    
+    def toDict(self):
+        return {
+            "name": self.name, 
+            "amount": self.amount, 
+            "user_id": self.user_id, 
+            "contact_id": self.contact_id, 
+            "status_id": self.status_id, 
+            "open_date": self.open_date,
+            "close_date": self.close_date
+        }
+```
+
+## 7. Create entry points
+
+- Create new urls.py under the webapp folder and add the below code
 
 ```python
 from django.urls import path
@@ -255,12 +347,13 @@ urlpatterns = [
 
 ```
 
-## 8. Create list Contact page
-Under templates folder create new file list-contact.html template and add the below code:
+## 8. CRUD Contact
+#### 8.1. List Contact
+
+- Under templates folder create new file list-contact.html template and add the below code:
 
 ```html
 {% extends "base.html" %}
-
 {% block content %}  
     <a href="{% url 'add-contact' %}" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">
         <i class="fa fa-plus" aria-hidden="true"></i>
@@ -294,7 +387,7 @@ Under templates folder create new file list-contact.html template and add the be
 {% endblock %}
 ```
 
-Open views.py and add the below code
+- Open views.py and add the below code
 
 ```python
 list_of_contacts = [
@@ -312,7 +405,121 @@ def list_contact(request):
     return render(request, 'list-contact.html', context=context)
 ```
 
-#### 9 Run and test the app
+![CRM diagram](/assets/images/list-contact.png)
+
+#### 8.2. Create Contact
+- Under templates folder create new file add-contact.html template and add the below code:
+
+```html
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+    {% for message in messages %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+            <p id="message-timer" class="alert alert-success float-center text-center message-text"> 
+                <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
+            </p>
+        {% endif %}
+    {% endfor %}
+    <form method="POST" autocomplete="off">
+        <fieldset>
+            <legend>Add Contact</legend>
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="row">
+                <div class="col-xs-4">
+                    {{field|as_crispy_field}}
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Create &nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>
+                <a href="{% url 'list-contact' %}" class="btn btn-primary mb-3" role="button" aria-disabled="true">
+                    &nbsp;Cancel&nbsp;
+                </a>
+            </div>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}
+```
+
+- Open views.py and add the below code
+
+```python
+def add_contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # submit dto to the backend
+            messages.success(request, "Customer added successfully.")
+            form = ContactForm()
+    else:
+        form = ContactForm()
+        
+    return render(request, "add-contact.html", context={'form': form})
+```
+
+![CRM diagram](/assets/images/add-contact.png)
+
+#### 8.3. Edit Contact
+
+- Under templates folder create new file edit-contact.html template and add the below code:
+
+```html
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+    {% for message in messages %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+            <p id="message-timer" class="alert alert-success float-center text-center message-text"> 
+                <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
+            </p>
+        {% endif %}
+    {% endfor %}
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="row">
+            <div class="col-xs-4">
+                {{field|as_crispy_field}}
+            </div>
+        </div>
+        {% endfor %}
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Update &nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>
+            <a href="{% url 'list-contact' %}" class="btn btn-primary mb-3" role="button" aria-disabled="true">
+                &nbsp;Cancel&nbsp;
+            </a>
+        </div>
+        
+    </form>
+</div>
+{% endblock %}
+```
+
+- Open views.py and add the below code
+
+```python
+def edit_contact(request, id=0):
+    contact_dto = contacts[id]
+    
+    if request.method == 'POST':
+        form = ContactForm(data=contact_dto.toDict())
+        if form.is_valid():
+            # submit dto to the backend
+            messages.success(request, "Contact updated successfully.")
+    else:
+        form = ContactForm(initial=contact_dto.toDict())
+        
+    return render(request, "edit-contact.html", context={"form": form})
+```
+
+![CRM diagram](/assets/images/edit-contact.png)
+
+#### 9. Run and test the app
 
 ```cmd
     python manage.py runserver
@@ -320,10 +527,9 @@ def list_contact(request):
 
 Open browser with url=http://localhost:8000/customer
 
-Result
 ![CRM diagram](/assets/images/list-customer.png)
 
-#### 13.2 Create create customer pageS
+#### 10. Create create customer pageS
 - Create CustomerForm class
 
 ```python
@@ -398,12 +604,11 @@ function hideMessage(){
 setTimeout(hideMessage, 5000);
 ```
 
-Result
 ![CRM diagram](/assets/images/create-customer.png)
 
-## 8. Implement Authentication and Authorization
-: Use Django's built-in authentication system to manage user accounts and permissions.
-## 9. Add Additional Features
+## 11. Implement Authentication and Authorization
+
+## 10. Add Additional Features
 Implement additional features like reporting, dashboards, and integrations with other services.
 
 ## 10. Test and Deploy

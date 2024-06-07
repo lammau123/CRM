@@ -39,8 +39,8 @@ def add_contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            #dto = CustomerDto(**form.cleaned_data, created_at = datetime.now(), updated_at = datetime.now())
             # submit dto to the backend
+            contact_dto = ContactDto(**form.cleaned_data, id = -1, created_at = datetime.now(), updated_at = datetime.now())
             messages.success(request, "Customer added successfully.")
             form = ContactForm()
     else:
