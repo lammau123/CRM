@@ -19,6 +19,7 @@ Here are the technology stack used in the project:
 - azure ad authentication and authorization
 - fontawesome
 - Azure authentication and Authorization
+- javascript/jquery
 
 ## 4. Preparing Development Environment
 

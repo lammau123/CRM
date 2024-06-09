@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'webapp.apps.WebappConfig',
     'crispy_forms',
     'crispy_bootstrap5',
+    "phonenumber_field",
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
