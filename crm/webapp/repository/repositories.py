@@ -75,7 +75,16 @@ list_of_opportunities = [
             closed_at=datetime(2024, 5, 21, 9, 0, 0)),
 ]
 
-list_of_tasks = []
+list_of_tasks = [
+]
+
+list_of_opportunity_status = [
+    OpportunityStatusDto(1, 'New'),
+    OpportunityStatusDto(2, 'Inprogress'),
+    OpportunityStatusDto(3, 'Delay'),
+    OpportunityStatusDto(4, 'Cancel'),
+    OpportunityStatusDto(5, 'Completed'),
+]
 
 async def get_contacts():
     return list_of_contacts
@@ -88,3 +97,14 @@ async def get_opportunities():
 
 async def get_tasks():
     return list_of_tasks
+
+async def get_opportunity_statuses():
+    return list_of_opportunity_status
+
+async def get_contact_by_id(id):
+    contact_by_id = { contact.id: contact for contact in await get_contacts() }
+    return contact_by_id[id]
+
+async def get_opportunity_by_id(id):
+    opportunity_by_id = { opportunity.id: opportunity for opportunity in await get_opportunities() }
+    return opportunity_by_id[id]

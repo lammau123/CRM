@@ -116,11 +116,11 @@ class OpportunityDto:
         return {
             "name": self.name, 
             "amount": self.amount, 
-            "user_id": self.user_id, 
-            "contact_id": self.contact_id, 
-            "status_id": self.status_id, 
-            "open_date": self.open_date,
-            "close_date": self.close_date
+            "user": self.user, 
+            "contact_id": self.contact, 
+            "status_id": self.status, 
+            "opened_at": self.opened_at,
+            "closed_at": self.closed_at
         }
 
 # https://github.com/radzenhq/radzen-examples/blob/master/CRMDemo/crm-database-schema.sql

@@ -1,5 +1,6 @@
 from django import forms
 from phonenumber_field.formfields import PhoneNumberField
+from .repository import repositories as repos
 
 class ContactForm(forms.Form):
     first_name = forms.CharField(label='Fist Name', min_length=2)
@@ -12,6 +13,6 @@ class ContactForm(forms.Form):
 class OpportunityForm(forms.Form):
     name = forms.CharField(label='Name', min_length=2)
     amount = forms.DecimalField()
-    user = forms.ChoiceField()
-    contact = forms.ChoiceField()
-    status = forms.ChoiceField()
+    user = forms.ChoiceField(choices=[])
+    contact = forms.ChoiceField(choices=[])
+    status = forms.ChoiceField(choices=[])
