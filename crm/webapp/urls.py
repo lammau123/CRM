@@ -22,4 +22,12 @@ urlpatterns = [
     path('contact', views.list_contact, name='list-contact'),
     path('contact/<int:id>/edit', views.edit_contact, name='edit-contact'),
     path('contact/add', views.add_contact, name='add-contact'),
+    
+    path('task', views.list_task, name='list-task'),
+    path('task/<int:id>/edit', views.edit_contact, name='edit-task'),
+    path('task/add', views.add_contact, name='add-task'),
+    
+    path('opportunity', views.list_opportunity, name='list-opportunity'),
+    path('opportunity/<int:id>/edit', views.edit_opportunity, name='edit-opportunity'),
+    path('opportunity/add', views.add_opportunity, name='add-opportunity'),
 ]

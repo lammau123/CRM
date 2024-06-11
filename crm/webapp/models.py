@@ -2,6 +2,7 @@
 
 from dataclasses import dataclass
 from datetime import datetime
+from django.contrib.auth.models import User
 
 @dataclass(frozen=True)
 class ContactDto:
@@ -25,9 +26,17 @@ class ContactDto:
             "phone": self.phone, 
             "company": self.company
         }
+        
+    @staticmethod
+    def get_header_names():
+        return ['Name', 'Company', 'Email', 'Phone', 'Created Date', 'Modified Date']
+    
+    @staticmethod
+    def get_field_names():
+        return ['first_name last_name', 'company', 'email', 'phone', 'created_at', 'updated_at']
 
 @dataclass(frozen=True)
-class TaskType:
+class TaskTypeDto:
     name: str
     
     def __str__(self):
@@ -37,9 +46,9 @@ class TaskType:
         return { "name": self.name }
 
 @dataclass(frozen=True)
-class TaskStatus:
+class TaskStatusDto:
     name: str
-    
+       
     def __str__(self):
         return self.name
 
@@ -47,7 +56,7 @@ class TaskStatus:
         return { "name": self.name }
 
 @dataclass(frozen=True)
-class Task:
+class TaskDto:
     title: str
     opportunity_id: int
     due_date: datetime
@@ -67,7 +76,8 @@ class Task:
         }
 
 @dataclass(frozen=True)
-class OpportunityStatus:
+class OpportunityStatusDto:
+    id: int
     name: str
     
     def __str__(self):
@@ -76,19 +86,31 @@ class OpportunityStatus:
     def toDict(self):
         return { "name": self.name }
 
-    
+class UserDto(User):
+    def __str__(self):
+        return self.username
+        
 @dataclass(frozen=True)
-class Opportunity:
+class OpportunityDto:
+    id: int
     name: str
     amount: int
-    user_id: int
-    contact_id: int
-    status_id: int
-    open_date: datetime
-    close_date: datetime
+    user: UserDto
+    contact: ContactDto
+    status: OpportunityStatusDto
+    opened_at: datetime
+    closed_at: datetime
     
     def __str__(self):
         return self.name
+    
+    @staticmethod
+    def get_header_names():
+        return ['Name', 'Amount', 'User', 'Contact', 'Status', 'Opened Date', 'Closed Date']
+    
+    @staticmethod
+    def get_field_names():
+        return ['name', 'amount', 'user', 'contact', 'status', 'opened_at', 'closed_at']
     
     def toDict(self):
         return {

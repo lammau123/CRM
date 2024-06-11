@@ -1,27 +1,27 @@
 {% extends "base.html" %}
 {% load name %}
 {% block content %}  
-    <a href="{% url 'add-contact' %}" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">
+    <a href="{% url 'add-opportunity' %}" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">
         <i class="fa fa-plus" aria-hidden="true"></i>
     </a>
     <table class="table table-striped">
         <thead>
         <tr>
             <th scope="col">#</th>
-            {% for header_name in header_names %}
-            <th scope="col">{{ header_name }}</th>
+            {% for name in header_names %}
+            <th scope="col">{{ name }}</th>
             {% endfor %}
             <th scope="col">&nbsp;</th>
         </tr>
         </thead>
         <tbody>
-        {% for contact in contacts %}
+        {% for opportunity in opportunities %}
         <tr>
             <th scope="row">{{forloop.counter}}</th>
             {% for name in field_names %}
-            <td>{{ contact|get_attr:name }}</td>
+            <td>{{ opportunity|get_attr:name }}</td>
             {% endfor %}
-            <td><a href="{% url 'edit-contact' contact.id %}"><i class="fa fa-edit"></i></a></td>
+            <td><a href="{% url 'edit-opportunity' opportunity.id %}"><i class="fa fa-edit"></i></a></td>
         </tr>
         {% endfor %}
         </tbody>

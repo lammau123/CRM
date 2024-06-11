@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+    {% for message in messages %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+            <p id="message-timer" class="alert alert-success float-center text-center message-text"> 
+                <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
+            </p>
+        {% endif %}
+    {% endfor %}
+    <form method="POST" autocomplete="off">
+        <fieldset>
+            <legend>Add Opportunity</legend>
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="row">
+                <div class="col-xs-4">
+                    {{field|as_crispy_field}}
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Create &nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>
+                <a href="{% url 'list-opportunity' %}" class="btn btn-primary mb-3" role="button" aria-disabled="true">
+                    &nbsp;Cancel&nbsp;
+                </a>
+            </div>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

@@ -7,3 +7,11 @@ class ContactForm(forms.Form):
     email= forms.CharField(max_length=100, widget= forms.EmailInput(attrs={'placeholder':'example@email.com'}))
     phone = PhoneNumberField(region="CA", widget=forms.TextInput(attrs={'placeholder': '(506) 234-5678'}), label="Phone Number", required=True)
     company = forms.CharField()
+    
+    
+class OpportunityForm(forms.Form):
+    name = forms.CharField(label='Name', min_length=2)
+    amount = forms.DecimalField()
+    user = forms.ChoiceField()
+    contact = forms.ChoiceField()
+    status = forms.ChoiceField()

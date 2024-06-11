@@ -518,9 +518,7 @@ def edit_contact(request, id=0):
     return render(request, "edit-contact.html", context={"form": form})
 ```
 
-![CRM diagram](/assets/images/edit-contact.png)
-
-#### 9. Run and test the app
+#### 8.4. Run and test the app
 
 ```cmd
     python manage.py runserver
@@ -528,74 +526,10 @@ def edit_contact(request, id=0):
 
 Open browser with url=http://localhost:8000/customer
 
-![CRM diagram](/assets/images/list-customer.png)
+![CRM diagram](/assets/images/edit-contact.png)
 
-#### 10. Create create customer pageS
-- Create CustomerForm class
 
-```python
-from django import forms
-
-class CustomerForm(forms.Form):
-    name = forms.CharField()
-    email = forms.EmailField()
-    phone = forms.CharField()
-    address = forms.CharField()
-```
-
-- Add new create-customer.html page
-
-```html
-{% extends "base.html" %}
-{% load crispy_forms_tags %}
-{% block content %}
-    <div class="container">
-    {% for message in messages %}
-        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
-            <p id="message-timer" class="alert alert-success float-center text-center message-text"> 
-                <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
-            </p>
-        {% endif %}
-    {% endfor %}
-    <form method="POST" autocomplete="off">
-        {% csrf_token %}
-        {% for field in form %}
-        <div class="row">
-            <div class="col-xs-4">
-                {{field|as_crispy_field}}
-            </div>
-        </div>
-        {% endfor %}
-        <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Create &nbsp;<i class="fa fa-check" aria-hidden="true"></i></button>
-            <a href="/customer" class="btn btn-primary mb-3" role="button" aria-disabled="true">
-                &nbsp;Cancel&nbsp;
-            </a>
-        </div>
-        
-    </form>
-</div>
-{% endblock %}
-```
-
-- Add create customer request handler to views.py
-
-```python
-def create_customer(request):
-    if request.method == 'POST':
-        form = CustomerForm(request.POST)
-        if form.is_valid():
-            dto = CustomerDto(**form.cleaned_data, created_at = datetime.now(), updated_at = datetime.now())
-            # submit dto to the backend
-            messages.success(request, "Customer added successfully.")
-            form = CustomerForm()
-    else:
-        form = CustomerForm()
-        
-    return render(request, "create-customer.html", context={'form': form})
-```
-
-- When Customer is added successfully, then a message "Customer added successfully." shows up at the top of created customer form. To hide this message after showing for some seconds. Open app.js page and add the below code:
+- When Contact is added successfully, then a message "Contact added successfully." shows up at the top of created customer form. To hide this message after showing for some seconds. Open app.js page and add the below code:
 
 ```javascript
 function hideMessage(){
@@ -607,10 +541,10 @@ setTimeout(hideMessage, 5000);
 
 ![CRM diagram](/assets/images/edit-contact.png)
 
-## 11. Implement Authentication and Authorization
+## 9. Implement Authentication and Authorization
 
 ## 10. Add Additional Features
 Implement additional features like reporting, dashboards, and integrations with other services.
 
-## 10. Test and Deploy
+## 11. Test and Deploy
 Thoroughly test the application and deploy it to a production server.
