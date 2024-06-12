@@ -13,6 +13,6 @@ class ContactForm(forms.Form):
 class OpportunityForm(forms.Form):
     name = forms.CharField(label='Name', min_length=2)
     amount = forms.DecimalField()
-    user = forms.ChoiceField(choices=[])
-    contact = forms.ChoiceField(choices=[])
-    status = forms.ChoiceField(choices=[])
+    user = forms.ChoiceField()
+    contact = forms.ChoiceField()
+    status = forms.ChoiceField()

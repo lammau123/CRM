@@ -18,7 +18,18 @@ class ContactDto:
     def __str__(self):
         return '{} {}'.format(self.first_name, self.last_name)
     
-    def toDict(self):
+    def update(self, form):
+        data = self.to_dict()
+        data['created_at'] = self.created_at
+        data['updated_at'] = datetime.now()
+        data['id'] = self.id
+        
+        for field in form.changed_data:
+            data[field] = form.cleaned_data[field]
+            
+        return ContactDto(**data)
+        
+    def to_dict(self):
         return {
             "last_name": self.last_name, 
             "first_name": self.first_name, 
@@ -112,15 +123,24 @@ class OpportunityDto:
     def get_field_names():
         return ['name', 'amount', 'user', 'contact', 'status', 'opened_at', 'closed_at']
     
-    def toDict(self):
+    def update(self, form):
+        data = self.to_dict()
+        data['opened_at'] = self.opened_at
+        data['closed_at'] = self.closed_at
+        data['id'] = self.id
+        
+        for field in form.changed_data:
+            data[field] = form.cleaned_data[field]
+            
+        return OpportunityDto(**data)
+    
+    def to_dict(self):
         return {
             "name": self.name, 
             "amount": self.amount, 
-            "user": self.user, 
-            "contact_id": self.contact, 
-            "status_id": self.status, 
-            "opened_at": self.opened_at,
-            "closed_at": self.closed_at
+            "user": self.user.id, 
+            "contact": self.contact.id, 
+            "status": self.status.id
         }
 
 # https://github.com/radzenhq/radzen-examples/blob/master/CRMDemo/crm-database-schema.sql
