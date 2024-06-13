@@ -5,7 +5,7 @@ from datetime import datetime
 from django.contrib import messages
 from .repository import repositories as repos
 import logging
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('django')
 
 async def home(request):
     return render(request, 'home.html', {})
@@ -78,16 +78,11 @@ async def list_opportunity(request):
 
 async def add_opportunity(request):
     logger.info('Starting add opportunity.')
-    statuses = (*[(-1, '----select----')], *[(status.id, status.name) for status in await repos.get_opportunity_statuses()])
-    users = (*[(-1, '----select----')], *[(user.id, user.username) for user in await repos.get_users()])
-    contacts = (*[(-1, '----select----')], *[(contact.id, " ".join([contact.first_name, contact.last_name])) for contact in await repos.get_contacts()])
     intial_value = {'status': -1, 'user': -1, 'contact': -1}
     
     if request.method == 'POST':
         form = OpportunityForm(request.POST, initial=intial_value)
-        form.fields['status'].choices = statuses
-        form.fields['user'].choices = users
-        form.fields['contact'].choices = contacts
+        await form.load()
         
         if form.is_valid():
             # submit dto to the backend
@@ -95,33 +90,25 @@ async def add_opportunity(request):
             contact_dto = OpportunityDto(**form.cleaned_data, id = -1, opened_at = datetime.now(), closed_at = datetime.now())
             messages.success(request, "Opportunity was added successfully.")
             form = OpportunityForm(initial=intial_value)
-            form.fields['status'].choices = statuses
-            form.fields['user'].choices = users
-            form.fields['contact'].choices = contacts
+            await form.load()
         else:
             logger.error('Adding a new opportunity failed validation with errors: {}'.format(form.errors.as_text()))
     else:
         logger.info('Init a new opportunity form.')
         form = OpportunityForm(initial=intial_value)
-        form.fields['status'].choices = statuses
-        form.fields['user'].choices = users
-        form.fields['contact'].choices = contacts
+        await form.load()
         
     return render(request, "add-opportunity.html", context={'form': form})
 
 async def edit_opportunity(request, id=0):
     opportunity_dto = await repos.get_opportunity_by_id(id)
-    logger.info('Starting edit opportunity: {}'.format(opportunity_dto.name))
     
-    statuses = (*[(-1, '----select----')], *[(status.id, status.name) for status in await repos.get_opportunity_statuses()])
-    users = (*[(-1, '----select----')], *[(user.id, user.username) for user in await repos.get_users()])
-    contacts = (*[(-1, '----select----')], *[(contact.id, " ".join([contact.first_name, contact.last_name])) for contact in await repos.get_contacts()])
+    logger.info('Starting edit opportunity: {}'.format(opportunity_dto.name))
                 
     if request.method == 'POST':
         form = OpportunityForm(request.POST, initial=opportunity_dto.to_dict())
-        form.fields['status'].choices = statuses
-        form.fields['user'].choices = users
-        form.fields['contact'].choices = contacts
+        await form.load()
+        
         if form.is_valid():
             logger.info('Editing an opportunity passed validation.')
             # submit dto to the backend
@@ -132,8 +119,6 @@ async def edit_opportunity(request, id=0):
     else:
         logger.info('Init the opportunty form.')
         form = OpportunityForm(initial=opportunity_dto.to_dict())
-        form.fields['status'].choices = statuses
-        form.fields['user'].choices = users
-        form.fields['contact'].choices = contacts
+        await form.load()
         
     return render(request, "edit-opportunity.html", context={'form': form})

@@ -1,0 +1,18 @@
+INFO 2024-06-13 00:31:45,903 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 00:32:15,612 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 00:32:38,237 views Starting list opportunity.
+INFO 2024-06-13 00:32:38,253 basehttp "GET /opportunity HTTP/1.1" 200 5868
+INFO 2024-06-13 00:32:39,625 views Starting list contacts.
+INFO 2024-06-13 00:32:39,632 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-13 00:43:58,720 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 00:44:07,859 views Starting list contacts.
+INFO 2024-06-13 00:44:07,879 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-13 00:44:09,819 views Starting list opportunity.
+INFO 2024-06-13 00:44:09,826 basehttp "GET /opportunity HTTP/1.1" 200 5868
+INFO 2024-06-13 00:44:11,000 views Starting add opportunity.
+INFO 2024-06-13 00:44:11,002 views Init a new opportunity form.
+INFO 2024-06-13 00:44:11,194 basehttp "GET /opportunity/add HTTP/1.1" 200 7927
+INFO 2024-06-13 00:44:52,816 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-13 00:44:53,359 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 00:45:07,330 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-13 00:45:07,823 autoreload Watching for file changes with StatReloader

@@ -16,3 +16,8 @@ class OpportunityForm(forms.Form):
     user = forms.ChoiceField()
     contact = forms.ChoiceField()
     status = forms.ChoiceField()
+    
+    async def load(self):
+        self.fields['status'].choices = (*[(-1, '----select----')], *[(status.id, status.name) for status in await repos.get_opportunity_statuses()])
+        self.fields['user'].choices = (*[(-1, '----select----')], *[(user.id, user.username) for user in await repos.get_users()])
+        self.fields['contact'].choices = (*[(-1, '----select----')], *[(contact.id, " ".join([contact.first_name, contact.last_name])) for contact in await repos.get_contacts()])
