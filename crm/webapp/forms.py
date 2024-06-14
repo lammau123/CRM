@@ -9,6 +9,14 @@ class ContactForm(forms.Form):
     phone = PhoneNumberField(region="CA", widget=forms.TextInput(attrs={'placeholder': '(506) 234-5678'}), label="Phone Number", required=True)
     company = forms.CharField()
     
+    def to_dict(self):
+        data = {}
+        
+        for field in self.changed_data:
+            data[field] = self.cleaned_data[field]
+            
+        return data
+    
     
 class OpportunityForm(forms.Form):
     name = forms.CharField(label='Name', min_length=2)
@@ -21,3 +29,22 @@ class OpportunityForm(forms.Form):
         self.fields['status'].choices = (*[(-1, '----select----')], *[(status.id, status.name) for status in await repos.get_opportunity_statuses()])
         self.fields['user'].choices = (*[(-1, '----select----')], *[(user.id, user.username) for user in await repos.get_users()])
         self.fields['contact'].choices = (*[(-1, '----select----')], *[(contact.id, " ".join([contact.first_name, contact.last_name])) for contact in await repos.get_contacts()])
+        
+    async def to_dict(self):
+        data = {}
+        
+        for field in self.changed_data:
+            data[field] = self.cleaned_data[field]
+            
+        if 'user' in data:
+            data['user'] = (await repos.get_user_by_id(int(data['user']))).to_dict()
+            
+        if 'contact' in data:
+            data['contact'] = (await repos.get_contact_by_id(int(data['contact']))).to_dict()
+            
+        if 'status' in data:
+            data['status'] = (await repos.get_opportunity_status_by_id(int(data['status']))).to_dict()
+            
+        return data
+            
+        

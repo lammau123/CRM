@@ -16,3 +16,293 @@ INFO 2024-06-13 00:44:52,816 autoreload C:\Users\lamma\working\repositories\CRM\
 INFO 2024-06-13 00:44:53,359 autoreload Watching for file changes with StatReloader
 INFO 2024-06-13 00:45:07,330 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
 INFO 2024-06-13 00:45:07,823 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 15:02:16,754 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 15:02:41,755 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-13 15:02:43,919 views Starting list contacts.
+INFO 2024-06-13 15:02:43,972 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-13 15:02:46,466 views Starting edit contact: first last
+INFO 2024-06-13 15:02:46,467 views Init edit ContactForm: first last
+INFO 2024-06-13 15:02:46,581 basehttp "GET /contact/1/edit HTTP/1.1" 200 7278
+INFO 2024-06-13 15:02:49,171 views Starting edit contact: first last
+ERROR 2024-06-13 15:02:49,484 views Editing contact failed validation with error: * phone
+  * Enter a valid phone number (e.g. (506) 234-5678) or a number with an international call prefix.
+INFO 2024-06-13 15:02:49,497 basehttp "POST /contact/1/edit HTTP/1.1" 200 7495
+INFO 2024-06-13 15:03:08,290 views Starting edit contact: first last
+INFO 2024-06-13 15:03:08,301 views Editing contact pass validation
+INFO 2024-06-13 15:03:08,318 basehttp "POST /contact/1/edit HTTP/1.1" 200 7524
+INFO 2024-06-13 15:03:17,177 views Starting list contacts.
+INFO 2024-06-13 15:03:17,184 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-13 15:03:19,026 views Starting add contact.
+INFO 2024-06-13 15:03:19,027 views init a new ContactForm.
+INFO 2024-06-13 15:03:19,058 basehttp "GET /contact/add HTTP/1.1" 200 7189
+INFO 2024-06-13 15:03:40,503 views Starting add contact.
+INFO 2024-06-13 15:03:40,506 views adding new contact passed validation.
+INFO 2024-06-13 15:03:40,517 basehttp "POST /contact/add HTTP/1.1" 200 7430
+INFO 2024-06-13 15:04:56,673 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-13 15:04:57,370 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 15:07:17,965 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-13 15:07:18,604 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:20:41,999 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:20:55,505 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-13 23:21:00,393 views Starting list opportunity.
+INFO 2024-06-13 23:21:00,442 basehttp "GET /opportunity HTTP/1.1" 200 5868
+INFO 2024-06-13 23:21:04,142 views Starting add opportunity.
+INFO 2024-06-13 23:21:04,143 views Init a new opportunity form.
+INFO 2024-06-13 23:21:04,352 basehttp "GET /opportunity/add HTTP/1.1" 200 7927
+INFO 2024-06-13 23:21:42,446 views Starting add opportunity.
+INFO 2024-06-13 23:21:42,450 views Adding a new opportunity passed validation.
+INFO 2024-06-13 23:21:42,450 views <coroutine object OpportunityForm.to_dict at 0x000002F6502F6420>
+INFO 2024-06-13 23:21:42,486 basehttp "POST /opportunity/add HTTP/1.1" 200 8175
+INFO 2024-06-13 23:22:28,774 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-13 23:22:29,412 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:22:57,227 views Starting add opportunity.
+INFO 2024-06-13 23:22:57,230 views Adding a new opportunity passed validation.
+ERROR 2024-06-13 23:22:57,660 log Internal Server Error: /opportunity/add
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
+    logger.info(await form.to_dict())
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py", line 32, in to_dict
+    data['user'] = (await repos.get_user_by_id(data['user'])).to_dict()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_user_by_id() takes 0 positional arguments but 1 was given
+ERROR 2024-06-13 23:22:57,685 basehttp "POST /opportunity/add HTTP/1.1" 500 84115
+INFO 2024-06-13 23:24:10,215 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\repository\repositories.py changed, reloading.
+INFO 2024-06-13 23:24:10,842 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:24:34,787 views Starting add opportunity.
+INFO 2024-06-13 23:24:34,790 views Adding a new opportunity passed validation.
+ERROR 2024-06-13 23:24:34,910 log Internal Server Error: /opportunity/add
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
+    logger.info(await form.to_dict())
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py", line 32, in to_dict
+    data['user'] = (await repos.get_user_by_id(data['user'])).to_dict()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\repository\repositories.py", line 97, in get_user_by_id
+    return user_by_id[id]
+           ~~~~~~~~~~^^^^
+KeyError: '2'
+ERROR 2024-06-13 23:24:34,924 basehttp "POST /opportunity/add HTTP/1.1" 500 87626
+INFO 2024-06-13 23:29:25,597 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-13 23:29:26,545 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:29:52,148 views Starting add opportunity.
+INFO 2024-06-13 23:29:52,150 views Adding a new opportunity passed validation.
+ERROR 2024-06-13 23:29:52,265 log Internal Server Error: /opportunity/add
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
+    logger.info(await form.to_dict())
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py", line 32, in to_dict
+    data['user'] = (await repos.get_user_by_id(int(data['user']))).to_dict()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserDto' object has no attribute 'to_dict'
+ERROR 2024-06-13 23:29:52,280 basehttp "POST /opportunity/add HTTP/1.1" 500 84199
+INFO 2024-06-13 23:33:57,577 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-13 23:33:58,357 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:34:15,384 views Starting add opportunity.
+INFO 2024-06-13 23:34:15,387 views Adding a new opportunity passed validation.
+ERROR 2024-06-13 23:34:15,505 log Internal Server Error: /opportunity/add
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
+    logger.info(await form.to_dict())
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py", line 38, in to_dict
+    data['status'] = (await repos.get_opportunity_status_by_id(int(data['status']))).to_dict()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'OpportunityStatusDto' object has no attribute 'to_dict'. Did you mean: 'toDict'?
+ERROR 2024-06-13 23:34:15,517 basehttp "POST /opportunity/add HTTP/1.1" 500 84457
+INFO 2024-06-13 23:35:19,124 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-13 23:35:19,770 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:36:33,046 views Starting add opportunity.
+INFO 2024-06-13 23:36:33,049 views Adding a new opportunity passed validation.
+INFO 2024-06-13 23:36:33,050 views {'name': 'test', 'amount': Decimal('111'), 'user': {'id': 1, 'username': 'Test1'}, 'contact': {'last_name': 'last', 'first_name': 'first', 'email': 'asd@gmail.com', 'phone': '123-123-123', 'company': '123 ooo st', 'created_at': datetime.datetime(2024, 5, 21, 9, 0), 'updated_at': datetime.datetime(2024, 5, 21, 9, 0), 'id': 1}, 'status': {'id': 3, 'name': 'Delay'}}
+INFO 2024-06-13 23:36:33,128 basehttp "POST /opportunity/add HTTP/1.1" 200 8175
+INFO 2024-06-13 23:45:13,603 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:45:31,468 views Starting add opportunity.
+INFO 2024-06-13 23:45:31,471 views Adding a new opportunity passed validation.
+ERROR 2024-06-13 23:45:31,584 log Internal Server Error: /opportunity/add
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
+    opportunity_dto = OpportunityDto(await form.to_dict(), id = -1, opened_at = datetime.now(), closed_at = datetime.now())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: OpportunityDto.__init__() got multiple values for argument 'id'
+ERROR 2024-06-13 23:45:31,595 basehttp "POST /opportunity/add HTTP/1.1" 500 80036
+INFO 2024-06-13 23:46:22,313 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-13 23:46:22,932 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:46:40,542 views Starting add opportunity.
+INFO 2024-06-13 23:46:40,545 views Adding a new opportunity passed validation.
+ERROR 2024-06-13 23:46:40,675 log Internal Server Error: /opportunity/add
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
+    opportunity_dto = OpportunityDto(await form.to_dict(), opened_at = datetime.now(), closed_at = datetime.now())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: OpportunityDto.__init__() missing 5 required positional arguments: 'name', 'amount', 'user', 'contact', and 'status'
+ERROR 2024-06-13 23:46:40,687 basehttp "POST /opportunity/add HTTP/1.1" 500 80372
+INFO 2024-06-13 23:47:35,757 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-13 23:47:36,374 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:52:05,772 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-13 23:52:06,441 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:52:15,267 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-13 23:52:15,946 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:52:25,790 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-13 23:52:26,397 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:52:59,221 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-13 23:52:59,830 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:56:00,896 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:56:16,122 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-13 23:56:16,783 autoreload Watching for file changes with StatReloader
+INFO 2024-06-13 23:56:40,152 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-13 23:56:40,917 autoreload Watching for file changes with StatReloader
+INFO 2024-06-14 00:01:53,146 autoreload Watching for file changes with StatReloader
+INFO 2024-06-14 00:05:49,799 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-14 00:05:50,586 autoreload Watching for file changes with StatReloader
+INFO 2024-06-14 00:06:29,883 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-14 00:06:30,651 autoreload Watching for file changes with StatReloader
+INFO 2024-06-14 00:09:47,519 autoreload Watching for file changes with StatReloader
+INFO 2024-06-14 00:10:24,783 views Starting add opportunity.
+INFO 2024-06-14 00:10:24,785 views Adding a new opportunity passed validation.
+ERROR 2024-06-14 00:10:24,901 log Internal Server Error: /opportunity/add
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
+    opportunity_dto = OpportunityDto(**(await form.to_dict()), opened_at = datetime.now(), closed_at = datetime.now())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: OpportunityDto.__init__() missing 1 required positional argument: 'id'
+ERROR 2024-06-14 00:10:24,912 basehttp "POST /opportunity/add HTTP/1.1" 500 80043
+INFO 2024-06-14 00:11:39,772 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-14 00:11:40,587 autoreload Watching for file changes with StatReloader
+INFO 2024-06-14 00:13:19,006 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-14 00:13:19,752 autoreload Watching for file changes with StatReloader
+INFO 2024-06-14 00:13:38,396 views Starting add opportunity.
+INFO 2024-06-14 00:13:38,398 views Adding a new opportunity passed validation.
+INFO 2024-06-14 00:13:38,400 views {'name': 'sss', 'amount': Decimal('22'), 'user': 2, 'contact': 1, 'status': 4, 'opened_at': datetime.datetime(2024, 6, 14, 0, 13, 38, 399857), 'closed_at': datetime.datetime(2024, 6, 14, 0, 13, 38, 399857), 'id': -1}
+INFO 2024-06-14 00:13:38,474 basehttp "POST /opportunity/add HTTP/1.1" 200 8175
+INFO 2024-06-14 00:17:35,067 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
+INFO 2024-06-14 00:17:35,839 autoreload Watching for file changes with StatReloader
+INFO 2024-06-14 00:18:35,092 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-14 00:18:35,714 autoreload Watching for file changes with StatReloader
+INFO 2024-06-14 00:18:57,242 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-14 00:18:57,848 autoreload Watching for file changes with StatReloader
+INFO 2024-06-14 00:19:42,344 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-14 00:19:42,990 autoreload Watching for file changes with StatReloader
+INFO 2024-06-14 00:20:00,055 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-14 00:20:00,847 autoreload Watching for file changes with StatReloader

@@ -45,7 +45,7 @@ async def edit_contact(request, id=0):
         if form.is_valid():
             logger.info('Editing contact pass validation')
             # submit dto to the backend
-            contact_dto.update(form)
+            contact_dto.update(form.to_dict())
             messages.success(request, "Contact updated successfully.")
         else:
             logger.error('Editing contact failed validation with error: {}'.format(form.errors.as_text()))
@@ -87,7 +87,8 @@ async def add_opportunity(request):
         if form.is_valid():
             # submit dto to the backend
             logger.info('Adding a new opportunity passed validation.')
-            contact_dto = OpportunityDto(**form.cleaned_data, id = -1, opened_at = datetime.now(), closed_at = datetime.now())
+            opportunity_dto = OpportunityDto(**(await form.to_dict()), id=-1, opened_at = datetime.now(), closed_at = datetime.now())
+            logger.info(opportunity_dto.to_dict())
             messages.success(request, "Opportunity was added successfully.")
             form = OpportunityForm(initial=intial_value)
             await form.load()

@@ -32,45 +32,45 @@ list_of_opportunities = [
             id=1,
             name='Opportunity 1', 
             amount='12', 
-            user=list_of_users[0], 
-            contact=list_of_contacts[0], 
-            status=list_of_statuses[0], 
+            user=list_of_users[0].to_dict(), 
+            contact=list_of_contacts[0].to_dict(), 
+            status=list_of_statuses[0].to_dict(), 
             opened_at=datetime(2024, 5, 21, 9, 0, 0), 
             closed_at=datetime(2024, 5, 21, 9, 0, 0)),
         OpportunityDto(
             id=2,
             name='Opportunity 2', 
             amount='12', 
-            user=list_of_users[1], 
-            contact=list_of_contacts[1], 
-            status=list_of_statuses[1], 
+            user=list_of_users[1].to_dict(), 
+            contact=list_of_contacts[1].to_dict(), 
+            status=list_of_statuses[1].to_dict(), 
             opened_at=datetime(2024, 5, 21, 9, 0, 0), 
             closed_at=datetime(2024, 5, 21, 9, 0, 0)),
         OpportunityDto(
             id=3,
             name='Opportunity 3', 
             amount='12', 
-            user=list_of_users[2], 
-            contact=list_of_contacts[2], 
-            status=list_of_statuses[2], 
+            user=list_of_users[2].to_dict(), 
+            contact=list_of_contacts[2].to_dict(), 
+            status=list_of_statuses[2].to_dict(), 
             opened_at=datetime(2024, 5, 21, 9, 0, 0), 
             closed_at=datetime(2024, 5, 21, 9, 0, 0)),
         OpportunityDto(
             id=4,
             name='Opportunity 4', 
             amount='12', 
-            user=list_of_users[3], 
-            contact=list_of_contacts[3], 
-            status=list_of_statuses[3], 
+            user=list_of_users[3].to_dict(), 
+            contact=list_of_contacts[3].to_dict(), 
+            status=list_of_statuses[3].to_dict(), 
             opened_at=datetime(2024, 5, 21, 9, 0, 0), 
             closed_at=datetime(2024, 5, 21, 9, 0, 0)),
         OpportunityDto(
             id=5,
             name='Opportunity 5', 
             amount='12', 
-            user=list_of_users[4], 
-            contact=list_of_contacts[4], 
-            status=list_of_statuses[4], 
+            user=list_of_users[4].to_dict(), 
+            contact=list_of_contacts[4].to_dict(), 
+            status=list_of_statuses[4].to_dict(), 
             opened_at=datetime(2024, 5, 21, 9, 0, 0), 
             closed_at=datetime(2024, 5, 21, 9, 0, 0)),
 ]
@@ -92,6 +92,10 @@ async def get_contacts():
 async def get_users():
     return list_of_users
 
+async def get_user_by_id(id):
+    user_by_id = { user.id: user for user in await get_users() }
+    return user_by_id[id]
+
 async def get_opportunities():
     return list_of_opportunities
 
@@ -100,6 +104,10 @@ async def get_tasks():
 
 async def get_opportunity_statuses():
     return list_of_opportunity_status
+
+async def get_opportunity_status_by_id(id):
+    status_by_id = { status.id: status for status in await get_opportunity_statuses() }
+    return status_by_id[id]
 
 async def get_contact_by_id(id):
     contact_by_id = { contact.id: contact for contact in await get_contacts() }
