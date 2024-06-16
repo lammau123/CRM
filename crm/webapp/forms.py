@@ -1,6 +1,7 @@
 from django import forms
 from phonenumber_field.formfields import PhoneNumberField
 from .repository import repositories as repos
+from datetime import date
 
 class ContactForm(forms.Form):
     first_name = forms.CharField(label='Fist Name', min_length=2)
@@ -47,4 +48,25 @@ class OpportunityForm(forms.Form):
             
         return data
             
-        
+class TaskForm(forms.Form):
+    title = forms.CharField(min_length=2)
+    opportunity = forms.ChoiceField()
+    due_date = forms.DateTimeField(
+        widget=forms.DateInput(
+            attrs={
+                'class': 'form-control',
+                'type': 'date'
+            }
+        ),
+        initial=date.today
+    )
+    type = forms.ChoiceField()
+    status =forms.ChoiceField()
+    
+    async def load(self):
+        self.fields['opportunity'].choices = (*[(-1, '----select----')], *[(opportunity.id, opportunity.name) for opportunity in await repos.get_opportunities()])
+        self.fields['type'].choices = (*[(-1, '----select----')], *[(type.id, type.name) for type in await repos.get_task_types()])
+        self.fields['status'].choices = (*[(-1, '----select----')], *[(status.id, status.name) for status in await repos.get_task_statuses()])
+    
+    async def to_dict(self):
+        data = {}

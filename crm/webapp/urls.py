@@ -24,8 +24,8 @@ urlpatterns = [
     path('contact/add', views.add_contact, name='add-contact'),
     
     path('task', views.list_task, name='list-task'),
-    path('task/<int:id>/edit', views.edit_contact, name='edit-task'),
-    path('task/add', views.add_contact, name='add-task'),
+    path('task/<int:id>/edit', views.edit_task, name='edit-task'),
+    path('task/add', views.add_task, name='add-task'),
     
     path('opportunity', views.list_opportunity, name='list-opportunity'),
     path('opportunity/<int:id>/edit', views.edit_opportunity, name='edit-opportunity'),

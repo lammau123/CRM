@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import ContactDto, OpportunityDto
-from .forms import ContactForm, OpportunityForm
+from .models import ContactDto, OpportunityDto, TaskDto
+from .forms import ContactForm, OpportunityForm, TaskForm
 from datetime import datetime
 from django.contrib import messages
 from .repository import repositories as repos
@@ -55,18 +55,6 @@ async def edit_contact(request, id=0):
         
     return render(request, "edit-contact.html", context={"form": form})
     
-async def list_task(request):
-    context = { 'tasks': await repos.get_tasks() }
-    return render(request, 'list-task.html', context=context)
-
-async def add_task(request):
-    context = { 'tasks': await repos.get_tasks() }
-    return render(request, 'list-task.html', context=context)
-
-async def edit_task(request):
-    context = { 'tasks': await repos.get_tasks() }
-    return render(request, 'list-task.html', context=context)
-
 async def list_opportunity(request):
     logger.info('Starting list opportunity.')
     context = { 
@@ -107,7 +95,7 @@ async def edit_opportunity(request, id=0):
     logger.info('Starting edit opportunity: {}'.format(opportunity_dto.name))
                 
     if request.method == 'POST':
-        form = OpportunityForm(request.POST, initial=opportunity_dto.to_dict())
+        form = OpportunityForm(request.POST, initial=opportunity_dto.to_ref_dict())
         await form.load()
         
         if form.is_valid():
@@ -123,3 +111,41 @@ async def edit_opportunity(request, id=0):
         await form.load()
         
     return render(request, "edit-opportunity.html", context={'form': form})
+
+
+async def list_task(request):
+    logger.info('Starting list tasks.')
+    context = {
+        'tasks': await repos.get_tasks(),
+        'header_names': TaskDto.get_header_names(),
+        'field_names': TaskDto.get_field_names()
+    }
+    return render(request, 'list-task.html', context=context)
+
+async def add_task(request):
+    logger.info('Starting add task.')
+    intial_value = {}
+    
+    if request.method == 'POST':
+        form = TaskForm(request.POST, initial=intial_value)
+        await form.load()
+        
+        if form.is_valid():
+            # submit dto to the backend
+            logger.info('Adding a new task passed validation.')
+            task_dto = TaskDto(**(await form.to_dict()), id=-1, opened_at = datetime.now(), closed_at = datetime.now())
+            messages.success(request, "Task was added successfully.")
+            form = TaskForm(initial=intial_value)
+            await form.load()
+        else:
+            logger.error('Adding a new task failed validation with errors: {}'.format(form.errors.as_text()))
+    else:
+        logger.info('Init a new task form.')
+        form = TaskForm(initial=intial_value)
+        await form.load()
+        
+    return render(request, "add-task.html", context={'form': form})
+
+async def edit_task(request, id):
+    logger.info('Starting add task.')
+    intial_value = {}

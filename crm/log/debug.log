@@ -306,3 +306,316 @@ INFO 2024-06-14 00:19:42,344 autoreload C:\Users\lamma\working\repositories\CRM\
 INFO 2024-06-14 00:19:42,990 autoreload Watching for file changes with StatReloader
 INFO 2024-06-14 00:20:00,055 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
 INFO 2024-06-14 00:20:00,847 autoreload Watching for file changes with StatReloader
+INFO 2024-06-15 01:48:00,651 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-15 01:48:02,355 log Internal Server Error: /task
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 60, in list_task
+    return render(request, 'list-task.html', context=context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\defaulttags.py", line 861, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\defaulttags.py", line 861, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 693, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 603, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'get_attr'
+ERROR 2024-06-15 01:48:02,394 basehttp "GET /task HTTP/1.1" 500 241500
+INFO 2024-06-15 01:48:36,587 basehttp "GET /task HTTP/1.1" 200 3847
+INFO 2024-06-16 00:10:37,728 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:11:07,354 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-16 00:11:07,426 basehttp "GET /static/js/app.js HTTP/1.1" 304 0
+INFO 2024-06-16 00:11:18,154 views Starting list tasks.
+INFO 2024-06-16 00:11:18,178 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:17:11,483 views Starting list tasks.
+INFO 2024-06-16 00:17:11,486 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:19:07,641 views Starting list tasks.
+INFO 2024-06-16 00:19:07,646 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:19:09,206 views Starting list tasks.
+INFO 2024-06-16 00:19:09,207 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:19:10,006 views Starting list tasks.
+INFO 2024-06-16 00:19:10,010 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:19:32,660 views Starting list tasks.
+INFO 2024-06-16 00:19:32,664 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:19:34,090 views Starting list tasks.
+INFO 2024-06-16 00:19:34,093 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:19:34,791 views Starting list tasks.
+INFO 2024-06-16 00:19:34,793 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:19:34,992 views Starting list tasks.
+INFO 2024-06-16 00:19:34,997 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:19:35,274 views Starting list tasks.
+INFO 2024-06-16 00:19:35,278 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:19:35,493 views Starting list tasks.
+INFO 2024-06-16 00:19:35,497 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:19:46,992 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:19:53,551 views Starting list opportunity.
+INFO 2024-06-16 00:19:53,612 basehttp "GET /opportunity HTTP/1.1" 200 5868
+INFO 2024-06-16 00:19:54,757 views Starting list tasks.
+INFO 2024-06-16 00:19:54,762 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:20:28,846 views Starting list tasks.
+INFO 2024-06-16 00:20:28,848 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:22:53,500 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:22:58,292 views Starting list tasks.
+INFO 2024-06-16 00:22:58,293 views 5
+INFO 2024-06-16 00:22:58,310 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:23:10,119 views Starting list contacts.
+INFO 2024-06-16 00:23:10,122 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-16 00:24:15,011 views Starting list tasks.
+INFO 2024-06-16 00:24:15,012 views 5
+INFO 2024-06-16 00:24:15,014 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:25:51,143 views Starting list tasks.
+INFO 2024-06-16 00:25:51,143 views 5
+INFO 2024-06-16 00:25:51,146 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:25:54,948 views Starting list tasks.
+INFO 2024-06-16 00:25:54,949 views 5
+INFO 2024-06-16 00:25:54,952 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:26:15,762 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:26:16,637 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:27:28,780 views Starting list tasks.
+INFO 2024-06-16 00:27:28,794 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:29,659 views Starting list tasks.
+INFO 2024-06-16 00:27:29,661 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:44,026 views Starting list tasks.
+INFO 2024-06-16 00:27:44,032 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:46,120 views Starting list tasks.
+INFO 2024-06-16 00:27:46,122 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:46,796 views Starting list tasks.
+INFO 2024-06-16 00:27:46,797 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:47,181 views Starting list tasks.
+INFO 2024-06-16 00:27:47,185 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:47,650 views Starting list tasks.
+INFO 2024-06-16 00:27:47,654 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:48,723 views Starting list tasks.
+INFO 2024-06-16 00:27:48,726 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:49,119 views Starting list tasks.
+INFO 2024-06-16 00:27:49,125 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:49,463 views Starting list tasks.
+INFO 2024-06-16 00:27:49,467 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:49,822 views Starting list tasks.
+INFO 2024-06-16 00:27:49,825 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:50,467 views Starting list tasks.
+INFO 2024-06-16 00:27:50,470 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:27:50,777 views Starting list tasks.
+INFO 2024-06-16 00:27:50,782 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:28:49,968 views Starting list tasks.
+INFO 2024-06-16 00:28:49,977 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:28:50,746 views Starting list tasks.
+INFO 2024-06-16 00:28:50,751 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:28:50,909 views Starting list tasks.
+INFO 2024-06-16 00:28:50,913 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:28:51,109 views Starting list tasks.
+INFO 2024-06-16 00:28:51,112 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:28:51,323 views Starting list tasks.
+INFO 2024-06-16 00:28:51,326 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:28:52,499 views Starting list tasks.
+INFO 2024-06-16 00:28:52,502 basehttp "GET /task HTTP/1.1" 200 3324
+INFO 2024-06-16 00:30:12,213 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:30:12,860 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:30:17,627 views Starting list tasks.
+INFO 2024-06-16 00:30:17,643 basehttp "GET /task HTTP/1.1" 200 5321
+INFO 2024-06-16 00:39:14,499 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:39:15,095 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:39:22,993 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:39:23,708 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:39:35,711 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:39:36,299 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:40:16,412 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:40:17,179 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:41:38,708 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 00:41:39,274 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:43:41,997 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 00:43:42,567 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:44:50,129 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 00:44:50,707 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:45:17,323 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:45:17,914 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:45:24,755 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:45:25,432 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:45:39,149 views Starting add contact.
+INFO 2024-06-16 00:45:39,150 views init a new ContactForm.
+INFO 2024-06-16 00:45:39,288 basehttp "GET /task/add HTTP/1.1" 200 7189
+INFO 2024-06-16 00:45:43,271 views Starting list tasks.
+INFO 2024-06-16 00:45:43,284 basehttp "GET /task HTTP/1.1" 200 5321
+INFO 2024-06-16 00:45:44,846 views Starting add contact.
+INFO 2024-06-16 00:45:44,847 views init a new ContactForm.
+INFO 2024-06-16 00:45:44,859 basehttp "GET /task/add HTTP/1.1" 200 7189
+INFO 2024-06-16 00:47:59,497 views Starting list tasks.
+INFO 2024-06-16 00:47:59,503 basehttp "GET /task HTTP/1.1" 200 5321
+INFO 2024-06-16 00:48:00,831 views Starting add contact.
+INFO 2024-06-16 00:48:00,832 views init a new ContactForm.
+INFO 2024-06-16 00:48:00,839 basehttp "GET /task/add HTTP/1.1" 200 7189
+INFO 2024-06-16 00:48:53,001 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-16 00:48:53,603 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:49:01,509 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-16 00:49:02,341 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:49:06,647 views Starting list tasks.
+INFO 2024-06-16 00:49:06,660 basehttp "GET /task HTTP/1.1" 200 5321
+INFO 2024-06-16 00:49:07,798 basehttp "GET /task/add HTTP/1.1" 200 3847
+INFO 2024-06-16 00:50:12,989 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:50:13,719 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:50:43,646 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:50:44,220 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:50:51,712 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:50:52,412 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:51:09,417 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 00:51:10,070 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:51:12,676 views Starting list opportunity.
+INFO 2024-06-16 00:51:12,696 basehttp "GET /opportunity HTTP/1.1" 200 5868
+INFO 2024-06-16 00:51:13,818 views Starting list tasks.
+INFO 2024-06-16 00:51:13,824 basehttp "GET /task HTTP/1.1" 200 5321
+INFO 2024-06-16 00:51:14,895 views Starting add task.
+INFO 2024-06-16 00:51:14,896 views Init a new task form.
+ERROR 2024-06-16 00:51:15,135 log Internal Server Error: /task/add
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 146, in add_task
+    await form.load()
+          ^^^^^^^^^
+AttributeError: 'TaskForm' object has no attribute 'load'
+ERROR 2024-06-16 00:51:15,151 basehttp "GET /task/add HTTP/1.1" 500 78117
+INFO 2024-06-16 00:52:41,685 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 00:52:42,270 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:54:49,752 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 00:54:50,644 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 00:54:53,444 views Starting add task.
+INFO 2024-06-16 00:54:53,445 views Init a new task form.
+INFO 2024-06-16 00:54:53,505 basehttp "GET /task/add HTTP/1.1" 200 7195
+INFO 2024-06-16 00:59:35,476 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 00:59:36,662 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 01:05:58,533 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 01:05:59,201 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 01:06:03,022 views Starting list tasks.
+INFO 2024-06-16 01:06:03,040 basehttp "GET /task HTTP/1.1" 200 5321
+WARNING 2024-06-16 01:06:03,161 log Not Found: /favicon.ico
+INFO 2024-06-16 01:06:03,163 basehttp - Broken pipe from ('127.0.0.1', 50075)
+INFO 2024-06-16 01:06:04,228 views Starting add task.
+INFO 2024-06-16 01:06:04,228 views Init a new task form.
+INFO 2024-06-16 01:06:04,254 basehttp "GET /task/add HTTP/1.1" 200 7199
+INFO 2024-06-16 01:07:47,589 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 01:07:48,227 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 01:08:57,544 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 01:08:58,126 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 01:09:05,731 views Starting add task.
+INFO 2024-06-16 01:09:05,732 views Init a new task form.
+INFO 2024-06-16 01:09:05,816 basehttp "GET /task/add HTTP/1.1" 200 7214
+WARNING 2024-06-16 01:09:05,928 log Not Found: /favicon.ico
+INFO 2024-06-16 01:09:05,930 basehttp - Broken pipe from ('127.0.0.1', 50126)
+INFO 2024-06-16 01:16:06,749 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 01:16:11,220 views Starting add task.
+INFO 2024-06-16 01:16:11,220 views Init a new task form.
+INFO 2024-06-16 01:16:11,261 basehttp "GET /task/add HTTP/1.1" 200 7214
+INFO 2024-06-16 01:16:11,448 basehttp - Broken pipe from ('127.0.0.1', 50248)
+INFO 2024-06-16 01:18:05,726 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-16 01:18:06,320 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 01:19:31,477 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 01:19:32,059 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 01:20:35,116 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 01:20:35,776 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 01:22:14,413 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 01:22:15,056 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 01:24:03,340 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-16 01:24:03,929 autoreload Watching for file changes with StatReloader
+INFO 2024-06-16 01:24:15,496 views Starting add task.
+INFO 2024-06-16 01:24:15,497 views Init a new task form.
+INFO 2024-06-16 01:24:15,568 basehttp "GET /task/add HTTP/1.1" 200 7992
