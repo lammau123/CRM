@@ -619,3 +619,47 @@ INFO 2024-06-16 01:24:03,929 autoreload Watching for file changes with StatReloa
 INFO 2024-06-16 01:24:15,496 views Starting add task.
 INFO 2024-06-16 01:24:15,497 views Init a new task form.
 INFO 2024-06-16 01:24:15,568 basehttp "GET /task/add HTTP/1.1" 200 7992
+INFO 2024-06-19 02:20:22,367 autoreload Watching for file changes with StatReloader
+INFO 2024-06-19 02:20:28,825 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-19 02:20:29,090 basehttp - Broken pipe from ('127.0.0.1', 51682)
+INFO 2024-06-19 02:20:31,510 views Starting list tasks.
+INFO 2024-06-19 02:20:31,564 basehttp "GET /task HTTP/1.1" 200 5321
+INFO 2024-06-19 02:20:33,592 views Starting add task.
+INFO 2024-06-19 02:20:33,593 views Init a new task form.
+INFO 2024-06-19 02:20:33,781 basehttp "GET /task/add HTTP/1.1" 200 7992
+WARNING 2024-06-19 02:20:34,085 log Not Found: /favicon.ico
+INFO 2024-06-19 02:20:34,087 basehttp - Broken pipe from ('127.0.0.1', 51697)
+INFO 2024-06-19 02:20:54,080 views Starting add task.
+INFO 2024-06-19 02:20:54,223 views Adding a new task passed validation.
+ERROR 2024-06-19 02:20:54,376 log Internal Server Error: /task/add
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 136, in add_task
+    task_dto = TaskDto(**(await form.changed_data_to_dict()), id=-1, opened_at = datetime.now(), closed_at = datetime.now())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py", line 78, in changed_data_to_dict
+    data['opportunity'] = (await repos.get_opportunity_by_id(data['opportunity'])).to_dict()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\repository\repositories.py", line 141, in get_opportunity_by_id
+    return opportunity_by_id[id]
+           ~~~~~~~~~~~~~~~~~^^^^
+KeyError: '1'
+ERROR 2024-06-19 02:20:54,402 basehttp "POST /task/add HTTP/1.1" 500 92202
+INFO 2024-06-19 02:22:50,809 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
+INFO 2024-06-19 02:22:51,580 autoreload Watching for file changes with StatReloader

@@ -121,6 +121,10 @@ async def get_opportunities():
 async def get_tasks():
     return list_of_tasks
 
+async def get_task_by_id(id):
+    task_by_id = { task.id: task for task in await get_tasks() }
+    return task_by_id[id]
+
 async def get_opportunity_statuses():
     return list_of_opportunity_status
 

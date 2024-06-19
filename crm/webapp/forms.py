@@ -10,7 +10,7 @@ class ContactForm(forms.Form):
     phone = PhoneNumberField(region="CA", widget=forms.TextInput(attrs={'placeholder': '(506) 234-5678'}), label="Phone Number", required=True)
     company = forms.CharField()
     
-    def to_dict(self):
+    def changed_data_to_dict(self):
         data = {}
         
         for field in self.changed_data:
@@ -31,7 +31,7 @@ class OpportunityForm(forms.Form):
         self.fields['user'].choices = (*[(-1, '----select----')], *[(user.id, user.username) for user in await repos.get_users()])
         self.fields['contact'].choices = (*[(-1, '----select----')], *[(contact.id, " ".join([contact.first_name, contact.last_name])) for contact in await repos.get_contacts()])
         
-    async def to_dict(self):
+    async def changed_data_to_dict(self):
         data = {}
         
         for field in self.changed_data:
@@ -51,6 +51,8 @@ class OpportunityForm(forms.Form):
 class TaskForm(forms.Form):
     title = forms.CharField(min_length=2)
     opportunity = forms.ChoiceField()
+    type = forms.ChoiceField()
+    status =forms.ChoiceField()
     due_date = forms.DateTimeField(
         widget=forms.DateInput(
             attrs={
@@ -60,13 +62,26 @@ class TaskForm(forms.Form):
         ),
         initial=date.today
     )
-    type = forms.ChoiceField()
-    status =forms.ChoiceField()
     
     async def load(self):
         self.fields['opportunity'].choices = (*[(-1, '----select----')], *[(opportunity.id, opportunity.name) for opportunity in await repos.get_opportunities()])
         self.fields['type'].choices = (*[(-1, '----select----')], *[(type.id, type.name) for type in await repos.get_task_types()])
         self.fields['status'].choices = (*[(-1, '----select----')], *[(status.id, status.name) for status in await repos.get_task_statuses()])
     
-    async def to_dict(self):
+    async def changed_data_to_dict(self):
         data = {}
+        
+        for field in self.changed_data:
+            data[field] = self.cleaned_data[field]
+            
+        if 'opportunity' in data:
+            data['opportunity'] = (await repos.get_opportunity_by_id(int(data['opportunity']))).to_dict()
+            
+        if 'type' in data:
+            data['type'] = (await repos.get_task_type_by_id(int(data['type']))).to_dict()
+            
+        if 'status' in data:
+            data['status'] = (await repos.get_task_status_by_id(int(data['status']))).to_dict()
+            
+        return data
+        

@@ -101,10 +101,8 @@ class OpportunityDto:
     def get_field_names():
         return ['name', 'amount', 'user', 'contact', 'status', 'opened_at', 'closed_at']
     
-    def update(self, form):
-        data = self.to_dict()
-        for field in form.changed_data:
-            data[field] = form.cleaned_data[field]
+    def update(self, changed):
+        data = self.to_dict() | changed
         return OpportunityDto(**data)
     
     def to_ref_dict(self):
@@ -120,16 +118,12 @@ class OpportunityDto:
         }
     
     def to_dict(self):
-        return {
-            "id": self.id,
-            "name": self.name, 
-            "amount": self.amount, 
-            "user": self.user.to_dict(), 
-            "contact": self.contact.to_dict(),
-            "status": self.status.to_dict(),
-            "opened_at": self.opened_at,
-            "closed_at": self.closed_at
-        }
+        data = self.to_ref_dict()
+        data["user"] = self.user.to_dict()
+        data["contact"] = self.contact.to_dict()
+        data["status"] = self.status.to_dict()
+        
+        return data
 
 @dataclass(frozen=True)
 class TaskTypeDto:
@@ -161,6 +155,8 @@ class TaskDto:
     due_date: datetime
     type: TaskTypeDto
     status: TaskStatusDto
+    created_at: datetime
+    updated_at: datetime
 
     def __init__(self, id, title, opportunity, due_date, type, status):
         object.__setattr__(self, 'id', id)
@@ -180,18 +176,18 @@ class TaskDto:
             "opportunity": self.opportunity_id, 
             "due_date": self.due_date, 
             "type_id": self.type_id, 
-            "status_id": self.status_id 
+            "status_id": self.status_id,
+            "created_at": self.created_at,
+            "updated_at": self.updated_at
         }
         
     def to_dict(self):
-        return {
-            "id": self.id,
-            "title": self.title, 
-            "opportunity": self.opportunity.to_dict(), 
-            "due_date": self.due_date, 
-            "type": self.type.to_dict(), 
-            "status": self.status.to_dict() 
-        }
+        data = self.to_ref_dict()
+        data["opportunity"] = self.opportunity.to_dict()
+        data["type"] = self.type.to_dict(), 
+        data["status"] = self.status.to_dict(),
+            
+        return data
 
     @staticmethod
     def get_header_names():
@@ -200,5 +196,10 @@ class TaskDto:
     @staticmethod
     def get_field_names():
         return ['title', 'opportunity', 'due_date', 'type', 'status']
+    
+    def update(self, changed):
+        data = self.to_dict() | changed
+        data['updated_at'] = datetime.now()
+        return OpportunityDto(**data)
     
 # https://github.com/radzenhq/radzen-examples/blob/master/CRMDemo/crm-database-schema.sql

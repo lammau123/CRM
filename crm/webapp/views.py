@@ -26,7 +26,7 @@ async def add_contact(request):
         if form.is_valid():
             logger.info('adding new contact passed validation.')
             # submit dto to the backend
-            contact_dto = ContactDto(**form.cleaned_data, id = -1, created_at = datetime.now(), updated_at = datetime.now())
+            contact_dto = ContactDto(**form.changed_data_to_dict(), id = -1, created_at = datetime.now(), updated_at = datetime.now())
             messages.success(request, "Customer added successfully.")
             form = ContactForm()
         else:
@@ -45,7 +45,7 @@ async def edit_contact(request, id=0):
         if form.is_valid():
             logger.info('Editing contact pass validation')
             # submit dto to the backend
-            contact_dto.update(form.to_dict())
+            contact_dto.update(form.changed_data_to_dict())
             messages.success(request, "Contact updated successfully.")
         else:
             logger.error('Editing contact failed validation with error: {}'.format(form.errors.as_text()))
@@ -75,7 +75,7 @@ async def add_opportunity(request):
         if form.is_valid():
             # submit dto to the backend
             logger.info('Adding a new opportunity passed validation.')
-            opportunity_dto = OpportunityDto(**(await form.to_dict()), id=-1, opened_at = datetime.now(), closed_at = datetime.now())
+            opportunity_dto = OpportunityDto(**(await form.changed_data_to_dict()), id=-1, opened_at = datetime.now(), closed_at = datetime.now())
             logger.info(opportunity_dto.to_dict())
             messages.success(request, "Opportunity was added successfully.")
             form = OpportunityForm(initial=intial_value)
@@ -101,7 +101,7 @@ async def edit_opportunity(request, id=0):
         if form.is_valid():
             logger.info('Editing an opportunity passed validation.')
             # submit dto to the backend
-            opportunity_dto = opportunity_dto.update(form)
+            opportunity_dto = opportunity_dto.update(form.changed_data_to_dict())
             messages.success(request, "Opportunity was added successfully.")
         else:
             logger.error('Editing the opportunity failed validation with errors: {}'.format(form.errors.as_text()))
@@ -133,7 +133,7 @@ async def add_task(request):
         if form.is_valid():
             # submit dto to the backend
             logger.info('Adding a new task passed validation.')
-            task_dto = TaskDto(**(await form.to_dict()), id=-1, opened_at = datetime.now(), closed_at = datetime.now())
+            task_dto = TaskDto(**(await form.changed_data_to_dict()), id=-1, opened_at = datetime.now(), closed_at = datetime.now())
             messages.success(request, "Task was added successfully.")
             form = TaskForm(initial=intial_value)
             await form.load()
@@ -147,5 +147,24 @@ async def add_task(request):
     return render(request, "add-task.html", context={'form': form})
 
 async def edit_task(request, id):
-    logger.info('Starting add task.')
-    intial_value = {}
+    task_dto = await repos.get_task_by_id(id)
+    
+    logger.info('Starting edit task: {}'.format(task_dto.name))
+                
+    if request.method == 'POST':
+        form = TaskForm(request.POST, initial=task_dto.to_ref_dict())
+        await form.load()
+        
+        if form.is_valid():
+            logger.info('Editing an task passed validation.')
+            # submit dto to the backend
+            task_dto = task_dto.update(form.changed_data_to_dict())
+            messages.success(request, "Task was added successfully.")
+        else:
+            logger.error('Editing the task failed validation with errors: {}'.format(form.errors.as_text()))
+    else:
+        logger.info('Init the opportunty form.')
+        form = TaskForm(initial=task_dto.to_dict())
+        await form.load()
+        
+    return render(request, "edit-opportunity.html", context={'form': form})
