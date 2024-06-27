@@ -122,9 +122,16 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
+# https://docs.djangoproject.com/en/5.0/howto/static-files/    
 
 STATIC_URL = 'static/'
+from ms_identity_web.configuration import AADConfig
+from ms_identity_web import IdentityWebPython
+AAD_CONFIG = AADConfig.parse_json(file_path='./aad.b2c.config.json')
+MS_IDENTITY_WEB = IdentityWebPython(AAD_CONFIG)
+ERROR_TEMPLATE = 'errors-pages/{}.html' # for rendering 401 or other errors from msal_middleware
+MIDDLEWARE.append('webapp.middleware.MsLoginUrlMiddleware')
+#MIDDLEWARE.append('ms_identity_web.django.middleware.MsalMiddleware')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -150,8 +157,8 @@ LOGGING = {
         "file": {
             "class": "logging.FileHandler",
             "filename": "./log/debug.log",
-            "formatter": "verbose"
-        },
+            "formatter": "verbose",
+        }
     },
     "root": {
         "handlers": ["console"],

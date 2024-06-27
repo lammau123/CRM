@@ -1,63 +1,128 @@
-INFO 2024-06-13 00:31:45,903 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 00:32:15,612 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 00:32:38,237 views Starting list opportunity.
-INFO 2024-06-13 00:32:38,253 basehttp "GET /opportunity HTTP/1.1" 200 5868
-INFO 2024-06-13 00:32:39,625 views Starting list contacts.
-INFO 2024-06-13 00:32:39,632 basehttp "GET /contact HTTP/1.1" 200 5653
-INFO 2024-06-13 00:43:58,720 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 00:44:07,859 views Starting list contacts.
-INFO 2024-06-13 00:44:07,879 basehttp "GET /contact HTTP/1.1" 200 5653
-INFO 2024-06-13 00:44:09,819 views Starting list opportunity.
-INFO 2024-06-13 00:44:09,826 basehttp "GET /opportunity HTTP/1.1" 200 5868
-INFO 2024-06-13 00:44:11,000 views Starting add opportunity.
-INFO 2024-06-13 00:44:11,002 views Init a new opportunity form.
-INFO 2024-06-13 00:44:11,194 basehttp "GET /opportunity/add HTTP/1.1" 200 7927
-INFO 2024-06-13 00:44:52,816 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-13 00:44:53,359 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 00:45:07,330 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-13 00:45:07,823 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 15:02:16,754 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 15:02:41,755 basehttp "GET / HTTP/1.1" 200 2661
-INFO 2024-06-13 15:02:43,919 views Starting list contacts.
-INFO 2024-06-13 15:02:43,972 basehttp "GET /contact HTTP/1.1" 200 5653
-INFO 2024-06-13 15:02:46,466 views Starting edit contact: first last
-INFO 2024-06-13 15:02:46,467 views Init edit ContactForm: first last
-INFO 2024-06-13 15:02:46,581 basehttp "GET /contact/1/edit HTTP/1.1" 200 7278
-INFO 2024-06-13 15:02:49,171 views Starting edit contact: first last
-ERROR 2024-06-13 15:02:49,484 views Editing contact failed validation with error: * phone
-  * Enter a valid phone number (e.g. (506) 234-5678) or a number with an international call prefix.
-INFO 2024-06-13 15:02:49,497 basehttp "POST /contact/1/edit HTTP/1.1" 200 7495
-INFO 2024-06-13 15:03:08,290 views Starting edit contact: first last
-INFO 2024-06-13 15:03:08,301 views Editing contact pass validation
-INFO 2024-06-13 15:03:08,318 basehttp "POST /contact/1/edit HTTP/1.1" 200 7524
-INFO 2024-06-13 15:03:17,177 views Starting list contacts.
-INFO 2024-06-13 15:03:17,184 basehttp "GET /contact HTTP/1.1" 200 5653
-INFO 2024-06-13 15:03:19,026 views Starting add contact.
-INFO 2024-06-13 15:03:19,027 views init a new ContactForm.
-INFO 2024-06-13 15:03:19,058 basehttp "GET /contact/add HTTP/1.1" 200 7189
-INFO 2024-06-13 15:03:40,503 views Starting add contact.
-INFO 2024-06-13 15:03:40,506 views adding new contact passed validation.
-INFO 2024-06-13 15:03:40,517 basehttp "POST /contact/add HTTP/1.1" 200 7430
-INFO 2024-06-13 15:04:56,673 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-13 15:04:57,370 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 15:07:17,965 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-13 15:07:18,604 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:20:41,999 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:20:55,505 basehttp "GET / HTTP/1.1" 200 2661
-INFO 2024-06-13 23:21:00,393 views Starting list opportunity.
-INFO 2024-06-13 23:21:00,442 basehttp "GET /opportunity HTTP/1.1" 200 5868
-INFO 2024-06-13 23:21:04,142 views Starting add opportunity.
-INFO 2024-06-13 23:21:04,143 views Init a new opportunity form.
-INFO 2024-06-13 23:21:04,352 basehttp "GET /opportunity/add HTTP/1.1" 200 7927
-INFO 2024-06-13 23:21:42,446 views Starting add opportunity.
-INFO 2024-06-13 23:21:42,450 views Adding a new opportunity passed validation.
-INFO 2024-06-13 23:21:42,450 views <coroutine object OpportunityForm.to_dict at 0x000002F6502F6420>
-INFO 2024-06-13 23:21:42,486 basehttp "POST /opportunity/add HTTP/1.1" 200 8175
-INFO 2024-06-13 23:22:28,774 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-13 23:22:29,412 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:22:57,227 views Starting add opportunity.
-INFO 2024-06-13 23:22:57,230 views Adding a new opportunity passed validation.
-ERROR 2024-06-13 23:22:57,660 log Internal Server Error: /opportunity/add
+INFO 2024-06-26 02:00:59,275 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 02:01:19,364 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-26 02:01:19,711 basehttp - Broken pipe from ('127.0.0.1', 60945)
+INFO 2024-06-26 02:05:18,711 basehttp "GET /contact HTTP/1.1" 200 2671
+INFO 2024-06-26 02:05:42,581 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-26 02:05:50,874 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 284, in assert_login
+    if not self._adapter.identity_context_data.authenticated:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'identity_context_data'
+ERROR 2024-06-26 02:05:58,474 basehttp "GET /contact HTTP/1.1" 500 72460
+INFO 2024-06-26 02:06:32,608 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 02:06:51,699 basehttp "GET /contact HTTP/1.1" 200 2671
+INFO 2024-06-26 12:21:26,349 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 12:24:27,392 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-26 12:26:31,774 basehttp "GET /contact HTTP/1.1" 200 2671
+INFO 2024-06-26 12:27:14,834 autoreload C:\Users\lamma\working\repositories\CRM\crm\crm\settings.py changed, reloading.
+INFO 2024-06-26 12:27:17,268 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-26 12:28:50,564 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 285, in assert_login
+    raise NotAuthenticatedError
+ms_identity_web.errors.NotAuthenticatedError: 401 Unauthorized: User is not authenticated
+ERROR 2024-06-26 12:28:55,805 basehttp "GET /contact HTTP/1.1" 500 72296
+INFO 2024-06-26 12:30:46,299 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 12:30:58,410 basehttp "GET /contact HTTP/1.1" 200 2671
+INFO 2024-06-26 12:31:35,405 basehttp "GET /contact HTTP/1.1" 200 2671
+INFO 2024-06-26 12:35:12,038 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py changed, reloading.
+INFO 2024-06-26 12:35:19,997 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 12:35:24,170 basehttp "GET /contact HTTP/1.1" 200 2671
+INFO 2024-06-26 12:35:39,917 autoreload C:\Users\lamma\working\repositories\CRM\crm\crm\settings.py changed, reloading.
+INFO 2024-06-26 12:35:42,519 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-26 12:54:57,038 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 284, in assert_login
+    if not self._adapter.identity_context_data.authenticated:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'identity_context_data'
+ERROR 2024-06-26 12:55:06,862 basehttp "GET /contact HTTP/1.1" 500 72460
+ERROR 2024-06-26 12:57:29,725 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 284, in assert_login
+    if not self._adapter.identity_context_data.authenticated:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'identity_context_data'
+ERROR 2024-06-26 12:57:29,738 basehttp "GET /contact HTTP/1.1" 500 72460
+INFO 2024-06-26 12:57:45,664 autoreload C:\Users\lamma\working\repositories\CRM\crm\crm\settings.py changed, reloading.
+INFO 2024-06-26 12:57:48,440 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 12:57:53,108 basehttp "GET /contact HTTP/1.1" 200 2671
+INFO 2024-06-26 12:58:44,758 autoreload C:\Users\lamma\working\repositories\CRM\crm\crm\settings.py changed, reloading.
+INFO 2024-06-26 12:58:47,346 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 12:59:08,775 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py changed, reloading.
+INFO 2024-06-26 12:59:11,361 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:00:35,626 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py changed, reloading.
+INFO 2024-06-26 13:01:34,935 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:02:05,295 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:07:42,680 basehttp "GET /contact HTTP/1.1" 200 2671
+INFO 2024-06-26 13:10:54,544 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py changed, reloading.
+INFO 2024-06-26 13:10:57,030 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:11:14,426 basehttp "GET /contact HTTP/1.1" 200 2671
+INFO 2024-06-26 13:12:50,291 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py changed, reloading.
+INFO 2024-06-26 13:12:52,925 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:13:04,017 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 13:13:05,965 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 13:46:49,059 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:46:58,156 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-26 13:47:07,604 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 13:47:09,108 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 13:49:24,022 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 13:54:27,283 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:54:47,595 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 13:55:02,906 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-26 13:55:04,964 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 13:55:06,923 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 13:59:13,565 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:00:00,445 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-26 14:00:00,586 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-26 14:00:01,110 log Not Found: /favicon.ico
+WARNING 2024-06-26 14:00:01,110 basehttp "GET /favicon.ico HTTP/1.1" 404 4243
+INFO 2024-06-26 14:00:04,621 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 14:00:05,279 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 14:00:52,187 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:01:43,296 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-26 14:01:43,462 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-26 14:01:43,837 log Not Found: /favicon.ico
+WARNING 2024-06-26 14:01:43,838 basehttp "GET /favicon.ico HTTP/1.1" 404 4243
+INFO 2024-06-26 14:01:47,186 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 14:01:48,337 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 14:07:29,428 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:07:42,511 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-26 14:07:46,851 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 14:07:48,069 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 14:08:27,333 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:08:38,826 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-26 14:08:38,977 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-26 14:08:39,235 log Not Found: /favicon.ico
+WARNING 2024-06-26 14:08:39,236 basehttp "GET /favicon.ico HTTP/1.1" 404 4243
+INFO 2024-06-26 14:08:40,802 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 14:08:41,820 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+ERROR 2024-06-26 14:09:27,824 log Internal Server Error: /auth/redirect
 Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -65,30 +130,17 @@ Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
-    return call_result.result()
-           ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
-    raise self._exception
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
-    result = await self.awaitable(*args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
-    logger.info(await form.to_dict())
-                ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py", line 32, in to_dict
-    data['user'] = (await repos.get_user_by_id(data['user'])).to_dict()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: get_user_by_id() takes 0 positional arguments but 1 was given
-ERROR 2024-06-13 23:22:57,685 basehttp "POST /opportunity/add HTTP/1.1" 500 84115
-INFO 2024-06-13 23:24:10,215 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\repository\repositories.py changed, reloading.
-INFO 2024-06-13 23:24:10,842 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:24:34,787 views Starting add opportunity.
-INFO 2024-06-13 23:24:34,790 views Adding a new opportunity passed validation.
-ERROR 2024-06-13 23:24:34,910 log Internal Server Error: /opportunity/add
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 41, in aad_redirect
+    afterwards_go_to_url=reverse('index'))
+                         ^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-06-26 14:09:27,830 basehttp "GET /auth/redirect?state=939bc2bd-c61e-47f8-a46a-ddf78bc93807&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..s53Zy8XDHypr4k8I.8qBHP2HS1r71Q98PTTJnHXlyOBLi7m4SMKHB95N2wjaASEMvtfwlcMo590Kn_Nl-0TsMCKY5dvu3ctZKF_rIfBLWDRnonHZw2NmX2JiaK8ek2TK0EStiYZo_cwIvp_s2eWzlUEVEMBsAmqrwxmezbFURcLofka_lOKUXzFbbJtRrxRrVmvoRR6lmywNtiNJ9b5HjBq_zsVK8kWVSfHQkFSO_MtIxKg334wU_IEUZNHhgDwukXlP0xdcZHQqDycsH19lGa66fv7lDkK_VmrSB8P0DnfkCJyAUpGGoy6q8AbeCclUtFawYVFdgWfz3M5ZTYO4S6oCUIyw7ar22kDRLE_YZNcIBdy-bpzGDe_z00mxXmuenfUDsTgxiSvT49wCDGK-ckJZuaiCUMMYxf5eHlz52FyKFZrYJ8hehuN4q0IaFERgQHcksH7KeMJmXAD_5Js5oXmGJZNoI7S10es_aso8BylM-Nj_15Tfm_eYbzcWLkjeMnKYI4T3i-xGipPbW5gcBFXzcHiga1v1epGIcRMdL3xJB9PB4YC7hT8wfB7F35yYQUNhOXExTIGaoPLoTn1OUNA.c4cmpQ9bD0TXfyb6xSTdNQ HTTP/1.1" 500 88922
+ERROR 2024-06-26 14:16:31,208 log Internal Server Error: /auth/redirect
 Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -96,33 +148,24 @@ Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
-    return call_result.result()
-           ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
-    raise self._exception
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
-    result = await self.awaitable(*args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
-    logger.info(await form.to_dict())
-                ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py", line 32, in to_dict
-    data['user'] = (await repos.get_user_by_id(data['user'])).to_dict()
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\repository\repositories.py", line 97, in get_user_by_id
-    return user_by_id[id]
-           ~~~~~~~~~~^^^^
-KeyError: '2'
-ERROR 2024-06-13 23:24:34,924 basehttp "POST /opportunity/add HTTP/1.1" 500 87626
-INFO 2024-06-13 23:29:25,597 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-13 23:29:26,545 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:29:52,148 views Starting add opportunity.
-INFO 2024-06-13 23:29:52,150 views Adding a new opportunity passed validation.
-ERROR 2024-06-13 23:29:52,265 log Internal Server Error: /opportunity/add
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 41, in aad_redirect
+    afterwards_go_to_url=reverse('index'))
+                         ^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-06-26 14:16:31,214 basehttp "GET /auth/redirect?state=939bc2bd-c61e-47f8-a46a-ddf78bc93807&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..XUJ0GRwl4aWj8LOj.OzhirqjssfUAnusOtLnWoKhnrG2brqIR_lE-6ZBAJ_885fML-ptU3YgVN5QVQSgQMaa5PRk2DPcrOuqUMDvq-OQLoGMZe6Bo4oYhlBlBG6J2VQtJvaAIfZrBZadp0_YjtPzvOUj2gCaqZ1CkU536To8bWRRagkpiXwNyBWRStfr2DrXtQOEkXzyb2r_7IlLBbBgMjUQwrGqpmx2l9grtjTfN0787vVWXUAoKhBSJ_Rh0s9sbR8gHhZ1QN8xRu0jB6PtK1yV6_oDM8GSjgzJt1qjDBR9FyAhbpUMZaBsfgmuApP4JbQeLDLWw7VX141ON9f0YG6c0GwolVAADHRojtrzB8CwY2U5V7-37nJHjq5SLEZS7_AbkQJAO6mKuiZyJTYyNaJRRp5vTMwx_NUx5XjBAtauLj2t8F3WTwcx2B0zIHU1OwhtNGMAOw3G3nMBNgJ_zrKUJglJPHQwqi52-aI3dI_rzzYQqTEi0KtSAMTqkkVnXj4S8nRrOtE26E73-PgzO9zXMvW75eXEVdq121aJ6qtx5dXnNxLaB1cKqY-a09RZ7e3HopzTJi8vLu72imdNMiQ.9GccEbX3Bw0nxttvSYqd9g HTTP/1.1" 500 88922
+INFO 2024-06-26 14:16:45,776 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:17:25,509 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-26 14:17:25,619 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-26 14:17:26,024 log Not Found: /favicon.ico
+WARNING 2024-06-26 14:17:26,025 basehttp "GET /favicon.ico HTTP/1.1" 404 4243
+INFO 2024-06-26 14:17:33,188 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 14:17:34,303 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+ERROR 2024-06-26 14:17:51,553 log Internal Server Error: /auth/redirect
 Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -130,30 +173,72 @@ Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
-    return call_result.result()
-           ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
-    raise self._exception
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
-    result = await self.awaitable(*args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
-    logger.info(await form.to_dict())
-                ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py", line 32, in to_dict
-    data['user'] = (await repos.get_user_by_id(int(data['user']))).to_dict()
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'UserDto' object has no attribute 'to_dict'
-ERROR 2024-06-13 23:29:52,280 basehttp "POST /opportunity/add HTTP/1.1" 500 84199
-INFO 2024-06-13 23:33:57,577 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-13 23:33:58,357 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:34:15,384 views Starting add opportunity.
-INFO 2024-06-13 23:34:15,387 views Adding a new opportunity passed validation.
-ERROR 2024-06-13 23:34:15,505 log Internal Server Error: /opportunity/add
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 41, in aad_redirect
+    afterwards_go_to_url=reverse('index'))
+                         ^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-06-26 14:17:51,556 basehttp "GET /auth/redirect?state=a2f7d9ad-a80b-42e0-84c0-bd73cac499d6&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..E_fgu0qIiHVo2cSY.t3kEfYHjz19eLWmbTRLhhlCtSuEUcYtVxaSMroCq3QXKWCYROVGKlWQyzrpaH-WlL3TmyZkL35wy7icPCTPHKotLXY8baZPqE0-0JmLvTnqNtsa59mmaaLsqTDplNcVSApFg6O8ZBPcQPfigxH3B9tDVGg-yF2vOZcaT0I8ryFmKHzOEX8-LVOrRLmayhzlhq_PT9SiLTmdrNynT9BTWshWivRo-NOAH_ghidhz0jAPsj6wvUTE5ENH6iGCIu3yABTmo7KYVm7q-1vS2rsbD7nWJ7xyWZM6_ewf0NDEpG6JbxaMp9uyKji5jAMlemvSURxGy2tINpBksk1y8_wZXOE82BYqK1-uPmfdwDdad2VZtkXSdkievq1coEOO8khE7LHhOCoK2d-9uRsuC7Inn08DtW9QQLsexwJ_pnSw7Lmlr-gSR87JQ6nhUNTfbv4S1yDPnHlg1uJH08JXZimzrIDwvGQnwKXHM3--AkzNERDpuMzeN6EB40yuZgMhMJqK-vPxJkE_C0GJ5KLi8I4ODMjtcp_1N4QQKLBoPmlnrcUPK8dRUPE3o-wXjfVJ-CjuugY_W1g.g6rsa0uFJYDNxt_7UCTqRQ HTTP/1.1" 500 88878
+WARNING 2024-06-26 14:17:51,599 log Not Found: /favicon.ico
+WARNING 2024-06-26 14:17:51,600 basehttp "GET /favicon.ico HTTP/1.1" 404 4243
+INFO 2024-06-26 16:36:06,057 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 16:36:09,587 basehttp "GET /auth/sign_out HTTP/1.1" 302 0
+INFO 2024-06-26 16:36:09,740 basehttp "GET /auth/post_sign_out HTTP/1.1" 302 0
+INFO 2024-06-26 16:36:09,741 basehttp "GET /index HTTP/1.1" 302 0
+INFO 2024-06-26 16:36:10,561 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 16:36:17,844 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-26 16:36:18,250 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 16:36:31,142 basehttp "GET /auth/redirect?state=92295437-1f83-4805-be6c-de7666ffe7ba&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..7pxUJfrCJTLxQooq.Wu0sz-k8qmp153qNVrLPXRYGy3uSw6YOgoFsnsKvehzfp9QQyfqIqL7Y-nAWFty6CS-wMoj5Ugyt0QVkaAF-D0hOSP94JV9nh2bq6ofmrUtDIVyzqxDsGfWFJndXCGLer_Kx0Uzjj-6sOqmpvtIPdQ-eUnvBJTrkr2cE27MtadbhCq2jn8kagNgDmjIZXXmbnHiDCeC-O6ol7WtIedED2x5oH52A_BMlgN4rHhWZY2E43gMVBL980mx6V1uSTqU5IWULzp6cDLmC45PQMYv22C2h65sLIH2kpblpf0nqqPxo56e1Z5X1sNGc-WFmOXnPGUVHdNVqnD0nX4z1DMyHpDzTyChfJymlpgwKa7qk2Fzq8RBM0i0B4sAMyVeOlkdkSkpyrL4uFmFdMCqzsfEeRe0B72OVhuZzO8gijrE95YEnkDTY8mdPuMht990IJ9T6O1qtxWRa6lrMyt2rgP4-4ZKw7Vs81POHmAYrBNbwrj7fhN1mVWAZH1u_F-GLOcR2wNwP2AQdekT1fwAdm5dyCDd3st_fjb7qrtKTay21xDABE7hegShHhZHEQDlNsZvp2cv4qoeqEA.kAcMmnJh6Ca-Xkoiyhgykw HTTP/1.1" 302 0
+INFO 2024-06-26 16:36:31,162 basehttp "GET /index HTTP/1.1" 200 2661
+INFO 2024-06-26 16:36:31,332 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-26 16:36:31,716 log Not Found: /favicon.ico
+WARNING 2024-06-26 16:36:31,718 basehttp "GET /favicon.ico HTTP/1.1" 404 4409
+ERROR 2024-06-26 16:36:33,993 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 337, in check_response
+    raise ValueError(
+ValueError: The view webapp.views.list_contact didn't return an HttpResponse object. It returned an unawaited coroutine instead. You may need to add an 'await' into your view.
+ERROR 2024-06-26 16:36:33,996 basehttp "GET /contact HTTP/1.1" 500 73249
+INFO 2024-06-26 16:38:57,558 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-26 16:38:58,256 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 16:39:05,202 views Starting list contacts.
+INFO 2024-06-26 16:39:05,217 basehttp "GET /contact HTTP/1.1" 200 5653
+WARNING 2024-06-26 16:39:05,262 log Not Found: /favicon.ico
+WARNING 2024-06-26 16:39:05,263 basehttp "GET /favicon.ico HTTP/1.1" 404 4409
+INFO 2024-06-26 16:39:07,381 views Starting list contacts.
+INFO 2024-06-26 16:39:07,386 basehttp "GET /contact HTTP/1.1" 200 5653
+WARNING 2024-06-26 16:39:07,427 log Not Found: /favicon.ico
+WARNING 2024-06-26 16:39:07,428 basehttp "GET /favicon.ico HTTP/1.1" 404 4409
+INFO 2024-06-26 16:39:08,860 views Starting list contacts.
+INFO 2024-06-26 16:39:08,865 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-26 16:59:08,167 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 23:08:10,204 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 23:36:48,489 autoreload C:\Users\lamma\working\repositories\CRM\crm\crm\settings.py changed, reloading.
+INFO 2024-06-26 23:36:49,159 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 23:37:03,609 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 23:38:59,791 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-26 23:39:06,138 basehttp "GET / HTTP/1.1" 500 59
+ERROR 2024-06-26 23:39:06,182 basehttp "GET /favicon.ico HTTP/1.1" 500 59
+INFO 2024-06-26 23:39:39,560 autoreload C:\Users\lamma\working\repositories\CRM\crm\crm\settings.py changed, reloading.
+INFO 2024-06-26 23:39:40,173 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 23:58:41,042 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 23:58:55,117 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-26 23:58:55,840 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 23:59:01,200 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-26 23:59:02,490 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 23:59:19,686 basehttp "GET /auth/redirect?state=2fa5081a-710d-425e-a0a2-2d29813eea9c&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..YDUf4XwNnEdvT7DI.gTs4WMlw1EqqLo5Uw6ACUVaDsZ8Ml1ONITCG6buSm7pOrGYb1iQj1gC-XnGQJ2l2Kh3p3wwXr6kOuzLA-cLpZCXoM95ICdDvTA-44-Fef1w-6LpYuHUecnCqtFQTCu7Scl0BSQLqmEX7BT8FuEonenPP5cdfaISCqGAlMN7l21l8U96nAQZsKBIppvuNLYsuU0Y3zm3zzfgPL9t5IxJ-ChH7MYLfGJ-2DWZmbU4li8rWzS_ipTFpPZsssgF3bNgKe7qsFpMat57il3qi1s4msmi7itASOaKOSvg0KDp8pB4orrIuYMarSRIn093iS5GCGSDhnsnJ3DjP8xHz2cjBhzzCdHK-VIe7OHX73JkG46lmo65O2q3HPOHczgwxss677gjjA5uglbvUyfrLbZZiIUvtR0H-oVd-8dD7iiDHHjkqVJgKaqx33VwjOHRSVOHRmNZ1LzSknRzX3_B8Z2A7yrFpiTaMsKq1JhNEF3Gf9cUrpXhdhEY54Q6T_N-jYojHhDxYmTuilYM68CUUS4wGYH2x-knV3eAgqQ5wvr3pw7Siy7DivqRVyGba8FeLDfe3wxfTCQw.7I_Dtd4W5nqRSXIICpokdw HTTP/1.1" 302 0
+INFO 2024-06-26 23:59:19,717 basehttp "GET /index HTTP/1.1" 200 2661
+INFO 2024-06-26 23:59:45,792 views Starting list contacts.
+ERROR 2024-06-26 23:59:46,031 log Internal Server Error: /contact
 Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -161,35 +246,61 @@ Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
-    return call_result.result()
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\ms_identity_web\__init__.py", line 290, in assert_login
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 25, in list_contact
+    return render(request, 'list-contact.html', context=context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
            ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
-    raise self._exception
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
-    result = await self.awaitable(*args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
-    logger.info(await form.to_dict())
-                ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py", line 38, in to_dict
-    data['status'] = (await repos.get_opportunity_status_by_id(int(data['status']))).to_dict()
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'OpportunityStatusDto' object has no attribute 'to_dict'. Did you mean: 'toDict'?
-ERROR 2024-06-13 23:34:15,517 basehttp "POST /opportunity/add HTTP/1.1" 500 84457
-INFO 2024-06-13 23:35:19,124 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-13 23:35:19,770 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:36:33,046 views Starting add opportunity.
-INFO 2024-06-13 23:36:33,049 views Adding a new opportunity passed validation.
-INFO 2024-06-13 23:36:33,050 views {'name': 'test', 'amount': Decimal('111'), 'user': {'id': 1, 'username': 'Test1'}, 'contact': {'last_name': 'last', 'first_name': 'first', 'email': 'asd@gmail.com', 'phone': '123-123-123', 'company': '123 ooo st', 'created_at': datetime.datetime(2024, 5, 21, 9, 0), 'updated_at': datetime.datetime(2024, 5, 21, 9, 0), 'id': 1}, 'status': {'id': 3, 'name': 'Delay'}}
-INFO 2024-06-13 23:36:33,128 basehttp "POST /opportunity/add HTTP/1.1" 200 8175
-INFO 2024-06-13 23:45:13,603 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:45:31,468 views Starting add opportunity.
-INFO 2024-06-13 23:45:31,471 views Adding a new opportunity passed validation.
-ERROR 2024-06-13 23:45:31,584 log Internal Server Error: /opportunity/add
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\defaulttags.py", line 197, in render
+    values = list(values)
+             ^^^^^^^^^^^^
+TypeError: 'coroutine' object is not iterable
+ERROR 2024-06-26 23:59:46,057 basehttp "GET /contact HTTP/1.1" 500 151791
+INFO 2024-06-27 00:03:22,032 views Starting list tasks.
+ERROR 2024-06-27 00:03:22,157 log Internal Server Error: /task
 Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -197,360 +308,125 @@ Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
-    return call_result.result()
-           ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
-    raise self._exception
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
-    result = await self.awaitable(*args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
-    opportunity_dto = OpportunityDto(await form.to_dict(), id = -1, opened_at = datetime.now(), closed_at = datetime.now())
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: OpportunityDto.__init__() got multiple values for argument 'id'
-ERROR 2024-06-13 23:45:31,595 basehttp "POST /opportunity/add HTTP/1.1" 500 80036
-INFO 2024-06-13 23:46:22,313 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-13 23:46:22,932 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:46:40,542 views Starting add opportunity.
-INFO 2024-06-13 23:46:40,545 views Adding a new opportunity passed validation.
-ERROR 2024-06-13 23:46:40,675 log Internal Server Error: /opportunity/add
-Traceback (most recent call last):
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
-    return call_result.result()
-           ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
-    raise self._exception
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
-    result = await self.awaitable(*args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
-    opportunity_dto = OpportunityDto(await form.to_dict(), opened_at = datetime.now(), closed_at = datetime.now())
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: OpportunityDto.__init__() missing 5 required positional arguments: 'name', 'amount', 'user', 'contact', and 'status'
-ERROR 2024-06-13 23:46:40,687 basehttp "POST /opportunity/add HTTP/1.1" 500 80372
-INFO 2024-06-13 23:47:35,757 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-13 23:47:36,374 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:52:05,772 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-13 23:52:06,441 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:52:15,267 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-13 23:52:15,946 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:52:25,790 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-13 23:52:26,397 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:52:59,221 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-13 23:52:59,830 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:56:00,896 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:56:16,122 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-13 23:56:16,783 autoreload Watching for file changes with StatReloader
-INFO 2024-06-13 23:56:40,152 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-13 23:56:40,917 autoreload Watching for file changes with StatReloader
-INFO 2024-06-14 00:01:53,146 autoreload Watching for file changes with StatReloader
-INFO 2024-06-14 00:05:49,799 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-14 00:05:50,586 autoreload Watching for file changes with StatReloader
-INFO 2024-06-14 00:06:29,883 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-14 00:06:30,651 autoreload Watching for file changes with StatReloader
-INFO 2024-06-14 00:09:47,519 autoreload Watching for file changes with StatReloader
-INFO 2024-06-14 00:10:24,783 views Starting add opportunity.
-INFO 2024-06-14 00:10:24,785 views Adding a new opportunity passed validation.
-ERROR 2024-06-14 00:10:24,901 log Internal Server Error: /opportunity/add
-Traceback (most recent call last):
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
-    return call_result.result()
-           ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
-    raise self._exception
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
-    result = await self.awaitable(*args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 90, in add_opportunity
-    opportunity_dto = OpportunityDto(**(await form.to_dict()), opened_at = datetime.now(), closed_at = datetime.now())
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: OpportunityDto.__init__() missing 1 required positional argument: 'id'
-ERROR 2024-06-14 00:10:24,912 basehttp "POST /opportunity/add HTTP/1.1" 500 80043
-INFO 2024-06-14 00:11:39,772 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-14 00:11:40,587 autoreload Watching for file changes with StatReloader
-INFO 2024-06-14 00:13:19,006 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-14 00:13:19,752 autoreload Watching for file changes with StatReloader
-INFO 2024-06-14 00:13:38,396 views Starting add opportunity.
-INFO 2024-06-14 00:13:38,398 views Adding a new opportunity passed validation.
-INFO 2024-06-14 00:13:38,400 views {'name': 'sss', 'amount': Decimal('22'), 'user': 2, 'contact': 1, 'status': 4, 'opened_at': datetime.datetime(2024, 6, 14, 0, 13, 38, 399857), 'closed_at': datetime.datetime(2024, 6, 14, 0, 13, 38, 399857), 'id': -1}
-INFO 2024-06-14 00:13:38,474 basehttp "POST /opportunity/add HTTP/1.1" 200 8175
-INFO 2024-06-14 00:17:35,067 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\models.py changed, reloading.
-INFO 2024-06-14 00:17:35,839 autoreload Watching for file changes with StatReloader
-INFO 2024-06-14 00:18:35,092 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-14 00:18:35,714 autoreload Watching for file changes with StatReloader
-INFO 2024-06-14 00:18:57,242 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-14 00:18:57,848 autoreload Watching for file changes with StatReloader
-INFO 2024-06-14 00:19:42,344 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-14 00:19:42,990 autoreload Watching for file changes with StatReloader
-INFO 2024-06-14 00:20:00,055 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-14 00:20:00,847 autoreload Watching for file changes with StatReloader
-INFO 2024-06-15 01:48:00,651 autoreload Watching for file changes with StatReloader
-ERROR 2024-06-15 01:48:02,355 log Internal Server Error: /task
-Traceback (most recent call last):
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
-    return call_result.result()
-           ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
-    raise self._exception
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
-    result = await self.awaitable(*args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 60, in list_task
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 128, in list_task
     return render(request, 'list-task.html', context=context)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
     content = loader.render_to_string(template_name, context, request, using=using)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
-    template = get_template(template_name, using=using)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
-    return engine.get_template(template_name)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
-    return Template(self.engine.get_template(template_name), self)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
-    template, origin = self.find_template(template_name)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
-    template = loader.get_template(name, skip=skip)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
-    template = super().get_template(template_name, skip)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
-    return Template(
-           ^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
-    self.nodelist = self.compile_nodelist()
-                    ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
-    return parser.parse()
-           ^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 510, in parse
-    raise self.error(token, e)
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 508, in parse
-    compiled_result = compile_func(self, token)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
-    nodelist = parser.parse()
-               ^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 510, in parse
-    raise self.error(token, e)
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 508, in parse
-    compiled_result = compile_func(self, token)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
-    nodelist = parser.parse(("endblock",))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 510, in parse
-    raise self.error(token, e)
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 508, in parse
-    compiled_result = compile_func(self, token)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\defaulttags.py", line 861, in do_for
-    nodelist_loop = parser.parse(
-                    ^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 510, in parse
-    raise self.error(token, e)
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 508, in parse
-    compiled_result = compile_func(self, token)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\defaulttags.py", line 861, in do_for
-    nodelist_loop = parser.parse(
-                    ^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 481, in parse
-    raise self.error(token, e)
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 479, in parse
-    filter_expression = self.compile_filter(token.contents)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
-    return FilterExpression(token, self)
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 693, in __init__
-    filter_func = parser.find_filter(filter_name)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 603, in find_filter
-    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
-django.template.exceptions.TemplateSyntaxError: Invalid filter: 'get_attr'
-ERROR 2024-06-15 01:48:02,394 basehttp "GET /task HTTP/1.1" 500 241500
-INFO 2024-06-15 01:48:36,587 basehttp "GET /task HTTP/1.1" 200 3847
-INFO 2024-06-16 00:10:37,728 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:11:07,354 basehttp "GET / HTTP/1.1" 200 2661
-INFO 2024-06-16 00:11:07,426 basehttp "GET /static/js/app.js HTTP/1.1" 304 0
-INFO 2024-06-16 00:11:18,154 views Starting list tasks.
-INFO 2024-06-16 00:11:18,178 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:17:11,483 views Starting list tasks.
-INFO 2024-06-16 00:17:11,486 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:19:07,641 views Starting list tasks.
-INFO 2024-06-16 00:19:07,646 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:19:09,206 views Starting list tasks.
-INFO 2024-06-16 00:19:09,207 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:19:10,006 views Starting list tasks.
-INFO 2024-06-16 00:19:10,010 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:19:32,660 views Starting list tasks.
-INFO 2024-06-16 00:19:32,664 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:19:34,090 views Starting list tasks.
-INFO 2024-06-16 00:19:34,093 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:19:34,791 views Starting list tasks.
-INFO 2024-06-16 00:19:34,793 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:19:34,992 views Starting list tasks.
-INFO 2024-06-16 00:19:34,997 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:19:35,274 views Starting list tasks.
-INFO 2024-06-16 00:19:35,278 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:19:35,493 views Starting list tasks.
-INFO 2024-06-16 00:19:35,497 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:19:46,992 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:19:53,551 views Starting list opportunity.
-INFO 2024-06-16 00:19:53,612 basehttp "GET /opportunity HTTP/1.1" 200 5868
-INFO 2024-06-16 00:19:54,757 views Starting list tasks.
-INFO 2024-06-16 00:19:54,762 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:20:28,846 views Starting list tasks.
-INFO 2024-06-16 00:20:28,848 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:22:53,500 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:22:58,292 views Starting list tasks.
-INFO 2024-06-16 00:22:58,293 views 5
-INFO 2024-06-16 00:22:58,310 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:23:10,119 views Starting list contacts.
-INFO 2024-06-16 00:23:10,122 basehttp "GET /contact HTTP/1.1" 200 5653
-INFO 2024-06-16 00:24:15,011 views Starting list tasks.
-INFO 2024-06-16 00:24:15,012 views 5
-INFO 2024-06-16 00:24:15,014 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:25:51,143 views Starting list tasks.
-INFO 2024-06-16 00:25:51,143 views 5
-INFO 2024-06-16 00:25:51,146 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:25:54,948 views Starting list tasks.
-INFO 2024-06-16 00:25:54,949 views 5
-INFO 2024-06-16 00:25:54,952 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:26:15,762 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:26:16,637 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:27:28,780 views Starting list tasks.
-INFO 2024-06-16 00:27:28,794 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:29,659 views Starting list tasks.
-INFO 2024-06-16 00:27:29,661 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:44,026 views Starting list tasks.
-INFO 2024-06-16 00:27:44,032 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:46,120 views Starting list tasks.
-INFO 2024-06-16 00:27:46,122 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:46,796 views Starting list tasks.
-INFO 2024-06-16 00:27:46,797 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:47,181 views Starting list tasks.
-INFO 2024-06-16 00:27:47,185 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:47,650 views Starting list tasks.
-INFO 2024-06-16 00:27:47,654 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:48,723 views Starting list tasks.
-INFO 2024-06-16 00:27:48,726 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:49,119 views Starting list tasks.
-INFO 2024-06-16 00:27:49,125 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:49,463 views Starting list tasks.
-INFO 2024-06-16 00:27:49,467 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:49,822 views Starting list tasks.
-INFO 2024-06-16 00:27:49,825 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:50,467 views Starting list tasks.
-INFO 2024-06-16 00:27:50,470 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:27:50,777 views Starting list tasks.
-INFO 2024-06-16 00:27:50,782 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:28:49,968 views Starting list tasks.
-INFO 2024-06-16 00:28:49,977 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:28:50,746 views Starting list tasks.
-INFO 2024-06-16 00:28:50,751 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:28:50,909 views Starting list tasks.
-INFO 2024-06-16 00:28:50,913 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:28:51,109 views Starting list tasks.
-INFO 2024-06-16 00:28:51,112 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:28:51,323 views Starting list tasks.
-INFO 2024-06-16 00:28:51,326 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:28:52,499 views Starting list tasks.
-INFO 2024-06-16 00:28:52,502 basehttp "GET /task HTTP/1.1" 200 3324
-INFO 2024-06-16 00:30:12,213 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:30:12,860 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:30:17,627 views Starting list tasks.
-INFO 2024-06-16 00:30:17,643 basehttp "GET /task HTTP/1.1" 200 5321
-INFO 2024-06-16 00:39:14,499 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:39:15,095 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:39:22,993 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:39:23,708 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:39:35,711 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:39:36,299 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:40:16,412 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:40:17,179 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:41:38,708 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 00:41:39,274 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:43:41,997 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 00:43:42,567 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:44:50,129 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 00:44:50,707 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:45:17,323 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:45:17,914 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:45:24,755 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:45:25,432 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:45:39,149 views Starting add contact.
-INFO 2024-06-16 00:45:39,150 views init a new ContactForm.
-INFO 2024-06-16 00:45:39,288 basehttp "GET /task/add HTTP/1.1" 200 7189
-INFO 2024-06-16 00:45:43,271 views Starting list tasks.
-INFO 2024-06-16 00:45:43,284 basehttp "GET /task HTTP/1.1" 200 5321
-INFO 2024-06-16 00:45:44,846 views Starting add contact.
-INFO 2024-06-16 00:45:44,847 views init a new ContactForm.
-INFO 2024-06-16 00:45:44,859 basehttp "GET /task/add HTTP/1.1" 200 7189
-INFO 2024-06-16 00:47:59,497 views Starting list tasks.
-INFO 2024-06-16 00:47:59,503 basehttp "GET /task HTTP/1.1" 200 5321
-INFO 2024-06-16 00:48:00,831 views Starting add contact.
-INFO 2024-06-16 00:48:00,832 views init a new ContactForm.
-INFO 2024-06-16 00:48:00,839 basehttp "GET /task/add HTTP/1.1" 200 7189
-INFO 2024-06-16 00:48:53,001 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
-INFO 2024-06-16 00:48:53,603 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:49:01,509 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
-INFO 2024-06-16 00:49:02,341 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:49:06,647 views Starting list tasks.
-INFO 2024-06-16 00:49:06,660 basehttp "GET /task HTTP/1.1" 200 5321
-INFO 2024-06-16 00:49:07,798 basehttp "GET /task/add HTTP/1.1" 200 3847
-INFO 2024-06-16 00:50:12,989 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:50:13,719 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:50:43,646 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:50:44,220 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:50:51,712 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:50:52,412 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:51:09,417 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 00:51:10,070 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:51:12,676 views Starting list opportunity.
-INFO 2024-06-16 00:51:12,696 basehttp "GET /opportunity HTTP/1.1" 200 5868
-INFO 2024-06-16 00:51:13,818 views Starting list tasks.
-INFO 2024-06-16 00:51:13,824 basehttp "GET /task HTTP/1.1" 200 5321
-INFO 2024-06-16 00:51:14,895 views Starting add task.
-INFO 2024-06-16 00:51:14,896 views Init a new task form.
-ERROR 2024-06-16 00:51:15,135 log Internal Server Error: /task/add
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\template\defaulttags.py", line 197, in render
+    values = list(values)
+             ^^^^^^^^^^^^
+TypeError: 'coroutine' object is not iterable
+ERROR 2024-06-27 00:03:22,181 basehttp "GET /task HTTP/1.1" 500 146096
+INFO 2024-06-27 00:07:20,175 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:07:32,704 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 00:07:34,653 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 00:07:50,161 basehttp "GET /auth/redirect?state=3da634dd-9bc0-4ee5-ad6e-eab6e7a46b22&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..Ovp0kfxEYZo7dAdw.5i2pi_TivYn3qdDlqIzR59w4sy1_pQXbjee1yRc7YoWk8W4CMVNxYMlijiprj25UwCGamKbmAq-i72pqAd6v1eEzdvAOmVSHqttMeu3a-QklX0rBQ6JaIlHW5jVxKtvyT8Uh9qs0k3m-c4F4RDy78zZ9Bks_ldGzRSeshnc4aG_cksCTAmOG9wrI8thwYKeUAAHNqt_-25tDIA0zOVNYoksFeNb4ZJ1Bi8g_iuaRqKRaBNqcyAKKXiAppsgjzvE8w10A5qH2LIEUOZl0_KQ5tMZBcOMR8Qz6xjWPiobuuNKeYMrIuoBeJrTPH0bCbqDyySPVfHbFiOczNHt9khpRrtJr2mwbOn2eW3rzHbRLjfGb3Tg6EEtNI8_t7OAZdxvrKTTaSlmAR3kJsx9i24OijB4PTOjXZXiZFAAIkISJtL3EgaiqIcDIqGNxN3GSu_J8vqAuQudx2HOQa1whJs4b3TSi9DC6x61y1smi4gRleJc-zpqXph5lygutCPmHf7sppEVUYISb07d6Qil2vzuD7-gQjaQQmb6hwCI0O3acObvbm2bQpXpRrzhXkpXt54U9fzw.EflqplleCn_Tc7hJfIdLdA HTTP/1.1" 302 0
+INFO 2024-06-27 00:07:50,186 basehttp "GET /index HTTP/1.1" 200 2661
+INFO 2024-06-27 00:07:50,496 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-27 00:07:51,708 log Not Found: /favicon.ico
+WARNING 2024-06-27 00:07:51,709 basehttp "GET /favicon.ico HTTP/1.1" 404 4409
+INFO 2024-06-27 00:07:53,511 views Starting list contacts.
+INFO 2024-06-27 00:07:53,524 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-27 00:07:55,257 views Starting list tasks.
+INFO 2024-06-27 00:07:55,266 basehttp "GET /task HTTP/1.1" 200 5321
+INFO 2024-06-27 00:07:56,898 views Starting list opportunity.
+INFO 2024-06-27 00:07:56,906 basehttp "GET /opportunity HTTP/1.1" 200 5868
+WARNING 2024-06-27 00:07:59,596 log Not Found: /dashboard
+WARNING 2024-06-27 00:07:59,598 basehttp "GET /dashboard HTTP/1.1" 404 4403
+INFO 2024-06-27 00:08:50,549 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-27 00:08:51,517 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-27 00:08:54,073 log Not Found: /favicon.ico
+WARNING 2024-06-27 00:08:54,074 basehttp "GET /favicon.ico HTTP/1.1" 404 4243
+INFO 2024-06-27 00:08:55,660 views Starting list contacts.
+INFO 2024-06-27 00:08:55,675 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-27 00:08:56,598 views Starting list tasks.
+INFO 2024-06-27 00:08:56,603 basehttp "GET /task HTTP/1.1" 200 5321
+INFO 2024-06-27 00:08:57,473 views Starting list opportunity.
+INFO 2024-06-27 00:08:57,479 basehttp "GET /opportunity HTTP/1.1" 200 5868
+WARNING 2024-06-27 00:08:58,720 log Not Found: /settings
+WARNING 2024-06-27 00:08:58,722 basehttp "GET /settings HTTP/1.1" 404 4234
+INFO 2024-06-27 00:09:03,721 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-27 00:34:35,284 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-27 00:34:49,121 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\ms_identity_web\__init__.py", line 285, in assert_login
+    raise NotAuthenticatedError
+ms_identity_web.errors.NotAuthenticatedError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 362, in process_exception_by_middleware
+    response = middleware_method(request, exception)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py", line 12, in process_exception
+    return redirect('{}/{}}'.format(settings.AAD_CONFIG.django.auth_endpoints.prefix, settings.AAD_CONFIG.django.auth_endpoints.sign_in))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Single '}' encountered in format string
+ERROR 2024-06-27 00:34:49,131 basehttp "GET / HTTP/1.1" 500 86252
+WARNING 2024-06-27 00:34:49,210 log Not Found: /favicon.ico
+WARNING 2024-06-27 00:34:49,211 basehttp "GET /favicon.ico HTTP/1.1" 404 4243
+INFO 2024-06-27 00:35:34,634 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py changed, reloading.
+INFO 2024-06-27 00:35:35,419 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:35:53,680 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py changed, reloading.
+INFO 2024-06-27 00:35:54,381 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:35:57,998 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py changed, reloading.
+INFO 2024-06-27 00:35:59,052 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:36:05,828 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py changed, reloading.
+INFO 2024-06-27 00:36:06,487 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:36:15,301 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 00:36:16,012 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+ERROR 2024-06-27 00:36:28,994 log Internal Server Error: /auth/redirect
 Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -558,108 +434,55 @@ Traceback (most recent call last):
   File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
-    return call_result.result()
-           ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
-    raise self._exception
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
-    result = await self.awaitable(*args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 146, in add_task
-    await form.load()
-          ^^^^^^^^^
-AttributeError: 'TaskForm' object has no attribute 'load'
-ERROR 2024-06-16 00:51:15,151 basehttp "GET /task/add HTTP/1.1" 500 78117
-INFO 2024-06-16 00:52:41,685 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 00:52:42,270 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:54:49,752 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 00:54:50,644 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 00:54:53,444 views Starting add task.
-INFO 2024-06-16 00:54:53,445 views Init a new task form.
-INFO 2024-06-16 00:54:53,505 basehttp "GET /task/add HTTP/1.1" 200 7195
-INFO 2024-06-16 00:59:35,476 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 00:59:36,662 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 01:05:58,533 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 01:05:59,201 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 01:06:03,022 views Starting list tasks.
-INFO 2024-06-16 01:06:03,040 basehttp "GET /task HTTP/1.1" 200 5321
-WARNING 2024-06-16 01:06:03,161 log Not Found: /favicon.ico
-INFO 2024-06-16 01:06:03,163 basehttp - Broken pipe from ('127.0.0.1', 50075)
-INFO 2024-06-16 01:06:04,228 views Starting add task.
-INFO 2024-06-16 01:06:04,228 views Init a new task form.
-INFO 2024-06-16 01:06:04,254 basehttp "GET /task/add HTTP/1.1" 200 7199
-INFO 2024-06-16 01:07:47,589 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 01:07:48,227 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 01:08:57,544 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 01:08:58,126 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 01:09:05,731 views Starting add task.
-INFO 2024-06-16 01:09:05,732 views Init a new task form.
-INFO 2024-06-16 01:09:05,816 basehttp "GET /task/add HTTP/1.1" 200 7214
-WARNING 2024-06-16 01:09:05,928 log Not Found: /favicon.ico
-INFO 2024-06-16 01:09:05,930 basehttp - Broken pipe from ('127.0.0.1', 50126)
-INFO 2024-06-16 01:16:06,749 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 01:16:11,220 views Starting add task.
-INFO 2024-06-16 01:16:11,220 views Init a new task form.
-INFO 2024-06-16 01:16:11,261 basehttp "GET /task/add HTTP/1.1" 200 7214
-INFO 2024-06-16 01:16:11,448 basehttp - Broken pipe from ('127.0.0.1', 50248)
-INFO 2024-06-16 01:18:05,726 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
-INFO 2024-06-16 01:18:06,320 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 01:19:31,477 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 01:19:32,059 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 01:20:35,116 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 01:20:35,776 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 01:22:14,413 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 01:22:15,056 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 01:24:03,340 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-16 01:24:03,929 autoreload Watching for file changes with StatReloader
-INFO 2024-06-16 01:24:15,496 views Starting add task.
-INFO 2024-06-16 01:24:15,497 views Init a new task form.
-INFO 2024-06-16 01:24:15,568 basehttp "GET /task/add HTTP/1.1" 200 7992
-INFO 2024-06-19 02:20:22,367 autoreload Watching for file changes with StatReloader
-INFO 2024-06-19 02:20:28,825 basehttp "GET / HTTP/1.1" 200 2661
-INFO 2024-06-19 02:20:29,090 basehttp - Broken pipe from ('127.0.0.1', 51682)
-INFO 2024-06-19 02:20:31,510 views Starting list tasks.
-INFO 2024-06-19 02:20:31,564 basehttp "GET /task HTTP/1.1" 200 5321
-INFO 2024-06-19 02:20:33,592 views Starting add task.
-INFO 2024-06-19 02:20:33,593 views Init a new task form.
-INFO 2024-06-19 02:20:33,781 basehttp "GET /task/add HTTP/1.1" 200 7992
-WARNING 2024-06-19 02:20:34,085 log Not Found: /favicon.ico
-INFO 2024-06-19 02:20:34,087 basehttp - Broken pipe from ('127.0.0.1', 51697)
-INFO 2024-06-19 02:20:54,080 views Starting add task.
-INFO 2024-06-19 02:20:54,223 views Adding a new task passed validation.
-ERROR 2024-06-19 02:20:54,376 log Internal Server Error: /task/add
-Traceback (most recent call last):
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 254, in __call__
-    return call_result.result()
-           ^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1264.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
-    raise self._exception
-  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
-    result = await self.awaitable(*args, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py", line 136, in add_task
-    task_dto = TaskDto(**(await form.changed_data_to_dict()), id=-1, opened_at = datetime.now(), closed_at = datetime.now())
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py", line 78, in changed_data_to_dict
-    data['opportunity'] = (await repos.get_opportunity_by_id(data['opportunity'])).to_dict()
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\repository\repositories.py", line 141, in get_opportunity_by_id
-    return opportunity_by_id[id]
-           ~~~~~~~~~~~~~~~~~^^^^
-KeyError: '1'
-ERROR 2024-06-19 02:20:54,402 basehttp "POST /task/add HTTP/1.1" 500 92202
-INFO 2024-06-19 02:22:50,809 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\forms.py changed, reloading.
-INFO 2024-06-19 02:22:51,580 autoreload Watching for file changes with StatReloader
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 41, in aad_redirect
+    afterwards_go_to_url=reverse('index'))
+                         ^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-06-27 00:36:29,002 basehttp "GET /auth/redirect?state=3bcedf67-d39f-4a27-8dfe-566c9c916c41&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..KoYh0DeEaCWzm874.a_47Cdi7Mo6jDvkLUqgYRho-k9dnXQzQQlHCwi8RxPEItH4b3daMehuG-nur8u9NYhkRVv9vHw79Hz6WvuQTwX5UREc4WytbrOJ7TfjIGMZkpo3ewUhpV1yE72yjeqjiFEEs9hrLTV263sQ6IfKzvqUE2N6M5ytblaR8Z2qmXrl400UU2ynFf-UiVQ5nqUHfUPNrHUBxPdK5HUK5bIZuN_sGPjEm5WxAgYjym2RR6h5qqcSt4IxUkQOY_Gli4lQIJuWrqawSeXoC55M2a2yRLkLd9Jdnvv1efbV2Q2q-Fiqkj_CSksiGqgXcmt2nV1Olw6uRRtOiuV-_jespzvXWtWCM69I78uc3EiGtfgDpKJ-JDACEpo_IynPr09qeUi_2lIFpiHm0NyqjYQqpbuweuJge7VshEt4QT-vof5zbkdTXhlL03z0nNuNlnmQZc0Ul4a7Qr7GVrBdYjvOGsRGYuw56_3iZHupN_ccl6PQPyvwXF6AvT9ulj2646lySyKyBMHytsgstDnieX-QKsdQrcZ9BG8ICo7xyNHncJ0yScEZ12mY7vOHEoNokaPYdz_fCqI7-IdU.Aktysvt7TOzVQU4qjUb0QQ HTTP/1.1" 500 88886
+WARNING 2024-06-27 00:36:29,097 log Not Found: /favicon.ico
+WARNING 2024-06-27 00:36:29,099 basehttp "GET /favicon.ico HTTP/1.1" 404 4243
+INFO 2024-06-27 00:37:38,654 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-27 00:37:39,309 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:38:03,985 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-27 00:38:04,588 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:38:09,639 basehttp "GET /auth/redirect?state=3bcedf67-d39f-4a27-8dfe-566c9c916c41&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..KoYh0DeEaCWzm874.a_47Cdi7Mo6jDvkLUqgYRho-k9dnXQzQQlHCwi8RxPEItH4b3daMehuG-nur8u9NYhkRVv9vHw79Hz6WvuQTwX5UREc4WytbrOJ7TfjIGMZkpo3ewUhpV1yE72yjeqjiFEEs9hrLTV263sQ6IfKzvqUE2N6M5ytblaR8Z2qmXrl400UU2ynFf-UiVQ5nqUHfUPNrHUBxPdK5HUK5bIZuN_sGPjEm5WxAgYjym2RR6h5qqcSt4IxUkQOY_Gli4lQIJuWrqawSeXoC55M2a2yRLkLd9Jdnvv1efbV2Q2q-Fiqkj_CSksiGqgXcmt2nV1Olw6uRRtOiuV-_jespzvXWtWCM69I78uc3EiGtfgDpKJ-JDACEpo_IynPr09qeUi_2lIFpiHm0NyqjYQqpbuweuJge7VshEt4QT-vof5zbkdTXhlL03z0nNuNlnmQZc0Ul4a7Qr7GVrBdYjvOGsRGYuw56_3iZHupN_ccl6PQPyvwXF6AvT9ulj2646lySyKyBMHytsgstDnieX-QKsdQrcZ9BG8ICo7xyNHncJ0yScEZ12mY7vOHEoNokaPYdz_fCqI7-IdU.Aktysvt7TOzVQU4qjUb0QQ HTTP/1.1" 302 0
+INFO 2024-06-27 00:38:09,650 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-27 00:38:09,788 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+INFO 2024-06-27 00:38:22,647 views Starting list contacts.
+INFO 2024-06-27 00:38:22,660 basehttp "GET /contact HTTP/1.1" 200 5653
+WARNING 2024-06-27 00:38:24,184 log Not Found: /dashboard
+WARNING 2024-06-27 00:38:24,185 basehttp "GET /dashboard HTTP/1.1" 404 4238
+INFO 2024-06-27 00:38:45,287 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-27 00:38:45,977 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-27 00:38:48,038 log Not Found: /dashboard
+WARNING 2024-06-27 00:38:48,040 basehttp "GET /dashboard HTTP/1.1" 404 4403
+INFO 2024-06-27 00:39:02,537 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-27 00:39:03,135 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:39:14,012 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-27 00:39:14,618 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:39:22,759 basehttp "GET /dashboard HTTP/1.1" 200 2661
+WARNING 2024-06-27 00:39:22,824 log Not Found: /favicon.ico
+WARNING 2024-06-27 00:39:22,826 basehttp "GET /favicon.ico HTTP/1.1" 404 4418
+INFO 2024-06-27 00:39:24,474 basehttp "GET /dashboard HTTP/1.1" 200 2661
+INFO 2024-06-27 00:39:26,263 views Starting list contacts.
+INFO 2024-06-27 00:39:26,270 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-27 00:39:27,307 views Starting list tasks.
+INFO 2024-06-27 00:39:27,310 basehttp "GET /task HTTP/1.1" 200 5321
+INFO 2024-06-27 00:39:29,065 views Starting list opportunity.
+INFO 2024-06-27 00:39:29,068 basehttp "GET /opportunity HTTP/1.1" 200 5868
+INFO 2024-06-27 00:39:30,868 basehttp "GET /dashboard HTTP/1.1" 200 2661
+INFO 2024-06-27 00:40:49,001 basehttp "GET /auth/sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 00:40:50,007 basehttp "GET /auth/post_sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 00:40:50,012 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 00:40:52,471 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 00:41:01,634 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-27 00:41:01,959 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 00:41:13,723 basehttp "GET /auth/redirect?state=de733a6f-acc7-41ef-ba3a-56f0f8093bb1&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..ItbjQVOjODD2hPxC._XmVI7ijNzbf29D3ntRPsqrRjWv2Ph45iAoVFt_BeU0nhKDtx_NAUtglbw7Yb8ibBHiyUZwwN4wzt-5pzQaGe_z2CnO8k5ovXitU2nwjIvpr-3-9ZuP5Vin3pAUyyRYah_gPFZNKY7Nn0viAFWt83xRf8tpSPeSdMkH0JpUU5FGjaGRYORB7G-vBChUv1zPxzN_8mNZB666HOr7Pd0iLXoRqa62UD_Lgotf9-mse-YfjTgJ7EYwGn7Gs9w-Sp43dOnhkixcP_THFvlf3rA8WOXBlwuzAP4jL0wC9h7GVmhCaPEmm1aRlBnB4hgDIcfEThsh6IMoex3yfrhdwdJDrPOiw172gcSDoZZHHufeCaW9V1W5iM2cpptK7RcROiOMMcHENEP9VyG0iwpqllunqQTEIx0SjIURoeoRdd1w6SgiIEQJFbrg5UlppifTPB3KZaE2NP0dnqDKTBL30X0sdvLUuOCbVLfl2bngrINgNhzGp3VEkhZgwjpq4nwKxHSb9irrBlngkgjcv3f6d2-6ZsQqCqoHJUcEH2mLU6QxNsPXAGmolk8qQ2xdaUDZ5DcgKFQ.c64KlIXo-aUWsrqSrx7p0g HTTP/1.1" 302 0
+INFO 2024-06-27 00:41:13,735 basehttp "GET / HTTP/1.1" 200 2661
+WARNING 2024-06-27 00:41:13,829 log Not Found: /favicon.ico
+WARNING 2024-06-27 00:41:13,831 basehttp "GET /favicon.ico HTTP/1.1" 404 4418

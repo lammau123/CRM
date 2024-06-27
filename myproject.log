@@ -1,0 +1,6 @@
+INFO 2024-06-26 01:43:06,555 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 01:43:47,585 basehttp "GET /contact HTTP/1.1" 200 2671
+INFO 2024-06-26 01:44:18,161 basehttp "GET /contact HTTP/1.1" 200 2671
+INFO 2024-06-26 01:44:35,006 views Starting list tasks.
+INFO 2024-06-26 01:44:39,594 basehttp "GET /task HTTP/1.1" 200 5321
+INFO 2024-06-26 01:45:01,253 basehttp "GET /contact HTTP/1.1" 200 2671

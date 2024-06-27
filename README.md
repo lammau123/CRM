@@ -548,3 +548,71 @@ Implement additional features like reporting, dashboards, and integrations with 
 
 ## 11. Test and Deploy
 Thoroughly test the application and deploy it to a production server.
+
+
+Certainly! Implementing the described approach involves the following steps:
+
+1. **Set Up Azure AD B2C**:
+   - If you haven't already, create an Azure AD B2C tenant in your Azure portal.
+   - Configure your B2C policies for sign-up, sign-in, and profile editing.
+
+2. **External System Integration**:
+   - Identify the external system (CRM or customer loyalty database) that will serve as the source of truth for customer data.
+   - Ensure that the external system has APIs or connectors that allow you to retrieve and update customer data.
+
+3. **Custom Policies in Azure AD B2C**:
+   - Create custom policies in Azure AD B2C to handle the interaction with the external system.
+   - Define custom claims transformations to map data between Azure AD B2C and the external system.
+
+4. **User Flow Configuration**:
+   - Set up user flows (e.g., sign-up, sign-in) in Azure AD B2C.
+   - Configure the user flows to call the custom policies that interact with the external system.
+
+5. **Authentication and Data Retrieval**:
+   - When a user signs up or signs in, Azure AD B2C will authenticate them.
+   - During the authentication process, the custom policies will retrieve additional customer data from the external system using APIs or connectors.
+
+6. **Token Issuance and Claims**:
+   - Azure AD B2C will issue tokens (e.g., ID tokens, access tokens) containing claims.
+   - Customize the claims issuance policy to include relevant customer data from the external system as claims in the tokens.
+
+7. **Application Integration**:
+   - Integrate your application with Azure AD B2C for authentication.
+   - When your application receives tokens, it can extract customer data from the claims.
+
+Remember that the specifics of implementation depend on your application's architecture, the external system you're using, and your business requirements. Consult Azure AD B2C documentation and consider seeking professional guidance for a detailed implementation tailored to your needs. 😊
+
+Certainly! In Azure Active Directory B2C (Azure AD B2C), custom policies allow you to create your own user journeys for complex identity scenarios that go beyond what predefined user flows offer. Let's dive into how you can integrate external systems using custom policies:
+
+1. **Custom Policies Overview**:
+   - Custom policies are configuration files that define the behavior of your Azure AD B2C tenant.
+   - They allow you to edit and extend identity tasks beyond the standard user flows.
+   - Custom policies can orchestrate trust between entities using protocols like OpenID Connect, OAuth, SAML, and even REST API-based system-to-system claims exchanges¹.
+
+2. **Starter Pack**:
+   - Azure AD B2C provides a custom policy starter pack with prebuilt policies to get you started quickly. These include:
+     - **LocalAccounts**: Enables local accounts (username/password) only.
+     - **SocialAccounts**: Enables social (or federated) accounts only.
+     - **SocialAndLocalAccounts**: Allows both local and social accounts.
+     - **SocialAndLocalAccountsWithMFA**: Supports social, local, and multifactor authentication options.
+   - You can find additional samples in the Azure AD B2C GitHub repository for various scenarios like local account enhancements, MFA, user interface improvements, and more¹.
+
+3. **Claims and Data Exchange**:
+   - Claims play a crucial role in custom policies. They temporarily store data during policy execution.
+   - You can collect claims from users during sign-up or profile editing flows.
+   - Claims can be received from external identity providers or sent via custom REST APIs.
+   - Customize your claims schema to declare the specific data you need¹.
+
+4. **Integration with External Systems**:
+   - Define your custom policy by creating multiple XML files that refer to each other hierarchically.
+   - Within the custom policy, integrate your business logic to build the desired user experiences.
+   - For external system integration, you can:
+     - Use REST API communication to exchange data with the external system.
+     - Extend functionality within the extension policy or relying party policy².
+
+Remember that the specifics of your implementation will depend on your organization's requirements and the external system you're integrating with. Feel free to explore the custom policy starter pack and adapt it to your needs! 😊👍¹²
+
+Source: Conversation with Copilot, 6/21/2024
+(1) Azure Active Directory B2C custom policy overview. https://learn.microsoft.com/en-us/azure/active-directory-b2c/custom-policy-overview.
+(2) User flows and custom policies in Azure Active Directory B2C - Azure AD .... https://learn.microsoft.com/en-us/azure/active-directory-b2c/user-flow-overview.
+(3) External System Integration Settings - Fortinet. https://help.fortinet.com/fsiem/6-7-5/Online-Help/HTML5_Help/Integration-settings.htm.

@@ -1,0 +1,35 @@
+{
+"type": {
+    "client_type": "CONFIDENTIAL",
+    "authority_type": "B2C",
+    "framework": "DJANGO"
+    },
+"client": {
+    "client_id": "xx",
+    "client_credential": "xx",
+    "authority": "https://c0ntosoorg2024.b2clogin.com/c0ntosoorg2024.onmicrosoft.com"
+    },
+"b2c": {
+    "susi": "/B2C_1_signinsignup1",
+    "profile": "/B2C_1_profileediting1",
+    "password": "/B2C_1_reset"
+    },
+"auth_request": {
+    "redirect_uri": "/contact",
+    "scopes": [],
+    "response_type": "code"
+    },
+"django": {
+    "id_web_configs": "MS_ID_WEB_CONFIGS",
+    "auth_endpoints": {
+        "prefix": "auth",
+        "sign_in": "sign_in",
+        "edit_profile": "edit_profile",
+        "redirect": "redirect",
+        "sign_out": "sign_out",
+        "post_sign_out": "post_sign_out"
+    }
+},
+"flask": null
+}
+    

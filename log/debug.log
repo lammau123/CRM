@@ -1,0 +1,182 @@
+INFO 2024-06-26 14:21:48,828 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:23:45,346 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 14:23:49,599 basehttp "GET / HTTP/1.1" 200 2661
+WARNING 2024-06-26 14:23:49,714 log Not Found: /favicon.ico
+WARNING 2024-06-26 14:23:49,716 basehttp "GET /favicon.ico HTTP/1.1" 404 4243
+INFO 2024-06-26 14:24:20,517 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py changed, reloading.
+INFO 2024-06-26 15:22:52,885 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 15:22:55,624 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-26 15:32:14,824 log Not Found: /favicon.ico
+WARNING 2024-06-26 15:32:14,825 basehttp "GET /favicon.ico HTTP/1.1" 404 4243
+INFO 2024-06-26 15:32:24,672 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 15:32:26,176 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+ERROR 2024-06-26 15:32:32,516 log Internal Server Error: /auth/redirect
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 41, in aad_redirect
+    afterwards_go_to_url=reverse('index'))
+                         ^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-06-26 15:32:32,523 basehttp "GET /auth/redirect?state=ca4eba0b-67b0-463a-98d3-1fdaed414cd3&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..p4xvhPvKp9Djt0w-.PtcEbb4XCzMYDlHGJWfmFVOFZT0br_nl5wNXiOpYLcTpNS2HWr822sjIAaLwiV2gABG0sMiHkcqfLFowpJ2pH934QiGckThB2Vzz5xSkO-Tnz37prUf5ZCmA9n7aVHZ-EWn1ooGsktAWL9lApbJ8b2WQJ1m9DKA3PI6xIDxWUl21x88HaT7Jzg4-_YtPPbUeB6OtJl5joKnwtdUj5lK7qVVRy6O2tgpyUdA20W5BVDA_54psPyzp5N2R0lCCX5_K1BIHIaeAlPPNsVhN-QRYi9kl6jm4PZYWhBQGiVKZLJtfoi4lniCYI3QNuxTHa29_6bQSCA55aH97AFIdXBbLaTHxgg_t4xgliedc7P0Z6fO6WiXk3qtJGbp_QYO2tWs4UV-I79LV0Jd-39HZdPN5mkCrUtEdSTnGnu0Xf0qjZlsglS5uJySKG_iwOYRfGXRDShdHqvcjalxHg9HCtXZA6YEBrhKU9mefItxcTvxh0NjAbzmb_2TofC78qxgJ_arYHIIKsuvBw_tPjTSdJhWMB7dH2n2rMRC4zwS1awF3pdRT6xJQqWcWJfO0qi-G80wcSQrhpg.dbYfs23c9Vtc4IDNHZFthQ HTTP/1.1" 500 88650
+WARNING 2024-06-26 15:32:32,577 log Not Found: /favicon.ico
+WARNING 2024-06-26 15:32:32,578 basehttp "GET /favicon.ico HTTP/1.1" 404 4243
+INFO 2024-06-26 15:33:35,121 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-26 15:33:37,905 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-26 15:33:54,197 log Internal Server Error: /auth/redirect
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 41, in aad_redirect
+    afterwards_go_to_url=reverse('index'))
+                         ^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-06-26 15:33:54,221 basehttp "GET /auth/redirect?state=ca4eba0b-67b0-463a-98d3-1fdaed414cd3&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..p4xvhPvKp9Djt0w-.PtcEbb4XCzMYDlHGJWfmFVOFZT0br_nl5wNXiOpYLcTpNS2HWr822sjIAaLwiV2gABG0sMiHkcqfLFowpJ2pH934QiGckThB2Vzz5xSkO-Tnz37prUf5ZCmA9n7aVHZ-EWn1ooGsktAWL9lApbJ8b2WQJ1m9DKA3PI6xIDxWUl21x88HaT7Jzg4-_YtPPbUeB6OtJl5joKnwtdUj5lK7qVVRy6O2tgpyUdA20W5BVDA_54psPyzp5N2R0lCCX5_K1BIHIaeAlPPNsVhN-QRYi9kl6jm4PZYWhBQGiVKZLJtfoi4lniCYI3QNuxTHa29_6bQSCA55aH97AFIdXBbLaTHxgg_t4xgliedc7P0Z6fO6WiXk3qtJGbp_QYO2tWs4UV-I79LV0Jd-39HZdPN5mkCrUtEdSTnGnu0Xf0qjZlsglS5uJySKG_iwOYRfGXRDShdHqvcjalxHg9HCtXZA6YEBrhKU9mefItxcTvxh0NjAbzmb_2TofC78qxgJ_arYHIIKsuvBw_tPjTSdJhWMB7dH2n2rMRC4zwS1awF3pdRT6xJQqWcWJfO0qi-G80wcSQrhpg.dbYfs23c9Vtc4IDNHZFthQ HTTP/1.1" 500 88651
+WARNING 2024-06-26 15:33:54,298 log Not Found: /favicon.ico
+WARNING 2024-06-26 15:33:54,301 basehttp "GET /favicon.ico HTTP/1.1" 404 4408
+WARNING 2024-06-26 15:34:01,526 log Not Found: /favicon.ico
+WARNING 2024-06-26 15:34:01,529 basehttp "GET /favicon.ico HTTP/1.1" 404 4408
+ERROR 2024-06-26 15:34:09,223 log Internal Server Error: /auth/redirect
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 41, in aad_redirect
+    afterwards_go_to_url=reverse('index'))
+                         ^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+INFO 2024-06-26 15:34:09,243 basehttp - Broken pipe from ('127.0.0.1', 50163)
+INFO 2024-06-26 15:34:10,463 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 15:34:11,682 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+ERROR 2024-06-26 15:34:16,475 log Internal Server Error: /auth/redirect
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 41, in aad_redirect
+    afterwards_go_to_url=reverse('index'))
+                         ^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-06-26 15:34:16,479 basehttp "GET /auth/redirect?state=9ab1bb61-1968-47a2-a87b-e69350fa840e&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..pyITBvzFdrGnLZ-0.G5fbqCe940AN2tJ_VXKcCHttXiDjGWp-faq50LrXj29qQ1m5J3f8tebeL3ZWVrI8krgPnCngj6iaHkgFsKTDQOGJgc0gfpzDdN2mvQsfF-RpENPSQEuejqpYO964KTplISMTjY9IO-ZxohTK_w1WAYRHr9w8QzStEBA9WoMLNqr_9Tbq_MJmnBrRlGkc8tQcO1Wr-MtKIzsSXgPm-n2TEUzfcR-2NWp3YRfgoFtQeFqBQnDKHP-B2rFk6euLzfksH5W74BSg4rAmlVmIGRh19GEQyAwYfF4kTR5CRlsqxu8z-2jRnFEWO4r-tHq_0n_5EelaWUGIWff1JbCfxYMIq86nAI13nrql7Lkcsq_qS8fNKYZRfdPOeBcyIZCeEQpx0RBoRIaAL5Vp0-6Ynwq9zOL5w6K-63DvFAfkNnsmuuU1ZV46cvJPq3XIxS8CUVEwaUDExEoQ64PrATF58f1XJZ8czVwC5dMrp7zyJhWfhwlpf63wOwqHu6pcs0msin1XTYKQTTZI8DXHmJrTyWiiVgFv1MJL73koBkSESGCAw8pgtlBVy2hYsrfQ0O14SF2-b0lP.3fB6l6-SysRtuO86NsOywg HTTP/1.1" 500 88636
+WARNING 2024-06-26 15:34:16,524 log Not Found: /favicon.ico
+WARNING 2024-06-26 15:34:16,525 basehttp "GET /favicon.ico HTTP/1.1" 404 4408
+INFO 2024-06-26 15:34:38,714 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-26 15:34:44,875 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 15:34:45,956 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+ERROR 2024-06-26 15:34:52,586 log Internal Server Error: /auth/redirect
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 41, in aad_redirect
+    afterwards_go_to_url=reverse('index'))
+                         ^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-06-26 15:34:52,597 basehttp "GET /auth/redirect?state=46ffc18b-95ea-48de-a581-009059cebe66&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..KojUV7n98AIJsUbq.gmbgY1m-c6uZIdgVx1LJG44aiyvivffSoSfJTanzm6GdNSkkDmWEeEwDGjRRuV1viDNg5cdVEqqq3hjh0oLAsa89NsS3SWThQznIMR84Ur4Z8ISFJVVy8vIMkcr3G_mbLDdtbjwsHBnpbGKWlA04RwdVSu1yBHOENSEzG6IQYY97sj2LnP-FJprxCE1MVDjpk1RU32XcRSmaxXr808PY6EQGpUr70ZLPrW2lJ89baXodcevY0K6qQbm1iRLx1XUKhdZQdz4j7YF4KJM6lzif3r3iLMbHPJEqGoipJspRWK3q26a9UlQVWh5ChF99yDjHQ_4khVM93R22zXGOyqUjeKidRQG0Azu871o_GCwiLtUNF9ZuVGVtKnhwI-B1gVCe9RorVZ2cMb6fpsXGZcSsev3nV1x8bWxMBuviRyN1vmShjVHLG6LKzoUDvQ-TGEr7UXaFdEnmbvfGOIzvcQkWXJZWlUkjYHJ3Nj1uofX-70SalbjIilslQkS41_l8zXYMaxiKpn2pKWI-otKMRgnyyO2spVGFTmYnmc6dkKR-yzrlmr_9mgWUUXwoHyklACTwjwzuew.gsMzoKyc65PbYinLXFHKuQ HTTP/1.1" 500 88650
+INFO 2024-06-26 15:35:34,379 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-26 15:35:36,741 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 15:36:16,831 basehttp "GET / HTTP/1.1" 200 2661
+WARNING 2024-06-26 15:36:16,935 log Not Found: /favicon.ico
+WARNING 2024-06-26 15:36:16,937 basehttp "GET /favicon.ico HTTP/1.1" 404 4409
+INFO 2024-06-26 15:36:56,294 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 15:36:58,180 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 15:37:00,800 basehttp "GET /auth/redirect?state=275c0d36-2a45-418f-b6b3-18408400832c&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..V0OuZOw9Cj6YtteZ.QCa0-OULKPfelHOSSacpg8dnrrF0J52XxUPycZCjLdj-5gwezAjsy1L5JvFVeJjChIjCMh3RX8eucpwGwQLKCsacSy7OYob7lSDMbBcK0h_iZ7x7EcqKAZl_2Xi7b7ms0UeMeqZJaqFGD_LnoIzuBRsWQDn4zaRqC2TE8NcVrK5IujOCA4JgAs_oI_H7XFekjro6Wj1B8UeQS2RKat9nfiSMOkQfZYj4WVUTRK6XOa_oeIBn8VoOyoTHTt0U-0gT7O9p7bNs0aDjdKU9DToXpBucDbt9z6dZY7TucJ6gUYQ8zQALS3EqhQIOrdb-THglnXXUsbsPWGhEflhxJHxB_HeN2tgMCKYFltnOt4dOLdNXeUIWQsmk8UyzoFd9qsv-Zgbq6foV5pXAl5e7p9ofbBlZ7vkTai9MlS6-N7G_xOrevnhujpO8m_tZN3h2YdKQBRdOKFMUp-OvfmxNp2QkyNjMk4Yr7RMm1__EnSIMbTVf67xYeS04hbuZAbSxehq2hOi9G676bGN4WHxjHNduiabLa_0U1oHID-xREwplxoKqa0PybNIOYhqjFhE98VPDYw-ytg.OTLhGH-vk4PDCuCdUZEYeA HTTP/1.1" 302 0
+INFO 2024-06-26 15:37:00,830 basehttp "GET /index HTTP/1.1" 200 2661
+WARNING 2024-06-26 15:37:00,923 log Not Found: /favicon.ico
+WARNING 2024-06-26 15:37:00,925 basehttp "GET /favicon.ico HTTP/1.1" 404 4409
+ERROR 2024-06-26 15:37:13,519 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 337, in check_response
+    raise ValueError(
+ValueError: The view webapp.views.list_contact didn't return an HttpResponse object. It returned an unawaited coroutine instead. You may need to add an 'await' into your view.
+ERROR 2024-06-26 15:37:13,523 basehttp "GET /contact HTTP/1.1" 500 72909
+WARNING 2024-06-26 15:37:13,586 log Not Found: /favicon.ico
+WARNING 2024-06-26 15:37:13,587 basehttp "GET /favicon.ico HTTP/1.1" 404 4409
+INFO 2024-06-26 16:02:12,088 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 16:02:46,087 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-26 16:02:46,193 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-26 16:02:46,536 log Not Found: /favicon.ico
+WARNING 2024-06-26 16:02:46,537 basehttp "GET /favicon.ico HTTP/1.1" 404 4409
+INFO 2024-06-26 16:03:09,693 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-26 16:03:10,739 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 16:03:38,659 basehttp "GET /auth/redirect?state=98794965-aa8a-4fc5-baa6-8f379f491ef4&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..PUF3R2zWHi-MC1Yy.kufvCWa_sk8W8IxVBFWWyarTtD8BYgTZPTxcq_0Z2NKbxlCFfmrjRa231EJxwT8cNAuMm8zTWeh0x87qbBsWf5dXIIf4lb4yPAM8E-Kn6j79ik0KAmavI7X6ksCA_c9gqm7EAscg7DvFDcL32BOMyiRTZ3q5aZXG6hkCTmfWxc60BscRbxMricekc0kNdjtBls7DkOP_qjzA64-mxfQ68bBOI2SYHkt5U-Do7kq_S2j2C9bmqA4LmQYXdW5j5ALeM9_XpNqrnewbmHzNJPqlliVyIFfc5EwqDSJxnwi--0JHXq4UuaCd7ihwocg6_vuGC-qxTiEs55KM2GzTBgOaT8TnQKqXQ23EzAkE23UsJj_vWOL9iNCsdLd22AW-bp36YbNvlmBBNPlf1ijGpKgmrEuRYMvAs9i87wF0sSnhTQCR6dVcg3EbesLKN5tYwG3Qg5RVZTQPmZU_5pT8PfxDTQvrV6zglWao_BnTB6h4ErWPdxHwlW-p0WX6LKENCcoNMA3G_I3v-QEW2CX01IzU3S39A1ulN-PXQA6hpYEOE28jLltP1IL6iOdy-C8sw6jvmUQwOA.Zd9fmoiZjmELU5kH3OODcw HTTP/1.1" 302 0
+INFO 2024-06-26 16:03:48,854 basehttp "GET /index HTTP/1.1" 200 2661
+WARNING 2024-06-26 16:03:48,970 log Not Found: /favicon.ico
+WARNING 2024-06-26 16:03:48,972 basehttp "GET /favicon.ico HTTP/1.1" 404 4409
+INFO 2024-06-26 16:04:27,171 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-26 16:04:29,974 autoreload Watching for file changes with StatReloader
+INFO 2024-06-26 16:04:49,487 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-26 16:04:50,596 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-26 16:05:40,569 basehttp "GET /auth/redirect?state=78d5b5ae-7f77-4c61-8793-f43bf5fd3852&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..ekV6vGaQYxdigLbR.EuCQVAAL5JVEnYuv0i7odbNlApVJ4SZAQW-B5LujUtGMp3BFSJuOGmogdsiZHxO_x_tFt9CxOp466zeiNxzfQ3VPhdx_ryVXkxEia8ZgeuqAEF8HKwAvo0ryY4ryLuJesL2C7V6xLV3bByWPp3nE5aByVvi9CGBWe0-sO5v-nNGcBSLjbB25FAweFYu4obHaCe3Fg77ivWIFqlhH1a9K3XtPo9JNrhIfxMD84FIhG2Fi48kSV-gB_tAHTMYK4IGlC5H_wVU0JrGMNId3I3GzZJRhY2a3MzcqbKM97aAbqvEISNBWIoum40J2EjA2uG5fVncWMPA2u0T-cQ_sZ1jPNq3Gzfx-zwI5ejxSuyNjIZ16ywzccJc586P6AASrk4vPeYPbIh7Uifzc_tnmP3hcGarfndRmt-657PJwUEqo3u0RsMAwbzAXSnaAvJQgXkh-DJ3OGjYoVeZ_sl6KImPr61Ld3HIo2-sWSs4lJuiSzUsL2y7gcRe8Pu2k41gLdwJ4-_c4M16L0vpJ5sjV8jo21BmhettnzrRyUBUfjAcXsaoqViCR09WWVNPWQR26gG65q8uT.T39mu2Ic-I2d__TOqTWTjA HTTP/1.1" 302 0
+ERROR 2024-06-26 16:05:40,694 log Internal Server Error: /index
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 337, in check_response
+    raise ValueError(
+ValueError: The view webapp.views.home didn't return an HttpResponse object. It returned an unawaited coroutine instead. You may need to add an 'await' into your view.
+ERROR 2024-06-26 16:05:40,698 basehttp "GET /index HTTP/1.1" 500 72647
+WARNING 2024-06-26 16:05:40,769 log Not Found: /favicon.ico
+WARNING 2024-06-26 16:05:40,770 basehttp "GET /favicon.ico HTTP/1.1" 404 4409
+INFO 2024-06-27 00:03:58,737 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:04:57,631 views Starting list contacts.
+INFO 2024-06-27 00:05:58,283 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-27 00:06:07,710 views Starting list tasks.
+INFO 2024-06-27 00:06:07,777 basehttp "GET /task HTTP/1.1" 200 5321
+INFO 2024-06-27 00:06:17,995 views Starting list opportunity.
+INFO 2024-06-27 00:06:18,058 basehttp "GET /opportunity HTTP/1.1" 200 5868
+INFO 2024-06-27 00:06:20,010 views Starting list contacts.
+INFO 2024-06-27 00:06:23,883 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-27 00:15:33,001 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:28:29,103 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 00:29:18,587 autoreload Watching for file changes with StatReloader

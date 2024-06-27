@@ -105,51 +105,51 @@ list_of_tasks = [
     TaskDto(id=5, title='task5', opportunity=list_of_opportunities[4].to_dict(), due_date=datetime.now(), type=list_of_task_type[4].to_dict(), status=list_of_task_status[4].to_dict()),
 ]
 
-async def get_contacts():
+def get_contacts():
     return list_of_contacts
 
-async def get_users():
+def get_users():
     return list_of_users
 
-async def get_user_by_id(id):
-    user_by_id = { user.id: user for user in await get_users() }
+def get_user_by_id(id):
+    user_by_id = { user.id: user for user in get_users() }
     return user_by_id[id]
 
-async def get_opportunities():
+def get_opportunities():
     return list_of_opportunities
 
-async def get_tasks():
+def get_tasks():
     return list_of_tasks
 
-async def get_task_by_id(id):
-    task_by_id = { task.id: task for task in await get_tasks() }
+def get_task_by_id(id):
+    task_by_id = { task.id: task for task in get_tasks() }
     return task_by_id[id]
 
-async def get_opportunity_statuses():
+def get_opportunity_statuses():
     return list_of_opportunity_status
 
-async def get_opportunity_status_by_id(id):
-    status_by_id = { status.id: status for status in await get_opportunity_statuses() }
+def get_opportunity_status_by_id(id):
+    status_by_id = { status.id: status for status in get_opportunity_statuses() }
     return status_by_id[id]
 
-async def get_contact_by_id(id):
-    contact_by_id = { contact.id: contact for contact in await get_contacts() }
+def get_contact_by_id(id):
+    contact_by_id = { contact.id: contact for contact in get_contacts() }
     return contact_by_id[id]
 
-async def get_opportunity_by_id(id):
-    opportunity_by_id = { opportunity.id: opportunity for opportunity in await get_opportunities() }
+def get_opportunity_by_id(id):
+    opportunity_by_id = { opportunity.id: opportunity for opportunity in get_opportunities() }
     return opportunity_by_id[id]
 
-async def get_task_types():
+def get_task_types():
     return list_of_task_type
 
-async def get_task_type_by_id(id):
-    type_by_id = { type.id: type for type in await get_task_types() }
+def get_task_type_by_id(id):
+    type_by_id = { type.id: type for type in get_task_types() }
     return type_by_id[id]
 
-async def get_task_statuses():
+def get_task_statuses():
     return list_of_task_status
 
-async def get_task_status_by_id(id):
-    status_by_id = { status.id: status for status in await get_task_statuses() }
+def get_task_status_by_id(id):
+    status_by_id = { status.id: status for status in get_task_statuses() }
     return status_by_id[id]

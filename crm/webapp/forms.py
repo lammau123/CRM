@@ -26,25 +26,25 @@ class OpportunityForm(forms.Form):
     contact = forms.ChoiceField()
     status = forms.ChoiceField()
     
-    async def load(self):
-        self.fields['status'].choices = (*[(-1, '----select----')], *[(status.id, status.name) for status in await repos.get_opportunity_statuses()])
-        self.fields['user'].choices = (*[(-1, '----select----')], *[(user.id, user.username) for user in await repos.get_users()])
-        self.fields['contact'].choices = (*[(-1, '----select----')], *[(contact.id, " ".join([contact.first_name, contact.last_name])) for contact in await repos.get_contacts()])
+    def load(self):
+        self.fields['status'].choices = (*[(-1, '----select----')], *[(status.id, status.name) for status in repos.get_opportunity_statuses()])
+        self.fields['user'].choices = (*[(-1, '----select----')], *[(user.id, user.username) for user in repos.get_users()])
+        self.fields['contact'].choices = (*[(-1, '----select----')], *[(contact.id, " ".join([contact.first_name, contact.last_name])) for contact in repos.get_contacts()])
         
-    async def changed_data_to_dict(self):
+    def changed_data_to_dict(self):
         data = {}
         
         for field in self.changed_data:
             data[field] = self.cleaned_data[field]
             
         if 'user' in data:
-            data['user'] = (await repos.get_user_by_id(int(data['user']))).to_dict()
+            data['user'] = repos.get_user_by_id(int(data['user'])).to_dict()
             
         if 'contact' in data:
-            data['contact'] = (await repos.get_contact_by_id(int(data['contact']))).to_dict()
+            data['contact'] = repos.get_contact_by_id(int(data['contact'])).to_dict()
             
         if 'status' in data:
-            data['status'] = (await repos.get_opportunity_status_by_id(int(data['status']))).to_dict()
+            data['status'] = repos.get_opportunity_status_by_id(int(data['status'])).to_dict()
             
         return data
             
@@ -63,25 +63,25 @@ class TaskForm(forms.Form):
         initial=date.today
     )
     
-    async def load(self):
-        self.fields['opportunity'].choices = (*[(-1, '----select----')], *[(opportunity.id, opportunity.name) for opportunity in await repos.get_opportunities()])
-        self.fields['type'].choices = (*[(-1, '----select----')], *[(type.id, type.name) for type in await repos.get_task_types()])
-        self.fields['status'].choices = (*[(-1, '----select----')], *[(status.id, status.name) for status in await repos.get_task_statuses()])
+    def load(self):
+        self.fields['opportunity'].choices = (*[(-1, '----select----')], *[(opportunity.id, opportunity.name) for opportunity in repos.get_opportunities()])
+        self.fields['type'].choices = (*[(-1, '----select----')], *[(type.id, type.name) for type in repos.get_task_types()])
+        self.fields['status'].choices = (*[(-1, '----select----')], *[(status.id, status.name) for status in repos.get_task_statuses()])
     
-    async def changed_data_to_dict(self):
+    def changed_data_to_dict(self):
         data = {}
         
         for field in self.changed_data:
             data[field] = self.cleaned_data[field]
             
         if 'opportunity' in data:
-            data['opportunity'] = (await repos.get_opportunity_by_id(int(data['opportunity']))).to_dict()
+            data['opportunity'] = repos.get_opportunity_by_id(int(data['opportunity'])).to_dict()
             
         if 'type' in data:
-            data['type'] = (await repos.get_task_type_by_id(int(data['type']))).to_dict()
+            data['type'] = repos.get_task_type_by_id(int(data['type'])).to_dict()
             
         if 'status' in data:
-            data['status'] = (await repos.get_task_status_by_id(int(data['status']))).to_dict()
+            data['status'] = repos.get_task_status_by_id(int(data['status'])).to_dict()
             
         return data
         
