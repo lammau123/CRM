@@ -23,8 +23,9 @@ from ms_identity_web.django.msal_views_and_urls import MsalViews
 msal_urls = MsalViews(settings.MS_IDENTITY_WEB).url_patterns()
 
 urlpatterns = [
+    path('', view=views.home, name='home'),
     path('dashboard', view=views.home, name='dashboard'),
-    path('', view=views.home, name='index'),
+    path('after_login', view=views.after_login, name='index'),
     path('contact', views.list_contact, name='list-contact'),
     path('contact/<int:id>/edit', views.edit_contact, name='edit-contact'),
     path('contact/add', views.add_contact, name='add-contact'),

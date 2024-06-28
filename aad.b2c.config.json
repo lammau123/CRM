@@ -5,8 +5,8 @@
     "framework": "DJANGO"
     },
 "client": {
-    "client_id": "xx",
-    "client_credential": "xx",
+    "client_id": "",
+    "client_credential": "",
     "authority": "https://c0ntosoorg2024.b2clogin.com/c0ntosoorg2024.onmicrosoft.com"
     },
 "b2c": {

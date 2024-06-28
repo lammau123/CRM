@@ -9,6 +9,7 @@ except:
 class MsLoginUrlMiddleware(MsalMiddleware):
     def process_exception(self, request, exception):
         if isinstance(exception, NotAuthenticatedError):
+            request.session['next'] = request.get_full_path()
             return redirect('{}/{}'.format(settings.AAD_CONFIG.django.auth_endpoints.prefix, settings.AAD_CONFIG.django.auth_endpoints.sign_in))
         else:
             return super().process_exception(request, exception)

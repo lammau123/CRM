@@ -6,9 +6,15 @@ from django.contrib import messages
 from .repository import repositories as repos
 from django.conf import settings
 import logging
+from django.shortcuts import redirect
 
 logger = logging.getLogger('django')
 ms_identity_web = settings.MS_IDENTITY_WEB
+
+@ms_identity_web.login_required
+def after_login(request):
+    next_url = request.session.pop('next', '/')
+    return redirect(next_url)
 
 @ms_identity_web.login_required
 def home(request):
@@ -24,6 +30,7 @@ def list_contact(request):
     }
     return render(request, 'list-contact.html', context=context)
 
+@ms_identity_web.login_required
 def add_contact(request):
     logger.info('Starting add contact.')
     if request.method == 'POST':
@@ -42,6 +49,7 @@ def add_contact(request):
         
     return render(request, "add-contact.html", context={'form': form})
 
+@ms_identity_web.login_required
 def edit_contact(request, id=0):
     contact_dto = repos.get_contact_by_id(id)
     logger.info('Starting edit contact: {} {}'.format(contact_dto.first_name, contact_dto.last_name))
@@ -60,6 +68,7 @@ def edit_contact(request, id=0):
         
     return render(request, "edit-contact.html", context={"form": form})
     
+@ms_identity_web.login_required
 def list_opportunity(request):
     logger.info('Starting list opportunity.')
     context = { 
@@ -69,6 +78,7 @@ def list_opportunity(request):
             }
     return render(request, 'list-opportunity.html', context=context)
 
+@ms_identity_web.login_required
 def add_opportunity(request):
     logger.info('Starting add opportunity.')
     intial_value = {'status': -1, 'user': -1, 'contact': -1}
@@ -94,6 +104,7 @@ def add_opportunity(request):
         
     return render(request, "add-opportunity.html", context={'form': form})
 
+@ms_identity_web.login_required
 def edit_opportunity(request, id=0):
     opportunity_dto = repos.get_opportunity_by_id(id)
     
@@ -117,7 +128,7 @@ def edit_opportunity(request, id=0):
         
     return render(request, "edit-opportunity.html", context={'form': form})
 
-
+@ms_identity_web.login_required
 def list_task(request):
     logger.info('Starting list tasks.')
     context = {
@@ -127,6 +138,7 @@ def list_task(request):
     }
     return render(request, 'list-task.html', context=context)
 
+@ms_identity_web.login_required
 def add_task(request):
     logger.info('Starting add task.')
     intial_value = {}
@@ -151,6 +163,7 @@ def add_task(request):
         
     return render(request, "add-task.html", context={'form': form})
 
+@ms_identity_web.login_required
 def edit_task(request, id):
     task_dto = repos.get_task_by_id(id)
     

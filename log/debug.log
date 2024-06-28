@@ -180,3 +180,237 @@ INFO 2024-06-27 00:06:23,883 basehttp "GET /contact HTTP/1.1" 200 5653
 INFO 2024-06-27 00:15:33,001 autoreload Watching for file changes with StatReloader
 INFO 2024-06-27 00:28:29,103 autoreload Watching for file changes with StatReloader
 INFO 2024-06-27 00:29:18,587 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 01:22:07,801 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 01:22:37,382 basehttp "GET / HTTP/1.1" 200 2661
+WARNING 2024-06-27 01:22:37,678 log Not Found: /favicon.ico
+WARNING 2024-06-27 01:22:37,682 basehttp "GET /favicon.ico HTTP/1.1" 404 4418
+INFO 2024-06-27 01:22:40,794 views Starting list contacts.
+INFO 2024-06-27 01:22:40,834 basehttp "GET /contact HTTP/1.1" 200 5653
+WARNING 2024-06-27 01:22:40,924 log Not Found: /favicon.ico
+WARNING 2024-06-27 01:22:40,927 basehttp "GET /favicon.ico HTTP/1.1" 404 4418
+INFO 2024-06-27 01:22:56,521 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 01:22:59,047 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 01:23:32,840 basehttp "GET /auth/redirect?state=897ec982-0872-4697-a427-8a9f31cc9ebd&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..pJ1EdRvZOS09wJwF.4zfp7PkHyBXQh1JTGd6U_0bnslFxv9isRggTJ8zvKRZd2OvAljw7jaqfq_5oVa8PdH7tFZKlMCJRtbzMkvrbCFYwVvlc0xgAPOKwXfX1HtvVroHzk2u8SHn5AV5M2HwvGnZMsT4RPVYrItIUzHPrdHFeIEJDPdSjhVw-0zJXgW7pIQLaBhI3g4F9miMaEpNkXYiyy17dkfsVn60sFiOh2XdnnreSdw_RUPhgX5UYfW5R988G1-ACP1pNvfoEhsLaSrWQDjhXdTByy7nrtzXZvwVcSr66QJ5tp1URNiriNZM05UAIyNGvNKNuH9IE5Y30OSI9ignGI4ijFNGSyur2QsiaPSoACKJkJIKTvYLfjhccUHXc3_yJUT-Bjl-V2GpLJzNyloyRy58uw_UeP9FKIMnAe7DRZ0wC-p8w0WUjaBtZoXi5Mu6w0pJb5-y130TZNsdrWU6I8PP7oer-eO_gCyrpleam_urmimIdYk8oVznRnLDyZVJoOFcAiEAukf_5fJoplm7k_bAlS3KPsFN6Z43cq7sQ8I1_V29IiHtnULd1cbWtL_kXlRKrKqDGRf7L8pjTRdjU.DQFd-Ixhs2ARw4I74K-LVA HTTP/1.1" 302 0
+INFO 2024-06-27 01:23:32,861 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-27 01:23:33,148 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-27 01:23:34,166 log Not Found: /favicon.ico
+WARNING 2024-06-27 01:23:34,170 basehttp "GET /favicon.ico HTTP/1.1" 404 4418
+INFO 2024-06-27 16:30:40,269 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 16:35:27,061 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:35:29,186 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 16:35:44,125 basehttp "GET /auth/redirect?state=bf72d251-7d09-43ae-8acc-08a1e5ab711b&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..FovnqtSap4rhY922.Hbqe6Zbn62l88l84E3BIt1HyTiVEU5Xw3g-N05GRtOXZV4gn_DSxdCL0GMSws3oL1CxQP1jBpIOLfmWW4dG8hXrqjtxmtX8JyYqvv_d3yO2pSUxwzaVUbxfOR6b3YkdS_kEenTFte7-adFnndVlHpa0UePtY1CTr0-iwcJBZMYHQ-RxCe5ue4PUPbfg8e_JE2poU-disz4cpKDjwcAc7wn7y_F1bDIAcGsHC_jC6XbrrXawO4mRuoO31Z1V-PzLVibQ6Cr1447C2xLdd_RJdMk3Tzjs29DRCG8zPazt_UcKfEko_ORhSi6CkaKAG7GMLRItNgGLTBhbVMW0z4k8hfAj4rcVK0LhR53LO4mknKW4zrmD3eE0EQfOfFV7IJmyq36aX4AhXEeYO5wv-v1C0iZ8VK9Sn_QGUmCEeuSPP9n76UX-MoCB0J9C3L9R8dGxxILA54VRBVvdXpAgQamhAQGy81gy6ppukPNbwuwXJpBVeMIyWxgwNZc_sP6yqEyFJMETXiGsYEIAL72RmrNkR_7ZUCN7Po84anqEHTfFR1E7G8oGRTGztvfO80cy70BGetItoLQ.jD1mP1DuSVmEV8dY12laPg HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:14,771 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:16,388 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:17,270 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,591 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,606 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,615 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,623 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,632 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,639 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,649 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,656 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,666 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,673 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,683 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,691 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,696 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,705 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,711 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:33,718 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:36:45,991 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 16:37:10,273 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:37:12,771 views Starting list contacts.
+INFO 2024-06-27 16:37:12,941 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-27 16:37:13,069 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-27 16:37:13,495 log Not Found: /favicon.ico
+WARNING 2024-06-27 16:37:13,496 basehttp "GET /favicon.ico HTTP/1.1" 404 4418
+INFO 2024-06-27 16:39:17,977 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 16:39:31,973 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-27 16:39:33,976 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 16:41:02,595 basehttp "GET /auth/redirect?state=52e7b8d9-0314-4012-96e3-f59ec1dc1fea&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..EmpSVCE4MPeJFRRW.EDDlX1nQ2oMK_cWtCE7OmH7O9kaDtS2QImUxYunWGak8XQiYOJnL6rhBF650fd5hqEzEEPEKbNgzSs_h_ajaHRqi5SITbPnE6AuOt9yMEys7y12MtOhveb-oC5lxOCCTtsCo9SXNTN5A_BcNr9xB7iJ7QKzfLf0OHehFmjyjgIo5feHdYOCxWszzNvOozNwmUEY1Zyi99XDalJ1fNZkQx-BF6bFCrkBjeVINq2I6qE35wxoAFVYekfQ1KCen6Eya18vEqOEOy_k_L_kcGHJxel1HmFhDV7xXvBAkml93XyIvDBRFdSJxWh-2vF5XBiaPbG_1V383M25ZOM1BOH5AZW49niVXgkSwWkO9MPK65YOTrM8j6w-5KzZ50WO2daYHkcduy3OOMtlBZ9jjhtWkxz0-s4arhQwo38cJf6sg1hefDwbn43Q2vhuGm3l8Wdh5wQWn3EiJTHhIobkoAAzeBq8HS8cAW4eg0qomO9gxBU-m75rlRml0xe_rXs4kK2_t0es1yVlTBz62IZLv4aifronC0wcurSZdlZo9QunId6HcNi2feE4DjnfWHLPZCaRBaCUM70FG.G7wEvXTB48joNQ9irPX6MQ HTTP/1.1" 302 0
+INFO 2024-06-27 16:44:10,438 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:44:10,455 views Starting list contacts.
+INFO 2024-06-27 16:44:10,573 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-27 16:44:10,799 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-27 16:44:11,118 log Not Found: /favicon.ico
+WARNING 2024-06-27 16:44:11,121 basehttp "GET /favicon.ico HTTP/1.1" 404 4418
+INFO 2024-06-27 16:44:40,928 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 16:44:58,163 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-27 16:45:00,335 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+ERROR 2024-06-27 16:45:17,739 log Internal Server Error: /auth/redirect
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 41, in aad_redirect
+    afterwards_go_to_url=reverse('index'))
+                         ^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-06-27 16:45:17,751 basehttp "GET /auth/redirect?state=e7d64a72-7a3e-42ce-accd-cede4aa5c81e&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..IBGd-sxprVu70Uu-.UVz3qqs6J2uEFsbL-e6ZTk-4FV4K--P08NpdE6V81KLjKDa7UZnDa8U1yGjzzCOqcBe01DM9Zlkfa_q049la4NMzoNzrmo1WAiA_od565Cj0u9hqaumH7vbPMwVw59PUxKtiTuXlIoHgGbqqQcjHKUX3R2dzg9-0YJ_bNE4TjojMqETSpn6GdNE0X1wOJX-mCJ_Wlmxtqu3wPuFz93ISjHhqDWGvPAQ3MpPjEdt8lIQpFI7tvQ5agy521BhAmdyV5KO9XCC5rU8LBZXp3Vx5xypN_4F4GuU230YEGX7CoL01cqJIdOuYf6sjALfPL1Sr41-Gem4i2zwBAGIS7cyKoHXm_uq8iTTNkMgQc_Sua-UJlv8A5Wg5TgB0CiTYGYPklBDBej2O-lcpWg1iIxYhPQpQVjCmPcCnX7vD_FJU_QBn5nd_WtRbujwpLLvCDVMKDpNnL6mu5gZ8DmtMTt9woD3HjuYAblj_SeI0c8X87KwBD1ZD582vZBx061MDSinWeiq4v6ONZ1JQWSgKU2Efcttd949t8r3eoG9h4VHqImUzSlqq3v8E_6ZuCh2aetjzhg.b9O6L3DwbGuIAp94molMWA HTTP/1.1" 500 88665
+WARNING 2024-06-27 16:45:17,833 log Not Found: /favicon.ico
+WARNING 2024-06-27 16:45:17,835 basehttp "GET /favicon.ico HTTP/1.1" 404 4257
+INFO 2024-06-27 16:49:26,607 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-27 16:49:29,190 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 16:49:32,800 basehttp "GET /auth/redirect?state=e7d64a72-7a3e-42ce-accd-cede4aa5c81e&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..IBGd-sxprVu70Uu-.UVz3qqs6J2uEFsbL-e6ZTk-4FV4K--P08NpdE6V81KLjKDa7UZnDa8U1yGjzzCOqcBe01DM9Zlkfa_q049la4NMzoNzrmo1WAiA_od565Cj0u9hqaumH7vbPMwVw59PUxKtiTuXlIoHgGbqqQcjHKUX3R2dzg9-0YJ_bNE4TjojMqETSpn6GdNE0X1wOJX-mCJ_Wlmxtqu3wPuFz93ISjHhqDWGvPAQ3MpPjEdt8lIQpFI7tvQ5agy521BhAmdyV5KO9XCC5rU8LBZXp3Vx5xypN_4F4GuU230YEGX7CoL01cqJIdOuYf6sjALfPL1Sr41-Gem4i2zwBAGIS7cyKoHXm_uq8iTTNkMgQc_Sua-UJlv8A5Wg5TgB0CiTYGYPklBDBej2O-lcpWg1iIxYhPQpQVjCmPcCnX7vD_FJU_QBn5nd_WtRbujwpLLvCDVMKDpNnL6mu5gZ8DmtMTt9woD3HjuYAblj_SeI0c8X87KwBD1ZD582vZBx061MDSinWeiq4v6ONZ1JQWSgKU2Efcttd949t8r3eoG9h4VHqImUzSlqq3v8E_6ZuCh2aetjzhg.b9O6L3DwbGuIAp94molMWA HTTP/1.1" 302 0
+INFO 2024-06-27 16:55:19,310 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 16:55:19,319 views Starting list contacts.
+INFO 2024-06-27 16:55:19,388 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-27 16:55:19,495 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-27 16:55:19,940 log Not Found: /favicon.ico
+WARNING 2024-06-27 16:55:19,942 basehttp "GET /favicon.ico HTTP/1.1" 404 4418
+INFO 2024-06-27 16:56:04,090 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-27 16:56:06,860 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 16:56:09,466 views Starting list contacts.
+INFO 2024-06-27 16:56:09,520 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-27 16:56:22,937 basehttp "GET /auth/sign_out HTTP/1.1" 302 0
+ERROR 2024-06-27 16:56:24,242 log Internal Server Error: /auth/post_sign_out
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 50, in post_sign_out
+    return redirect(reverse('index'))                   # take us back to the home page
+                    ^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-06-27 16:56:24,254 basehttp "GET /auth/post_sign_out HTTP/1.1" 500 81991
+WARNING 2024-06-27 16:56:24,347 log Not Found: /favicon.ico
+WARNING 2024-06-27 16:56:24,349 basehttp "GET /favicon.ico HTTP/1.1" 404 4257
+INFO 2024-06-27 17:02:15,154 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 17:21:56,427 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 17:22:29,146 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-27 17:22:30,281 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 17:22:47,670 basehttp "GET /auth/redirect?state=5dd392e6-dd4d-46da-8e48-fa92569d7717&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..cerV6BMJahW56rRw.Kauh_UHodFZP9jRrmBgQY3oNZU1rRqFRBl3rHWQSim9BP42WzQjPXrJ74USkExanY45bbcGevIRQaK72i8Mm9neE7HTddpaZgNzrKpZdF0JGwfVXi-iu1nVpFNsS5Me9UBPCBQg-jA41R9Iet8DAtHqK58C5I-hL0ZKfPLzm7LffGv_0n9TUdzo3G9Wb8fSSjPwc7xV0745HYVH70A5Pv5YDDTh7Ouh_jXfOBTCxEEgq5hwbz4YrYlsfMnS8w9dd4b_qDspfuDBznm0mwTCp939ndeEtZVaoelV2ywWxOFW_XOGdojUGqp4SFRDOqraIR8ha1P-d2GPZr_3-Kg_uEuJ9EpXCyjbKbRQdmzZq6D114SpID95e_CJUHKhiEr-8VaL2NvDVE1WIMRwoA1AKtafETt8wUqfCv4OyWXxxmBB27WSkJxLtpsUuhTLrgxnZv8QE8octsrWtlJJRhc20LuNWV9hVW7T2HPdcXblhCBk7q4C0EdQrtlC9BZGe8XeP8eb8WsguokwnZ240a-QBeRNhSjAYP_y9WjnumHaFjwbcPyu-ZDD1sKOPwAzDSVSpat4UjFQ.Dk9ll96_0edF5hvXydukBA HTTP/1.1" 302 0
+INFO 2024-06-27 17:26:04,498 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 17:26:04,516 views Starting list contacts.
+INFO 2024-06-27 17:26:04,556 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-06-27 17:26:04,659 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-27 17:26:05,013 log Not Found: /favicon.ico
+WARNING 2024-06-27 17:26:05,015 basehttp "GET /favicon.ico HTTP/1.1" 404 4418
+INFO 2024-06-27 22:21:21,453 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-27 22:21:25,402 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 22:21:42,107 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-27 22:21:44,997 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-27 22:22:26,500 log Not Found: /
+WARNING 2024-06-27 22:22:26,506 basehttp "GET / HTTP/1.1" 404 4379
+WARNING 2024-06-27 22:22:26,612 log Not Found: /favicon.ico
+WARNING 2024-06-27 22:22:26,616 basehttp "GET /favicon.ico HTTP/1.1" 404 4430
+WARNING 2024-06-27 22:22:57,803 log Not Found: /
+WARNING 2024-06-27 22:22:57,806 basehttp "GET / HTTP/1.1" 404 4379
+INFO 2024-06-27 22:23:27,568 autoreload Watching for file changes with StatReloader
+WARNING 2024-06-27 22:23:50,563 log Not Found: /
+WARNING 2024-06-27 22:23:50,570 basehttp "GET / HTTP/1.1" 404 4379
+WARNING 2024-06-27 22:23:50,680 log Not Found: /favicon.ico
+WARNING 2024-06-27 22:23:50,683 basehttp "GET /favicon.ico HTTP/1.1" 404 4430
+INFO 2024-06-27 22:24:27,999 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-27 22:24:30,556 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 22:24:47,292 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-06-27 22:24:49,718 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 22:25:26,519 basehttp "GET /auth/redirect?state=bfd9ef11-8934-4266-82a6-542400439620&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..ShEj1szaouXt9Vhn.UuAHnX_CS-iN5VCam40V_vBw1NJiz2q320pQrThIqZQSuOswlpPvPrUOIicCD8o7cWeCjpleVIVyCC7a9XjGDldykttYSoas4p9qUq4GX0RDO6l62D3IsDlu25PXG-KkjYBgG9cL2ZYbq62qKuV2ekaNv-QrCwdlCun5jp3dIP8hafZ8WWn2cXn8oKEaNWivMiVcGDQ4xhoH4hdlxwi8Xh4mvbW0DgKKJfJETBwO4EztfBG5jsiStYe_ga54PDgiHl6dTSGH4_Zao4JgzqtKZwrXIED3lCnuLGNvgvxxEuruB2mnB6hcfnmWRM612jbF0Vpg7Q44fbL2xMG4MrsEvIpdz49jHzarj6xPt0BP7RLgcmRCho1lZEvEddx0_SFrvfdXPvggFVJuLVQCN-Q8o2XLKkJiVjet0bQDwdO4-leTvOWdxWWCjaxwZpqNzaiHTTzNWcVdorUjXjXMAbKSl_-Vo7A-7FltZsV0-9e9QJLdWZf3oEi3P6AGSpON8pMTuJQDRhxQ9RQZpQEKrIYp4coB9s6NDOjM5vvXn7fk8ycKQxryA5Z_5YBknu5tRkCNp9B1Z2Of.46AgFw-x2-0VWVcW2dlqjw HTTP/1.1" 302 0
+INFO 2024-06-27 22:25:39,074 basehttp "GET /%2Fafter_login HTTP/1.1" 302 0
+INFO 2024-06-27 22:25:39,141 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-06-27 22:25:39,286 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-06-27 22:25:40,783 log Not Found: /favicon.ico
+WARNING 2024-06-27 22:25:40,785 basehttp "GET /favicon.ico HTTP/1.1" 404 4590
+INFO 2024-06-27 22:34:47,149 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\middleware.py changed, reloading.
+INFO 2024-06-27 22:34:49,806 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 22:35:19,056 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\urls.py changed, reloading.
+INFO 2024-06-27 22:35:21,436 autoreload Watching for file changes with StatReloader
+ERROR 2024-06-27 22:36:01,690 log Internal Server Error: /auth/redirect
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 39, in aad_redirect
+    return self.ms_identity_web.process_auth_redirect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 40, in assert_adapter
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 127, in process_auth_redirect
+    raise ase
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 105, in process_auth_redirect
+    self._verify_state(req_params)
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 40, in assert_adapter
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 259, in _verify_state
+    raise AuthSecurityError("Failed to match request state with session state")
+ms_identity_web.errors.AuthSecurityError: Failed to match request state with session state
+ERROR 2024-06-27 22:36:01,712 basehttp "GET /auth/redirect?state=939bc2bd-c61e-47f8-a46a-ddf78bc93807&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..orwfBJOW1fX2Pmg_.QAppPR3Mfms2kRj0tIAALwp14E6Gwvhe6Gqb41VG16tSP7y-pBaz6mJ2315Djf0v6cdqAgZqkE3B7JifTvKsYKqbtelvlcTOxsXQVeRXmrZM62dYZTlSkBO9ER8wcp0lyEaVaSBbmWvuih4o_-9xDEfvTsHqqftgREspqPpyLKjmMJJ4d5OdUwp0U_27I78PQ9ERc636waWWijOxUbcqje-Uj313GmXcyJNxv4Oy2GhA-Q4xrjKKPo2H1BttCrVdMkABPIOsAPTYFs4XQpmX7nzA8lblb_Emce_fBuCz1ArOB7PaeP0QoK6iHYNpMqFszNoOeSxyMmfWUGiwmnrva2GUndQD83z0jHy-HdBQM-87mscf380PPwzjpPCH6wNv15EF0Q08qdhxogJ8oQ4PTYiHhq8L_fsUvwCzIWbSbDNLVaJ_ATGjQ1BELL0hywmTvfOLBrYK4fKVLLofNR-SoQ6VQ49tkP7GvUD7us8lfHjpAV9_6TNJfKSLpCOAMuVdNsoF-Wu6eay25-NLKskPUu73-lwZrT_eGoA8_XqDD6ESka3aG489fcLQGrRTel3VVvv-.No0ilnMw75mApZKWwJ6dHQ HTTP/1.1" 500 105333
+WARNING 2024-06-27 22:36:01,858 log Not Found: /favicon.ico
+WARNING 2024-06-27 22:36:01,862 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-06-27 22:36:44,656 basehttp "GET /auth/sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 22:36:45,170 basehttp "GET /auth/post_sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 22:36:45,224 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-06-27 22:36:49,013 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 22:37:02,180 basehttp "GET /contact HTTP/1.1" 302 0
+INFO 2024-06-27 22:37:04,677 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 22:37:24,760 basehttp "GET /auth/redirect?state=0dace2dd-7769-449a-b44b-63edbb164fcd&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..YZfj6EZGrc7MM2jc.fFGkB1yZPvXTlptRo6RdhEnlpHTTIWHA0ierTAl0AtXmNZnOdRDZbLkw9hF_SHLO459bwUPBXT_c9YvAgWUI6NfHKq47XruocVsEZA_TPEJYSdMGL7l7nrUY5Gp_WYYu06LF5kPEGeS-pp-cFGV-O3QUF40v6Slrl7pTp2hOMerkujMki_hpJQHzTXKel4sL_rEF7gBN9qhdxmtUKGE6wx9wXnAdgKZ4fnKee86j4sEWi2LnqVGPB-2xgdw19UD60JaNo6RIA8PE0hJDvwobkptX7SBCCoGuKrYF6LRcXFqiL2DFuXRdrHmdIGEbRSfhX1OL7TlvLiME2fmSehkA8xRXO1srXIOsgHFQaYU0Vz-iYXWB444BNJCg7Pg6luJtUUqSn6vIxFxqkUXavDgwNtV_5HCybZDkudyYrXRZ67phV_E8u-xGvMj1m8CXASCgEwua5Kr4hefEIJy8k1V_A5k9aLKJj3qJpxSEX3rcqcv35P6r24hNJYYNylNIRwpz4kbMmpGJ2wR1e7xykoNMLu4QNVcIQi_9BB7owsw9WFCXdNQnhaX6zxWt6UYUUTVdd2m9bEs.7eXmyT4umvwk2j9B1eVMYw HTTP/1.1" 302 0
+INFO 2024-06-27 22:37:24,788 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-06-27 22:37:24,807 views Starting list contacts.
+INFO 2024-06-27 22:37:24,884 basehttp "GET /contact HTTP/1.1" 200 5653
+WARNING 2024-06-27 22:37:25,026 log Not Found: /favicon.ico
+WARNING 2024-06-27 22:37:25,029 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-06-27 22:38:07,619 basehttp "GET /auth/sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 22:38:07,902 basehttp "GET /auth/post_sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 22:38:07,920 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-06-27 22:38:10,316 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 22:38:28,081 basehttp "GET /auth/redirect?state=23678383-e67b-41b2-8181-2c4d8d7c94a0&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..VFTQ_l3UEDMvg7ND.zWlEpmd7Sn2f967fnnjGN9hrgb-sLVuqkbu6dZd8naHTghnlfmVWGDw7dd8e778MyJ2MCAShDxrcyhahcmV7mr05nHzMLi2X-i0cl6zXx03oe9irjHHr2Yqp93OckyBcHiyU9JvQYJ39f-BE434yn0Ftl8fHQ6xLd1_dOE9qAtUy7ww0iirwBmnggQMt6ywTFOktIlHomnYo3kzS8inJmH40ifxfqvsRC3BCGvz7sXjOMvGTAPVyfIqTQiyjeNGpbco_WYLz3zLhVzG8CUgrsbyOq3MR6vAUrpP1kGfZ1g-C-WGSWSSGGc78Y7dKYifgFbtq0TryKnIVV_N9YkswPW3G7EOYyRcTvIGUJTt-FOGfD1Kp4PLSK4i_rZC22KBqMIaNxUc_NgDhSo3YotSJyrOuamwrxCgcVv4muYZVVsAgIFGvdWgY0miKkzZDnZqCNdtIpNhSeN7ly3KujBSglisXt6N2DC9Y7hj8JSocDKKvUnzuNeJTgyEewvKhRE3YB8zZSwc9k0t6ZWIlbvHzuZ8l1uJXG6UmYlJ9qtQTApF0YnAms1Ddin9y3D4YoLiQUbdnLw.2LNPQrl0ArC85vKf5JcTxA HTTP/1.1" 302 0
+INFO 2024-06-27 22:38:45,530 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-06-27 22:38:45,541 views Starting list contacts.
+INFO 2024-06-27 22:38:45,555 basehttp "GET /contact HTTP/1.1" 200 5653
+WARNING 2024-06-27 22:38:45,690 log Not Found: /favicon.ico
+WARNING 2024-06-27 22:38:45,692 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-06-27 22:48:33,035 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 22:48:44,044 basehttp "GET /auth/sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 22:48:45,583 basehttp "GET /auth/post_sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 22:48:45,628 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-06-27 22:48:49,693 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 22:49:31,298 basehttp "GET /auth/redirect?state=eb61f5df-49f0-4d53-bc10-4fd4a7919a37&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..shklaS7FzFr4J91U.LGfwZq8AFpIrrcdwjtihSXSdmjgspE6E4S2Yw9D4HGRXK9Yjh_81G19ndj_XA_1P51yNtISv3HWYvEb1-u_Hl966-pti7ajEheztddmEGspo4f8JBP0y4DWcqVtT-JNgWh7s1EGruPgikqfa6sMaxfMcQ2NXZBbG92QMZgtF7GdnctD2nTuQGQk5VPgVOijindyKW7h02AtJidYN6gJLZWapLnT2Q_2YUD86qZUrBPNQRYjloCW_ZMV4BMEaHLG1tMiILruzTesEN5S3bBn03QaL9gEuMKOdC6IQW_wrTC1QzJtuP2MfyS2jukAYyXrC1KG9WKO3vkzXwOC8Kry-G91jy55JMKKc6MsFnOkeEb2BcmSH3lwYr_k8E6cnQx_PF4rM5qsVUJL-Pt1_dExm19MKd2gqs5T0ZjqsB_QYY_RywR2PnElU__vFPqvetnMOY7FQ-U5wbCApGT2KJVSuskJ3R5eAnptRJGa152pgcJh-ZgvwZZCksO72NBdchfl5BPpnwJ79UowgsEAJ9oNlC6RH_iGu4PnAZ0oaW4X9X5bqExYiLCXFZ2KnRPYAAM1zGa1s.H0SWdS960Qb34Xg0Xmuh9g HTTP/1.1" 302 0
+INFO 2024-06-27 22:49:31,346 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-06-27 22:49:31,372 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-06-27 22:49:31,488 basehttp "GET / HTTP/1.1" 200 2661
+WARNING 2024-06-27 22:49:31,701 log Not Found: /favicon.ico
+WARNING 2024-06-27 22:49:31,705 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-06-27 22:49:55,142 basehttp "GET /auth/sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 22:49:55,657 basehttp "GET /auth/post_sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 22:49:55,690 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-06-27 22:49:58,354 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 22:50:13,124 views Starting list tasks.
+INFO 2024-06-27 22:50:13,189 basehttp "GET /task HTTP/1.1" 200 5321
+WARNING 2024-06-27 22:50:13,318 log Not Found: /favicon.ico
+WARNING 2024-06-27 22:50:13,321 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-06-27 22:51:13,836 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\views.py changed, reloading.
+INFO 2024-06-27 22:51:16,462 autoreload Watching for file changes with StatReloader
+INFO 2024-06-27 22:51:30,516 basehttp "GET /auth/sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 22:51:30,777 basehttp "GET /auth/post_sign_out HTTP/1.1" 302 0
+INFO 2024-06-27 22:51:30,825 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-06-27 22:51:34,749 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 22:51:46,091 basehttp "GET /task HTTP/1.1" 302 0
+INFO 2024-06-27 22:51:47,924 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-06-27 22:52:04,420 basehttp "GET /auth/redirect?state=1c558f67-9061-479d-8037-660646a56fb4&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..iL77ZfgLcm2XWXUn.fqUi_pzO1YFXyLWSsAhUS6HOofrjqe1hsgebXsGCAb5l7a0Ds4SBSAu2FN337dxdMdIWOnmpwwSfx6Z3wgkGZdhuTftnHc9YedxaGKBDfDLP8Njz7WbH7_SKXPstA5C0vF0N2EyPSu7uRr9brEqVSJYZKZMZ_1nF-xzVsdL72qJY1JVSZ7M4qIM7ohoii0fE2O4G-Fd94_DMrUnAsko5D3ddHwzE9dC2g0TknFr39ZDpz0xwK06Ty2Ozh_CH-aE42bZjnjIMNByoYgf8ZOIO59aERkoJK8g7pus4z7GmThthtFW81-aOiLDigpwsJtl1Nqh6Rtv1bKnL6ybZZaAsQNDtw9rHoqs07tBUuM352IW7uUsFDbgfaHoB0STQwmV_3Y2yGqaZzWPwgfn4BvtLZh4oLqt-KLtGRdIoBEKUAdqaf9kVQiStjb53NOWkaPvGBZZrR5uxgbnnPQDQwfwcZkcNyeH0AuXMNBydYpBnGj7nQ-KX65uxztSZB3wSiJo1l_HHYA7Wx6Vprzz_dLqATWfISmTXZ9UYzKYaXED5twCWnLYIhFY5O8D98wenA4FK6VA.nuPfnSouvAke8sK5kpt0fw HTTP/1.1" 302 0
+INFO 2024-06-27 22:52:04,456 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-06-27 22:52:04,480 views Starting list tasks.
+INFO 2024-06-27 22:52:04,608 basehttp "GET /task HTTP/1.1" 200 5321
+WARNING 2024-06-27 22:52:04,801 log Not Found: /favicon.ico
+WARNING 2024-06-27 22:52:04,804 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
