@@ -126,9 +126,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 from ms_identity_web.configuration import AADConfig
-from ms_identity_web import IdentityWebPython
+#from ms_identity_web import IdentityWebPython
+from webapp.authZ  import CRMIdentityWebPython
 AAD_CONFIG = AADConfig.parse_json(file_path='./aad.b2c.config.json')
-MS_IDENTITY_WEB = IdentityWebPython(AAD_CONFIG)
+#MS_IDENTITY_WEB = IdentityWebPython(AAD_CONFIG)
+MS_IDENTITY_WEB = CRMIdentityWebPython(AAD_CONFIG)
 ERROR_TEMPLATE = 'errors-pages/{}.html' # for rendering 401 or other errors from msal_middleware
 MIDDLEWARE.append('webapp.middleware.MsLoginUrlMiddleware')
 #MIDDLEWARE.append('ms_identity_web.django.middleware.MsalMiddleware')

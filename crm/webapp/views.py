@@ -21,6 +21,7 @@ def home(request):
     return render(request, 'home.html', {})
 
 @ms_identity_web.login_required
+@ms_identity_web.azure_ad_required_claim(['read'])
 def list_contact(request):
     logger.info('Starting list contacts.')
     context = {

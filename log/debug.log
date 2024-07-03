@@ -414,3 +414,260 @@ INFO 2024-06-27 22:52:04,480 views Starting list tasks.
 INFO 2024-06-27 22:52:04,608 basehttp "GET /task HTTP/1.1" 200 5321
 WARNING 2024-06-27 22:52:04,801 log Not Found: /favicon.ico
 WARNING 2024-06-27 22:52:04,804 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-07-01 23:23:05,183 autoreload Watching for file changes with StatReloader
+INFO 2024-07-01 23:23:08,591 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-07-01 23:23:08,674 basehttp "GET /static/js/app.js HTTP/1.1" 304 0
+WARNING 2024-07-01 23:23:08,913 log Not Found: /favicon.ico
+INFO 2024-07-01 23:23:08,915 basehttp - Broken pipe from ('127.0.0.1', 58576)
+INFO 2024-07-01 23:23:13,122 views Starting list contacts.
+INFO 2024-07-01 23:23:13,220 basehttp "GET /contact HTTP/1.1" 200 5653
+INFO 2024-07-01 23:23:26,551 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-07-01 23:23:31,072 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-07-01 23:23:49,104 basehttp "GET /auth/redirect?state=6c4975dc-543f-4e48-ac89-fcbd360528b5&code=eyJraWQiOiJfX0xscHVfeFJSWUx3Y0tCYThjNjZOSlNNX25Cc0dPeEVjNVRTN0pHUlpvIiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.BgIVQg6DZGWv_1BzysKrBzzSnfUJUlY0cgaj_BmhlvZNZ2PYycpNCMm-zZ8_NCTUsdNe9iOihQApfmChMj7Sv3MMdHRdsz9d6IvDPFUMvxak3GjhKtRuSfuSbQ7zyPVfMLpb_PwTNc2s3ZrogDn0M97T4iNuhaiX5B-8vp6nU8v00YYJRW9xmTm4yOtzmyWNfw55vFuGTCvV7ZTVLPwF3F50jYlCEo-55khDT9zCNVxEpPeOR5I4OBarrauBYuar_6CdzH4cJCTbLpokhk-3QQg2-B40Hf1Z8YZRHZDrSFpeQRr-fEy7FNaOEMqqs_GhriaaEp0CWZaoi7FQbCrz3w.tjpCTlrFb4Bd8W9D.NtcVxpe4i3BXrI0dTysGGZ2eQWsEbNcu6KniFj4xQqwwhA_qtKrcR1m0R3huk3HNpo7lyXOyeAy4wgie9-FfMpaMslsEDx3aN_c6ezpaJ8j-i8nPSa5GgVCFHQsH8kfRab82T5gGRr64qJmffE7wMccSRVI3Xs6YTJJe8VUOVFl5V1k7L6G30hdAV6uuiavJI4N2C5AJc5cTcJIdEDgyEsk0yafa8MFRe1_7Nwfh6Ld5BfesLyGD-7uC3hsdl_Q0j24_AVSTNwxfz_yTnlyM4mFxcDHluUAhxTvZsvuSs68kfRZ0mz4t2Ye9JgQz5g2169Y1raJAW_pXljlrvKgVmyqjFsIbJsVg2EhnzMq1V5xKExKXFOaOSP_F7iDKe_gmmbJTXEizu76NmzshFE4XuxYljX6aHkCgSNnODQuyd4tE__0hddOwk8IfUZi88W5_qrmA9XHQBWGl3vhDjvbI6qBn3ttUXtKrwPlX3HfiPXY-dUJTHrvc-IqQ8ULRRSakvh-LMrHp_za_h9z4GHOVzKbkTds0IIK4gUKX3ZZUpPYMP4HIButzfUIjfMkjjJ0.iVZfIDJGHqpHTZKUyXhnGA HTTP/1.1" 302 0
+INFO 2024-07-01 23:23:49,140 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-07-01 23:23:49,170 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-07-01 23:23:49,461 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-07-01 23:23:51,299 log Not Found: /favicon.ico
+WARNING 2024-07-01 23:23:51,301 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-07-01 23:24:55,324 autoreload Watching for file changes with StatReloader
+INFO 2024-07-01 23:25:08,938 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-07-01 23:25:12,975 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-07-01 23:25:27,524 basehttp "GET /auth/redirect?state=8d04e808-4a54-4b7c-96ff-3a0b2adaeba0&code=eyJraWQiOiJfX0xscHVfeFJSWUx3Y0tCYThjNjZOSlNNX25Cc0dPeEVjNVRTN0pHUlpvIiwidmVyIjoiMS4wIiwiemlwIjoiRGVmbGF0ZSIsInNlciI6IjEuMCJ9.AX2O6oVI1TJqMijciQbl2vfoPrKjDbPmavgCtcrYgooNq2yx61JDCa7xv4u_HigxS5LCCXr6lQt7ZRfR2ysWgi06RJM5ZBhOeiBF3ds-_kD9FG9ongYvRAtNGxYeG5uT5zfjOktIuMZ-nO5zvxAK6Z5lxi6IjcEDqVUAbqO5dgGWAiXEtXFodhigPBn3uYDlHyEKS7UIAYL_qeG1DqSd2pUFNKZmdscF19EVlpqZeWamMJhW4rfr0o0vt-F6uK93Xj_jShr1PoPWosH7iiRbR8n9n1yJQNIUnWsAzeYTb2YVQS5lS8xvhL2zgDtdanuuOi5jz6FHEE-ey_9VvKpoew.RBlnIVYLxHZwEOt-.HC6EDHmZrEQkRN3DEGjxEgvrBQ41fqVTvoIF26GrHEkt3cBygcIcO7Wc6bmaiWtFK1xUTGOzLPJAJpg0k6bKcXwvRKm7Sp3FVwdvxl785fDu2unJhDXHMaBIUpEBp6jpa7AuI3R1-3aOcVSBq_NU_9PMHbEgL4YbqaPvh-cXEPf1hF143VGc0hPlcTegSHe6ROBk4bDYsDxsA56HH1aEI0CANpLJX_JRnwN3x8ZrAdbjs7bkk7ehnuXlQdD_ihK6CBBSt5S8iB3_aSo5Lh2OaNiMLJqrD33Ul-N1T7kCQjkT2aHigJ7hVam5PCJHoa7HHoZmV6v1OznY5isZq0wBDt93ZVy42RcRugiQPA3tdgviLNqdYWaAoUx4j6NZ9swsmbpU1nFoydNLfeh5erZMxu3Z3fCkMP1iUbeKgJFh_0e4lSeMDQYykHiA73papBbienIeSWRrVhqU79nMIbG7btlaxCiIpV6nwX1eQOTT-0RR3xauiTgjc2vXzhPQu--ZHlboZito9Ss-fpHhZk2GLz2tc433FfxetF3I_peKCjN9XwcthxrD2C79xQHxyg.wLMk8xay3RGC7tAS347O6A HTTP/1.1" 302 0
+INFO 2024-07-01 23:25:27,560 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-07-01 23:25:27,683 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-07-01 23:25:27,937 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-07-01 23:25:29,381 log Not Found: /favicon.ico
+WARNING 2024-07-01 23:25:29,385 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-07-01 23:26:08,753 autoreload Watching for file changes with StatReloader
+INFO 2024-07-01 23:26:47,112 basehttp "GET / HTTP/1.1" 302 0
+ERROR 2024-07-01 23:26:51,727 log Internal Server Error: /auth/sign_in
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\msal\authority.py", line 79, in __init__
+    openid_config = tenant_discovery(
+                    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\msal\authority.py", line 216, in tenant_discovery
+    raise ValueError("OIDC Discovery failed on {}. HTTP status: {}, Error: {}".format(
+ValueError: OIDC Discovery failed on https://c0ntosoorg2024.b2clogin.com/c0ntosoorg2024.onmicrosoft.com/B2C_1A_SIGNUP_SIGNINaaa/v2.0/.well-known/openid-configuration. HTTP status: 404, Error: The resource you are looking for has been removed, had its name changed, or is temporarily unavailable.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\django\msal_views_and_urls.py", line 27, in sign_in
+    auth_url = self.ms_identity_web.get_auth_url(redirect_uri=request.build_absolute_uri(reverse(self.endpoints.redirect)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 40, in assert_adapter
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 94, in get_auth_url
+    return self._client_factory(b2c_policy=b2c_policy).get_authorization_request_url(**auth_req_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 75, in _client_factory
+    return ConfidentialClientApplication(**client_config)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\msal\application.py", line 516, in __init__
+    self.authority = Authority(
+                     ^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\msal\authority.py", line 95, in __init__
+    raise ValueError(error_message)
+ValueError: Unable to get authority configuration for https://c0ntosoorg2024.b2clogin.com/c0ntosoorg2024.onmicrosoft.com/B2C_1A_SIGNUP_SIGNINaaa. Authority would typically be in a format of https://login.microsoftonline.com/your_tenant or https://tenant_name.ciamlogin.com or https://tenant_name.b2clogin.com/tenant.onmicrosoft.com/policy.  Also please double check your tenant name or GUID is correct.
+ERROR 2024-07-01 23:26:51,753 basehttp "GET /auth/sign_in HTTP/1.1" 500 114383
+WARNING 2024-07-01 23:26:51,907 log Not Found: /favicon.ico
+WARNING 2024-07-01 23:26:51,912 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-07-02 14:34:45,940 autoreload Watching for file changes with StatReloader
+INFO 2024-07-02 14:46:49,313 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-07-02 14:46:52,253 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-07-02 14:47:45,727 basehttp "GET /auth/redirect?state=bd4a31f1-50c1-4597-954b-31e11b1537c8&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..ITSsqsL6gyrJvt4h.IdvG10g6IbYtNXjYxJhNdlVPYS1E35DB2opGM0AxvkzcYQt46rYUnUiVIBaBHp9Qw-IYOelRFFNqpB70OYBUBAb5tGflPlR9Vx9VFXRNttKzLPwj97akRRzNRB_ptAnYQnzS4npBbfeR408mZTBNIRDBpleJHRDoaWbNA6MrzgnTQJ0Gmjf_G_5_vCwDZEvFv-NzAArXRfZ-grxoAftssjiyB-XbD2r2gBWtS9bOHUb5Rn9nrSFg3IzwjpwR6XoJZ1MTx-mSfAAj8FYXHptWiGqnqhn5_cEf8K9tjbjCnxcZYUzoyyk0UaC2-C9u7QkMPbbQl_OtOyJvoEAbHcBc1mNBl3BmzuTJtnT8kh63rhzfwrUEE66w0ySLdKfLUKGgNRIbXzW3TXOMeZZ_vgJR-x34FSZDjZIM95FmFFTIasbejCqFyKEsVSUd58kHIBG6gHn-kJZ-vdF2qX9VsWMrmkux4uw6wO2np8bBPQAsR9zPRY_7X7cve3LPllsT4QHW4HVuuFqkdIAiAbcmNwx8nMJGT92QruX-rk--ppuMXCKoxM4pkG7yqIXevBxjmWdLwA.co-2e2Snk6pyri5QR1_-Pw HTTP/1.1" 302 0
+INFO 2024-07-02 14:47:45,754 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-07-02 14:47:45,912 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-07-02 14:47:46,129 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-07-02 14:47:46,710 log Not Found: /favicon.ico
+WARNING 2024-07-02 14:47:46,712 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+ERROR 2024-07-02 14:48:32,590 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 290, in assert_login
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\authZ.py", line 13, in assert_authz
+    claim_roles = self._adapter.identity_context_data._id_token_claims['roles']
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'roles'
+ERROR 2024-07-02 14:48:32,600 basehttp "GET /contact HTTP/1.1" 500 75723
+WARNING 2024-07-02 14:48:32,654 log Not Found: /favicon.ico
+WARNING 2024-07-02 14:48:32,656 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+ERROR 2024-07-02 16:07:43,006 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 290, in assert_login
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\authZ.py", line 13, in assert_authz
+    claim_roles = self._adapter.identity_context_data._id_token_claims['roles']
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'roles'
+ERROR 2024-07-02 16:07:43,031 basehttp "GET /contact HTTP/1.1" 500 75723
+WARNING 2024-07-02 16:07:43,202 log Not Found: /favicon.ico
+WARNING 2024-07-02 16:07:43,206 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-07-02 21:03:06,447 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-07-02 21:03:08,663 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-07-02 21:03:26,701 basehttp "GET /auth/redirect?state=c092909a-2b12-454e-8326-0f284c77f23e&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..nD2URxdFCJQepDUc._5rEbnV-bM-B_-MK8AldfFEzUj4kAALFEH5pse_qHQ5v2YnLg93CcL9BtBU9We-m5I7URlAIe9qPbgl4dsIiFs13GVvq7oHQE6uMZBQCBFkSyINSMN656g6U1TuNpi8GEdpsjinGJXwfPVNuvYMouzrf1b3T0oF2Mi7FElJdB7lu8NrAEhlneof6u7mqjshJ700fNkc_t363pnNwHfBJh6KDykEANVy5zjK97t51BYRcjMt3I5h-WMutK6EBPYyEpsoAAQHWPZGsTBx6g3PaZjhpbJr3TDTvx8gg4wDEBoNv7FDpP5UKktjr6KocjfOnADL0CqFB2qO2LFg5Aneu3sKUaoLx5hgIyWSAiS8K7BY_L8FQIGOxbjPTi2NaLMjNgN5mVckPp1skUdnDDUZpbKvWuDrACrGVyBZkoKcbCY1AxJciSthqvFc_DhhYVzbZE4oO1SZkQI5m-LwMSfuTnh35Cu6zQXTMu1rfAmxHKFKZofodGOyONE7u9cuC63Ux1PBjWA6M8US_b5HQ5eclPJ31BRQWd-GMo8FK3NleJdfITCS0egxRkZnTrmGDNOzG26S2N-un.3b-mN7v3nOcXkVTij_TKDg HTTP/1.1" 302 0
+INFO 2024-07-02 21:03:26,744 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-07-02 21:03:26,776 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-07-02 21:03:26,839 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-07-02 21:03:28,660 log Not Found: /favicon.ico
+WARNING 2024-07-02 21:03:28,663 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+ERROR 2024-07-02 21:03:31,211 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 290, in assert_login
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\authZ.py", line 13, in assert_authz
+    claim_roles = self._adapter.identity_context_data._id_token_claims['roles']
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'roles'
+ERROR 2024-07-02 21:03:31,225 basehttp "GET /contact HTTP/1.1" 500 75723
+INFO 2024-07-02 21:03:55,216 autoreload Watching for file changes with StatReloader
+ERROR 2024-07-02 21:04:18,769 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 290, in assert_login
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\authZ.py", line 13, in assert_authz
+    claim_roles = self._adapter.identity_context_data._id_token_claims['Roles']
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'roles'
+ERROR 2024-07-02 21:04:18,780 basehttp "GET /contact HTTP/1.1" 500 75723
+WARNING 2024-07-02 21:04:18,856 log Not Found: /favicon.ico
+WARNING 2024-07-02 21:04:18,858 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-07-02 21:06:35,299 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-07-02 21:06:39,728 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-07-02 21:06:55,770 basehttp "GET /auth/redirect?state=d7a6a9cb-a9ed-4ed5-b63e-7dff90282563&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..K6kFfuc8qDUbn3qu.eZHGfm5c0_ioupd0NwUs3bZxvA_InCFNtAxyYZ2ChSfnpCHF1_2Rna3YmmDrQg96kpb_Dnj-wD6bYjWQ9zXduujS6OXMmYrMTPR8P1GHaTwcxuCtChfzHwOoJ948EyWcZej4FgVUg08-j-BhCWDS-6an96UimNA2H8wuY0BPhrxI-pnTpag3Xy_Hwurmsd36DWwhPlHp6D9BpdPcq3x_sRwLDnqOw5kL1AvGK9s1kTkE0QnfXeAjW-8UcIY77oTlIEK3AEKFxJdhNV0T-3c_wjtzPmveHW9fiMRtkLfHZVX-2phRr9sKO7AeM7RJXCbV6OMZpoSg03Om-1oKtbVaqaNTWuXHIL189jBpdcNzioj6AkQPl8vvsVR1wGl5Nubke-nSGkYroV8-nsjlRlPB-TUSll4MzkTlBDlrpL1Gcti4RRtuw59UmlFDOXKEKEgX4ZkuOa3EqKnxYEQyOwzLuRP4AWit-h_DDcwZtRhQeq9xAO4b0RxpCwi1qhtKsZq6OEVVTbIu7SYmL3EmrXWY985EvZAoTpGtBllYE9HF1QKxLtm87FS385kvhj8NgrVsps-xyg.dHlxTgSBgSozRHXRVIC7YA HTTP/1.1" 302 0
+INFO 2024-07-02 21:06:55,807 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-07-02 21:06:55,860 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-07-02 21:06:56,114 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-07-02 21:06:56,405 log Not Found: /favicon.ico
+WARNING 2024-07-02 21:06:56,408 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+ERROR 2024-07-02 21:07:04,017 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 290, in assert_login
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\authZ.py", line 13, in assert_authz
+    claim_roles = self._adapter.identity_context_data._id_token_claims['Roles']
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'roles'
+ERROR 2024-07-02 21:07:04,029 basehttp "GET /contact HTTP/1.1" 500 75723
+INFO 2024-07-02 21:07:41,323 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\authZ.py changed, reloading.
+INFO 2024-07-02 21:07:43,702 autoreload Watching for file changes with StatReloader
+ERROR 2024-07-02 21:07:58,357 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 290, in assert_login
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\authZ.py", line 13, in assert_authz
+    claim_roles = self._adapter.identity_context_data._id_token_claims['Roles']
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'Roles'
+ERROR 2024-07-02 21:07:58,376 basehttp "GET /contact HTTP/1.1" 500 75558
+INFO 2024-07-02 21:08:57,405 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-07-02 21:08:59,755 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-07-02 21:09:14,929 basehttp "GET /auth/redirect?state=d9d639f8-e161-42a0-862e-425c4ba66ec7&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..pnu0sclKsuOgfJtf.2BkzuGLtCOCqM5uokBVDcwE8B1RYzmAII7ytzyOXcezkeJ0v0dIb-69Hk50o6H2PeUgLIyJgU-getGRH5TLXdjdxCR7_tAfEcxrKys0FoxUqQxGYx6v6V2DLYY41H5v81l2TXKAvXAcckJAlr9rr_6juJ0XpzEFEtlZ3MnN_6Zu19emMCJsT4Xydd8YwmpzQfrTOB02u4RD1AkaAIcT4tUhnTP1Sxs8buPSS-IKQijzknVAThZVPP9LGEvb2cPK9ke1FuSyWY7GzPSRU7R4kH8HssDCu0NLrarfs5DQr24CqzDcJc_UTukgLBcf2eDBYnXQGGyR2S9BrqgotjvZXnNbQxjnFlg3gW2gJesUzUqVW43cmnxOp-LCX6gsgEM9P9x53l-Ttgd-m6QtJP7u2yN0_NM6V2wS_hBkRotn0tTwAFpzRjyu5iLkrIuFFeirD-1gJNd6zsALatsN0fVzD9FeGkYbb1gedkgmoun2QRXWpVgQ1Lc-Us43-xfZDhHxeDewvwfBNHq1qnwUyGcK1WPCNUvNaRPKaeWqGEN8Zit_c1XyguL5QbhX5zn-otd1spC5zPg.k-xnFT9SHFpGYdNRKbz74Q HTTP/1.1" 302 0
+INFO 2024-07-02 21:09:14,952 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-07-02 21:09:14,976 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-07-02 21:09:15,121 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-07-02 21:09:20,444 log Not Found: /favicon.ico
+WARNING 2024-07-02 21:09:20,446 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-07-02 21:13:14,125 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-07-02 21:13:17,773 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-07-02 21:13:34,287 basehttp "GET /auth/redirect?state=f06e7a32-62f9-42fe-997e-3244386b7707&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..7KCdSpwxH1qXJDgc.Y0_C2wDc_c1f2k68IP071_8b6scCRaSHvg_qSW0CYKaDs7kypjCgMmirE4jizJm7v-p-bZ3Ttizhyecz5elvcJDh-PJs8rj0JGGmxSUptVNAtpyBS9sGoVbYqc-KhiV-AkJxW2gHcZnv4fjP2s6_zttHlMrt7UJX6JuyFta2FZyrKLdeI3GCnDSd4L5T_cTQtkroZB8-BLL-2KH6U1YXtWO27qWDHUqVGwnK8Ryz3dlo5beZrjeKJ2oNuiXA8bfY-EqEhd95G6-47QaolevMWUdeHuIJSK4B5VPBtTYEjMyVZGEGV_xEaxNs5Df4aZzNUMAHYYOYrYgTqgJFm91ZZQ_6Vf55BJo9cwUIUWGcTsfxJLds5Yo4GehHG9JbwKuBLIGuahLl3qZr3uLYre0cjd7zQP4AtN_a0gE6m6Ec4HgJj4mDwSz6UEiayOiEeBq50zqw5L9kizhzpPM46KgNcoZVaXqa3OytqVjcqDA2PI3p2UGO-nDH2p6f1oL9t0TnBODGA-XgzkgnoShFSq5_CLL6POVsHUtR3trp0isnjnqJpGT2YJCf48BS1uxlz7mpap4Enjc.RkZjn4H5A4jjs1_-PCqs0Q HTTP/1.1" 302 0
+INFO 2024-07-02 21:13:34,325 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-07-02 21:13:34,345 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-07-02 21:13:34,404 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-07-02 21:13:34,947 log Not Found: /favicon.ico
+WARNING 2024-07-02 21:13:34,951 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+ERROR 2024-07-02 21:42:54,347 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 290, in assert_login
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\authZ.py", line 13, in assert_authz
+    claim_roles = self._adapter.identity_context_data._id_token_claims['Roles']
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'Roles'
+ERROR 2024-07-02 21:42:54,379 log Internal Server Error: /contact
+Traceback (most recent call last):
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\lamma\working\Capstone Project\backend\email_classification_env\Lib\site-packages\ms_identity_web\__init__.py", line 290, in assert_login
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lamma\working\repositories\CRM\crm\webapp\authZ.py", line 13, in assert_authz
+    claim_roles = self._adapter.identity_context_data._id_token_claims['Roles']
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'Roles'
+ERROR 2024-07-02 21:42:54,401 basehttp "GET /contact HTTP/1.1" 500 75558
+INFO 2024-07-02 21:42:54,406 basehttp - Broken pipe from ('127.0.0.1', 50227)
+WARNING 2024-07-02 21:42:54,475 log Not Found: /favicon.ico
+WARNING 2024-07-02 21:42:54,477 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-07-02 21:43:14,783 autoreload C:\Users\lamma\working\repositories\CRM\crm\webapp\authZ.py changed, reloading.
+INFO 2024-07-02 21:43:18,254 autoreload Watching for file changes with StatReloader
+INFO 2024-07-02 21:43:30,624 basehttp "GET / HTTP/1.1" 302 0
+INFO 2024-07-02 21:43:34,287 basehttp "GET /auth/sign_in HTTP/1.1" 302 0
+INFO 2024-07-02 21:43:49,231 basehttp "GET /auth/redirect?state=1938174f-ed04-4dab-bb6c-cda1d375c6c9&code=eyJraWQiOiJjcGltY29yZV8wOTI1MjAxNSIsInZlciI6IjEuMCIsInppcCI6IkRlZmxhdGUiLCJzZXIiOiIxLjAifQ..z4q-VKU8JqGJiRHZ.JgPjlUxO7v0l_lKdPbRBNyeVDt_Nd_C4Fa_98AmxVq9_SSpeMu1v10JTnKs96aRKHHZ-JYxUo4nmHDF4mNPIsnKbNkYPqo1CYs6iqpYP_xtUVpB8z0yf6lbS0uynnIGZAOAnUqcNXwjNYr1wZPqL8hNnnUD0Go69gfxJ3A_31VInc6rvt5NhtAPEjKrvGsKgApOhFk0bnesPXWhu0xdiqL6TaFd6eiu4vyJAVk79dy9-WcOBXMWqr4LcL-EhLaROsex8nMwPKzaI9OzLmWJnTNlNeJHSCHXjhaKI8pZ1O0FSY4bExXBrpucHOoah7SDj3w0Q6ZIIdMKUggXPodArT6UyJhtmfbiLN7V-70LODvWijPRs0vTQ_m5kT2qpb0LBbwUGcD1NCIHVLTR4Ov1fhbQUpaLu85MbilXiQgHz19iPRPliOy7Kt-XbAE57JPKEOMxKONfTJ9J9RTLzlBK8qQHwIUN1iiWhOef_KuwVfmKC79wDHxXlyWUVJet-izxYNACDJT-r83MzqZ_Q47Z6SRCBT6E3CwPVDfqbFvyo-JdlKVbYSZ4qBjNFGpwPjTrvVD8HrZwF2w6mS5cIHQOVSodNe8F9d1aftiet-uw.6iIfhWvMoJzcc9d2sSrolA HTTP/1.1" 302 0
+INFO 2024-07-02 21:43:49,273 basehttp "GET /after_login HTTP/1.1" 302 0
+INFO 2024-07-02 21:43:49,390 basehttp "GET / HTTP/1.1" 200 2661
+INFO 2024-07-02 21:43:49,702 basehttp "GET /static/js/app.js HTTP/1.1" 200 130
+WARNING 2024-07-02 21:43:53,360 log Not Found: /favicon.ico
+WARNING 2024-07-02 21:43:53,363 basehttp "GET /favicon.ico HTTP/1.1" 404 4589
+INFO 2024-07-02 21:44:40,001 views Starting list contacts.
+INFO 2024-07-02 21:44:40,065 basehttp "GET /contact HTTP/1.1" 200 5653
